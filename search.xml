@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>aest</title>
+      <link href="aest/"/>
+      <url>aest/</url>
+      
+        <content type="html"><![CDATA[<p>sdasdasd</p><a id="more"></a><p>sdada</p><p>asdasdad</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> asda </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> aaa </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FHI-aims编译安装</title>
       <link href="2020/FHI-aims%E5%AE%89%E8%A3%85/"/>
       <url>2020/FHI-aims%E5%AE%89%E8%A3%85/</url>
