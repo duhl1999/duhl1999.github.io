@@ -2,60 +2,6 @@
 <search> 
   
   
-    
-    <entry>
-      <title>test2</title>
-      <link href="2020/12/29/test2/"/>
-      <url>2020/12/29/test2/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> vasp </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> aaa </tag>
-            
-            <tag> ccc </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test1</title>
-      <link href="2020/12/29/test1/"/>
-      <url>2020/12/29/test1/</url>
-      
-        <content type="html"><![CDATA[<h1 id="test1"><a href="#test1" class="headerlink" title="test1"></a>test1</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> vasp </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> aaa </tag>
-            
-            <tag> bbb </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
