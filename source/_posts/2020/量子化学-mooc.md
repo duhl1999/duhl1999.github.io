@@ -9,7 +9,8 @@ categories: 量子化学
 <!-- more -->
 
 # Chapter 1: of the Quantum Theory 量子力学的曙光
-## 1.1 Blackbody Radiation黑体辐射  
+## Section1： Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应
+### Blackbody Radiation
 黑体：完全吸收照射到它上面全部辐射的物体  
 planck:  
 &emsp;&emsp;1.blackbody radiation was caused by the oscillations of the electrons  
@@ -19,3 +20,11 @@ $${\lambda_{max}}T=hc/4.965k_b$$
 The equation is in accord with Wien displacement law(Wien位移定律)：
 $${\lambda_{max}}T=2.9*10^{-3}m \cdot k$$
 完美解释了实验观测到的频率能量分布图
+
+### Photoelectric Effect
+The ejection of electrons from the surface of a metal by radiation is called the photoelectric effect.  
+爱因斯坦依据普朗克的理论成功解释了该现象  
+$$KE=1/2mv^2=h\nu-\Phi$$
+<center>hν: the energy of the incident photon</center>
+<center>Φ: the work function of the metal  </center>
+$$\Phi = h\nu_0 $$
