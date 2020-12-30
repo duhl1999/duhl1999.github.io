@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+
+cd /home/duhl/hexo/
 hexo clean
 hexo g -d
 git add -A .
