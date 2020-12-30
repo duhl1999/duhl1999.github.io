@@ -11,7 +11,7 @@ type: "resources"
 # 数据库
 
 ## 晶体学数据库：  
-[materials project](materialsproject.org)  
+[materials project](https://materialsproject.org/)  
 [AFLOW](http://www.aflowlib.org/)  
 [nomad lab](https://nomad-lab.eu/)  
 [MSE](http://mse.fhi-berlin.mpg.de/)
