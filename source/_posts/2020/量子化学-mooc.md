@@ -9,7 +9,7 @@ categories: 量子化学
 <!-- more -->
 
 # Chapter 1: of the Quantum Theory 量子力学的曙光
-## Section1： Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应
+## Section 1: Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应
 ### Blackbody Radiation
 黑体：完全吸收照射到它上面全部辐射的物体  
 planck:  
@@ -30,7 +30,7 @@ $$KE=1/2mv^2=h\nu-\Phi$$
 
 $$ \Phi = h\nu_0 $$
 
-## Section2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory
+## Section 2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory
 ### Hydrogen Atomic Spectrum
 Balmer series巴尔末系列:  符合 $1/n^2$的谱线  
 Rydberg formula： 波速$\widetilde{\nu}=R_H({1/n_1^2}-{1/n_2^2})$，$R_H=109677.581cm^{-1}$  
