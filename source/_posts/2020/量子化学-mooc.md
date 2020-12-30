@@ -12,4 +12,4 @@ categories: 量子化学
 Blackbody Radiation黑体辐射  
 黑体：完全吸收照射到它上面全部辐射的物体  
 Wien displacement law(Wien位移定律)：
-$${\lambda_max}T=hc/4.965k_b$$
+$${\lambda_{max}}T=hc/4.965k_b$$
