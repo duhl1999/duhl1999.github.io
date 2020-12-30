@@ -19,18 +19,14 @@ categories: markdown
 
 # 字型
 下划线符号$\underline{x+y}$: `$\underline{x+y}$`  
-
 上大括号$\overbrace{a+b+c+d}^{2.0}$: `$\overbrace{a+b+c+d}^{2.0}$`  
 下大括号$a+\underbrace{b+c}_{1.0}+d$: `$a+\underbrace{b+c}_{1.0}+d$`   
 上位符号$x\stackrel{\Delta}{=}x_1+x_2$: `$x\stackrel{\Delta}{=}x_1+x_2$`
 
 # 占位符
-两个quad空格$x\quad y$: `$x\quad y$`  
+两个quad空格$x\quad y$: `$x\qquad y$`  
 quad空格$x\quad y$: `$x\quad y$`  
-大空格$x\ y$: `$x\ y$`  
-中空格$x\:y$: `$x\:y$`  
-小空格$x\,y$: `$x\,y$`
-紧贴$x\!y$: `$x\!y$`  
+
 
 # 数学运算
 加减运算$x\pm y$: `$x\pm y$`  
@@ -46,13 +42,10 @@ quad空格$x\quad y$: `$x\quad y$`
 平均数运算$\overline{xyz}$: `$\overline{xyz}$`  
 开二次方运算$\sqrt x$: `$\sqrt x$`  
 开方运算$\sqrt[3]{x+y}$: `$\sqrt[3]{x+y}$`  
-极限运算$\lim^{x \to \infty}_{y \to 0}{x+y}$: `$\lim^{x \to \infty}_{y \to 0}{x+y}$ `  
-极限运算$\displaystyle \lim^{x \to \infty}_{y \to 0}{x+y}$: `$\displaystyle \lim^{x \to \infty}_{y \to 0}{x+y}$`  
-求和运算$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$: `$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$`  
-求和运算$\displaystyle \sum^{x \to \infty}_{y \to 0}{x+y}$: `$\displaystyle \sum^{x \to \infty}_{y \to 0}{x+y}$ `  
+求和运算$\sum_{i=0}^n$: `$\sum_{i=0}^n$`  
 积分运算$\int_a^b xdx$: `$\int_a^b xdx$`  
 微分运算$\frac{\partial x}{\partial y}$: `$\frac{\partial x}{\partial y}$`  
-矩阵表示$\left[\begin{matrix} 1&\cdots&3\\ \vdots&\ddots&\vdots\\ 7&\cdots&9 \end{matrix}\right]$:  `$\left[\begin{matrix} 1&\cdots&3\\ \vdots&\ddots&\vdots\\ 7&\cdots&9 \end{matrix}\right]$`
+矩阵表示$\left[\begin{matrix} 1&2&3 \\ 4&5&6 \\ 7&8&9 \end{matrix}\right]$: `$\left[\begin{matrix} 1&2&3 \\ 4&5&6 \\ 7&8&9 \end{matrix}\right]$`  
 
 # 逻辑运算
 大于等于$x\geq z$: `$x\geq z$`  
@@ -134,5 +127,4 @@ quad空格$x\quad y$: `$x\quad y$`
 |X|	`X`	        |χ|	`\chi`
 |Ψ|	`\Psi`  	|ψ|	`\psi`
 |Ω|	`\v`	    |ω|	`\omega`
-
 
