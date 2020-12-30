@@ -1,6 +1,6 @@
 ---
 title: VASP输出文件
-tags: [VASP,教程，输入文件]
+tags: [VASP,教程,输出文件]
 date: 2020-12-30 09:41:35
 categories: VASP
 ---
