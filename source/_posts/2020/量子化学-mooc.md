@@ -9,7 +9,13 @@ categories: 量子化学
 <!-- more -->
 
 # Chapter 1: of the Quantum Theory 量子力学的曙光
-Blackbody Radiation黑体辐射  
+## 1.1 Blackbody Radiation黑体辐射  
 黑体：完全吸收照射到它上面全部辐射的物体  
-Wien displacement law(Wien位移定律)：
+planck:  
+&emsp;&emsp;1.blackbody radiation was caused by the oscillations of the electrons  
+&emsp;&emsp;2.the energies of the oscillators振子(E) were discrete离散的 and had the form $E=nh\nu$  (n is an interger; h is the Planck constant)  
+可以推出：
 $${\lambda_{max}}T=hc/4.965k_b$$
+The equation is in accord with Wien displacement law(Wien位移定律)：
+$${\lambda_{max}}T=2.9*10^{-3}m \cdot k$$
+完美解释了实验观测到的频率能量分布图
