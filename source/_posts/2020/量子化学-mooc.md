@@ -57,3 +57,16 @@ $$\widetilde{\nu}=\frac{m_ee^4}{8\epsilon^2ch^3}(\frac{1}{n_1^2}-\frac{1}{n_2^2}
 #### 波尔提出的理论被称作旧量子论
 对氢原子光谱给出了很好的描述  
 但是具有局限性，不能预测其他复杂原子的光谱
+
+## Section 3: de Broglie Wave and Heisenberg Uncertainty Principle
+### de Broglie Wave
+$$ \lambda =\frac{h}{p}\frac{h}{mv}$$
+联系波动性和粒子性
+
+### Heisenberg Uncertainty Principle
+the position and the momentum of a particle cannot be specified确定 simultaneously同时 with unlimited precision无限精确：
+$$\Delta x \Delta p \geq h$$
+$$\Delta E \Delta t \geq h$$
+
+
+# Chapter 2:
