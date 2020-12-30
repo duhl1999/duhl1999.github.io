@@ -50,8 +50,7 @@ quad空格$x\quad y$: `$x\quad y$`
 极限运算$\displaystyle \lim^{x \to \infty}_{y \to 0}{x+y}$: `$\displaystyle \lim^{x \to \infty}_{y \to 0}{x+y}$`  
 求和运算$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$: `$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$`  
 求和运算$\displaystyle \sum^{x \to \infty}_{y \to 0}{x+y}$: `$\displaystyle \sum^{x \to \infty}_{y \to 0}{x+y}$ `  
-积分运算$\int^{\infty}_{0}{xdx}$: `$\int^{\infty}_{0}{xdx}$`  
-积分运算$\displaystyle \int^{\infty}_{0}{xdx}$: `$\displaystyle \int^{\infty}_{0}{xdx}$`  
+积分运算$\int_a^b xdx$: `$\int_a^b xdx$`  
 微分运算$\frac{\partial x}{\partial y}$: `$\frac{\partial x}{\partial y}$`  
 矩阵表示$\left[\begin{matrix} 1&\cdots&3\\ \vdots&\ddots&\vdots\\ 7&\cdots&9 \end{matrix}\right]$:  `$\left[\begin{matrix} 1&\cdots&3\\ \vdots&\ddots&\vdots\\ 7&\cdots&9 \end{matrix}\right]$`
 
@@ -135,3 +134,5 @@ quad空格$x\quad y$: `$x\quad y$`
 |X|	`X`	        |χ|	`\chi`
 |Ψ|	`\Psi`  	|ψ|	`\psi`
 |Ω|	`\v`	    |ω|	`\omega`
+
+
