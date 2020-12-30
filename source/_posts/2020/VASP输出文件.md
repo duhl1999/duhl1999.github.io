@@ -5,7 +5,8 @@ date: 2020-12-30 09:41:35
 categories: VASP
 ---
 # 2 输出文件
-输出文件主要包括`CHG`,`CHGCAR`,`CONTCAR`,`DOSCAR`,`EIGENVAL`,`IBZKPT`,`OSZICAR`,`OUTCAR`,`REPORT`,`vasprun.xml`,`WAVECAR`,`XDATCAR`
+输出文件主要包括：  
+`CHG`,`CHGCAR`,`CONTCAR`,`DOSCAR`,`EIGENVAL`,`IBZKPT`,`OSZICAR`,`OUTCAR`,`REPORT`,`vasprun.xml`,`WAVECAR`,`XDATCAR`
 
 本篇内容较长，比较重要的输出文件使用`"※ ※"`进行了重点标注
 
