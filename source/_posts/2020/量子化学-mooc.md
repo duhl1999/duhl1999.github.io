@@ -27,7 +27,8 @@ The ejection of electrons from the surface of a metal by radiation is called the
 $$KE=1/2mv^2=h\nu-\Phi$$
 <center>hν: the energy of the incident photon</center>
 <center>Φ: the work function of the metal  </center>
-$$\Phi = h\nu_0 $$
+
+$$ \Phi = h\nu_0 $$
 
 ## Section2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory
 ### Hydrogen Atomic Spectrum
