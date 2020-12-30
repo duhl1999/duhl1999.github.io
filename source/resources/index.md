@@ -10,8 +10,13 @@ type: "resources"
 
 # 数据库
 
+## 文献检索
+[Web of Science](https://www.webofscience.com)
+
 ## 晶体学数据库：  
 [Materials Project](https://materialsproject.org/)  
 [AFLOW](http://www.aflowlib.org/)  
 [NOMAD Lab](https://nomad-lab.eu/)  
 [MSE](http://mse.fhi-berlin.mpg.de/)
+
+
