@@ -33,7 +33,7 @@ $$ \Phi = h\nu_0 $$
 ## Section 2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory
 ### Hydrogen Atomic Spectrum
 Balmer series巴尔末系列:  符合 $1/n^2$的谱线  
-Rydberg formula： 波速$\widetilde{\nu}=R_H({1/n_1^2}-{1/n_2^2})$，$R_H=109677.581cm^{-1}$  
+Rydberg formula： 波速$\tilde{\nu}=R_H({1/n_1^2}-{1/n_2^2})$，$R_H=109677.581cm^{-1}$  
 ### Bohr Theory
 波尔：库仑力等于向心力，能量量子化：
 $$r=\frac{4\pi\hbar^2n^2}{m_ee^2}$$
@@ -44,8 +44,8 @@ $$E_n=-\frac{m_ee^4}{8\epsilon^2h^2}\frac{1}{n^2}, n=1,2,3...$$
 
 The observed spectrum of the hydrogen atom is due to transitions from one allowed energy state to another:
 $$\Delta E=\frac{m_ee^4}{8\epsilon^2h^2}(\frac{1}{n_1^2}-\frac{1}{n_2^2})=h\nu$$
-依据频率与波速关系$h\nu=hc\widetilde{\nu}$：
-$$\widetilde{\nu}=\frac{m_ee^4}{8\epsilon^2ch^3}(\frac{1}{n_1^2}-\frac{1}{n_2^2})$$
+依据频率与波速关系$h\nu=hc\tilde{\nu}$：
+$$\tilde{\nu}=\frac{m_ee^4}{8\epsilon^2ch^3}(\frac{1}{n_1^2}-\frac{1}{n_2^2})$$
 <p align="right">--Rydberg formula</p>
 可以用于计算eg: ionization energy电离能(IE)
 
