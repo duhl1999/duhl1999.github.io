@@ -1,8 +1,9 @@
 ---
 title: 量子化学_mooc_NJU
-tags: [量子化学,笔记]
+tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-categories: 量子化学
+update: 2020-12-30 13:38:33
+categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
 [MOOC](https://www.icourse163.org/learn/NJU-1462082163?tid=1462882445#)

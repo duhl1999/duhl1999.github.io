@@ -2,6 +2,7 @@
 title: FHI-aims编译安装
 tags: [FHI-aims,编译安装]
 date: 2020-12-29 16:52:02
+updated: 2020-12-29 16:52:02
 categories: FHI-aims
 ---
 

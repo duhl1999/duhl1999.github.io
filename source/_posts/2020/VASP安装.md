@@ -2,6 +2,7 @@
 title: VASP编译安装
 tags: [VASP,编译安装]
 date: 2020-12-29 16:32:13
+updated: 2020-12-29 16:32:13
 categories: VASP
 ---
 
