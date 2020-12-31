@@ -45,7 +45,7 @@ quad空格$x\quad y$: `$x\quad y$`
 开方运算$\sqrt[3]{x+y}$: `$\sqrt[3]{x+y}$`  
 求和运算$\sum_{i=0}^n$: `$\sum_{i=0}^n$`  
 积分运算$\int_a^b xdx$: `$\int_a^b xdx$`  
-微分运算$\frac{\partial x}{\partial y}$: `$\frac{\partial x}{\partial y}$`  
+偏微分运算$\frac{\partial x}{\partial y}$: `$\frac{\partial x}{\partial y}$`  
 矩阵表示$\left[\begin{matrix} 1&2&3 \\ 4&5&6 \\ 7&8&9 \end{matrix}\right]$: `$\left[\begin{matrix} 1&2&3 \\ 4&5&6 \\ 7&8&9 \end{matrix}\right]$`  
 
 # 逻辑运算
@@ -129,3 +129,5 @@ quad空格$x\quad y$: `$x\quad y$`
 |Ψ|	`\Psi`  	|ψ|	`\psi`
 |Ω|	`\v`	    |ω|	`\omega`
 
+$\hbar$: `$\hbar$`
+$\nabla$: `$\nabla$`
