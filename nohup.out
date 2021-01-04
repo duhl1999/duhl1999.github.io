@@ -104,3 +104,118 @@ nothing to commit, working directory clean
 Everything up-to-date
 Branch master set up to track remote branch master from git@github.com:duhl1999/duhl1999.github.io.
 INFO  Deploy done: git
+[hexo eb4db20] --
+ 2 files changed, 107 insertions(+), 1 deletion(-)
+ create mode 100644 nohup.out
+To git@github.com:duhl1999/duhl1999.github.io.git
+   763c170..eb4db20  hexo -> hexo
+#######################################
+ 
+              finished!                
+ 
+#######################################
+#######################################
+ 
+                start!                 
+ 
+#######################################
+mv: cannot stat ‘./source/_posts/*.md’: No such file or directory
+INFO  Validating config
+INFO  ==================================
+  ███╗   ██╗███████╗██╗  ██╗████████╗
+  ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝
+  ██╔██╗ ██║█████╗   ╚███╔╝    ██║
+  ██║╚██╗██║██╔══╝   ██╔██╗    ██║
+  ██║ ╚████║███████╗██╔╝ ██╗   ██║
+  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝
+========================================
+NexT version 8.1.0
+Documentation: https://theme-next.js.org
+========================================
+INFO  Deleted database.
+INFO  Deleted public folder.
+INFO  Validating config
+INFO  ==================================
+  ███╗   ██╗███████╗██╗  ██╗████████╗
+  ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝
+  ██╔██╗ ██║█████╗   ╚███╔╝    ██║
+  ██║╚██╗██║██╔══╝   ██╔██╗    ██║
+  ██║ ╚████║███████╗██╔╝ ██╗   ██║
+  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝
+========================================
+NexT version 8.1.0
+Documentation: https://theme-next.js.org
+========================================
+INFO  Start processing
+INFO  Files loaded in 831 ms
+(node:20469) Warning: Accessing non-existent property 'lineno' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20469) Warning: Accessing non-existent property 'column' of module exports inside circular dependency
+(node:20469) Warning: Accessing non-existent property 'filename' of module exports inside circular dependency
+(node:20469) Warning: Accessing non-existent property 'lineno' of module exports inside circular dependency
+(node:20469) Warning: Accessing non-existent property 'column' of module exports inside circular dependency
+(node:20469) Warning: Accessing non-existent property 'filename' of module exports inside circular dependency
+INFO  Generated: categories/index.html
+INFO  Generated: resources/index.html
+INFO  Generated: tags/index.html
+INFO  Generated: archives/index.html
+INFO  Generated: archives/2020/index.html
+INFO  Generated: archives/2020/12/index.html
+INFO  Generated: categories/FHI-aims/index.html
+INFO  Generated: categories/VASP/index.html
+INFO  Generated: categories/语言学习/index.html
+INFO  Generated: categories/理论学习/index.html
+INFO  Generated: tags/FHI-aims/index.html
+INFO  Generated: tags/编译安装/index.html
+INFO  Generated: tags/VASP/index.html
+INFO  Generated: tags/教程/index.html
+INFO  Generated: tags/输入文件/index.html
+INFO  Generated: tags/输出文件/index.html
+INFO  Generated: tags/markdown/index.html
+INFO  Generated: tags/语言/index.html
+INFO  Generated: tags/固体物理/index.html
+INFO  Generated: tags/笔记/index.html
+INFO  Generated: tags/理论/index.html
+INFO  Generated: tags/量子化学/index.html
+INFO  Generated: images/apple-touch-icon-next.png
+INFO  Generated: index.html
+INFO  Generated: CNAME
+INFO  Generated: images/avatar.gif
+INFO  Generated: images/cc-by-nc-nd.svg
+INFO  Generated: images/cc-by-nc-sa.svg
+INFO  Generated: images/cc-by-nc.svg
+INFO  Generated: images/cc-by-nd.svg
+INFO  Generated: images/cc-by-sa.svg
+INFO  Generated: images/cc-by.svg
+INFO  Generated: images/cc-zero.svg
+INFO  Generated: images/favicon-16x16-next.png
+INFO  Generated: images/favicon-32x32-next.png
+INFO  Generated: images/logo-algolia-nebula-blue-full.svg
+INFO  Generated: images/logo.svg
+INFO  Generated: 2020/固体物理/index.html
+INFO  Generated: search.xml
+INFO  Generated: 2020/markdown数学公式语法/index.html
+INFO  Generated: 2020/量子化学-mooc/index.html
+INFO  Generated: 2020/VASP输入文件/index.html
+INFO  Generated: 2020/FHI-aims安装/index.html
+INFO  Generated: 2020/VASP安装/index.html
+INFO  Generated: js/algolia-search.js
+INFO  Generated: js/schemes/muse.js
+INFO  Generated: 2020/VASP输出文件/index.html
+INFO  Generated: js/bookmark.js
+INFO  Generated: js/local-search.js
+INFO  Generated: js/motion.js
+INFO  Generated: js/next-boot.js
+INFO  Generated: js/schedule.js
+INFO  Generated: js/utils.js
+INFO  Generated: css/main.css
+INFO  Generated: images/duhl.jpg
+INFO  55 files generated in 2.94 s
+INFO  Deploying: git
+INFO  Clearing .deploy_git folder...
+INFO  Copying files from public folder...
+INFO  Copying files from extend dirs...
+# On branch master
+nothing to commit, working directory clean
+INFO  Farewell
+INFO  Deploy done: git
