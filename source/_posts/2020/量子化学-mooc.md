@@ -2,14 +2,14 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2020-12-31 11:20:11
+update: 2021-01-11 19:04:11
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
 [MOOC](https://www.icourse163.org/learn/NJU-1462082163?tid=1462882445#)
 <!-- more -->
 
-# Chapter 1: of the Quantum Theory 量子力学的曙光
+# Chapter 1: The dawn of the Quantum Theory 量子力学的曙光
 ## Section 1: Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应
 ### Blackbody Radiation
 黑体：完全吸收照射到它上面全部辐射的物体  
@@ -70,4 +70,28 @@ $$\Delta x \Delta p \geq h$$
 $$\Delta E \Delta t \geq h$$
 
 
-# Chapter 2:
+# Chapter 2: The Postulates and General Principles of Quantum Mechanics
+
+## Section 1: Wave Functions, Operators and Eigenvalues
+
+Postulate 1: The state of a quantum-mechanical system is completely specified by a wave function that depends upon the coordinates of all particles in the system.
+$$\Psi=\Psi(x_1,y_1,z_1,...,x_n,y_n,z_n,t)$$
+
+Born: For a 3D one-particle system, the quantity $\Psi(x',y',z',t)\Psi^*(x',y',z',t)dxdydz$ is the probability of finding the particle in the infinitesimal volume element $dxdydz$, located at the point$(x',y',z')$ at time $t$
+
+### The Wave Function should be Normalized:
+$$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |\Psi(x,y,z,t)|^2dxdydz = 1$$
+For a many-particle system, the total probability of find all the patricle is unity:
+$$\int_{-\infty}^{\infty}...\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}|\Psi(\vec{r},t)|^2dx_1dy_1dz_1...dx_ndy_ndz_n = 1$$
+
+$$\int_{-\infty}^{\infty}|\Psi|^2d\tau=1$$
+
+### Other Requirements
+2. The wave function must be single-valued, finite, and quadratically integrable 单值，连续，平方可积
+3. The wave function and ins first derivatives must be continuous 连续可微
+
+The wave function meeting these requirements is said to be **well-behaved** 品优函数
+
+
+
+
