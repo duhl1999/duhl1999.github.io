@@ -126,7 +126,7 @@ $$\hat{A}\psi_n=a_n\psi_n$$
 
 ### Postulate 4: average value of the observable B
 If a system is in a state described by a normalized wave function $\psi$, then the average value of the observable B is given by:
-$$<B>=\int \psi^* \hat{B} \psi d\tau, d\tau=dx_xdy_1dz_1...dx_ndy_ndz_n$$
+$$< B >=\int \psi^* \hat{B} \psi d\tau, d\tau=dx_xdy_1dz_1...dx_ndy_ndz_n$$
 
 
 
