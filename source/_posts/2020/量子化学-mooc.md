@@ -99,7 +99,7 @@ To every observable in classical mechanics, there corresponds a quantum-mechanic
 
 >position: $x$ ---- $\hat{X}$ ---- x  
 
->Momentum: $p_x$ ---- $\hat{P_x} ---- $-i\hbar \frac{\partial}{\partial x}$  
+>Momentum: $p_x$ ---- $\hat{P_x}$ ---- $-i\hbar \frac{\partial}{\partial x}$  
 
 >Momentum: $\vec{p}$ ---- $\hat{\vec{P}}$ ---- $-i\hbar (\vec{i}\frac{\partial}{\partial x}+\vec{j}\frac{\partial}{\partial y}+\vec{k}\frac{\partial}{\partial z})$  
 
