@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-11 19:04:11
+update: 2021-01-12 12:04:11
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -74,23 +74,59 @@ $$\Delta E \Delta t \geq h$$
 
 ## Section 1: Wave Functions, Operators and Eigenvalues
 
-Postulate 1: The state of a quantum-mechanical system is completely specified by a wave function that depends upon the coordinates of all particles in the system.
+### Postulate 1: wave function
+The state of a quantum-mechanical system is completely specified by a wave function that depends upon the coordinates of all particles in the system.
 $$\Psi=\Psi(x_1,y_1,z_1,...,x_n,y_n,z_n,t)$$
 
 Born: For a 3D one-particle system, the quantity $\Psi(x',y',z',t)\Psi^*(x',y',z',t)dxdydz$ is the probability of finding the particle in the infinitesimal volume element $dxdydz$, located at the point$(x',y',z')$ at time $t$
 
-### The Wave Function should be Normalized:
+#### The Wave Function should be Normalized:
 $$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |\Psi(x,y,z,t)|^2dxdydz = 1$$
 For a many-particle system, the total probability of find all the patricle is unity:
 $$\int_{-\infty}^{\infty}...\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}|\Psi(\vec{r},t)|^2dx_1dy_1dz_1...dx_ndy_ndz_n = 1$$
 
 $$\int_{-\infty}^{\infty}|\Psi|^2d\tau=1$$
 
-### Other Requirements
+#### Other Requirements
 2. The wave function must be single-valued, finite, and quadratically integrable 单值，连续，平方可积
 3. The wave function and ins first derivatives must be continuous 连续可微
 
 The wave function meeting these requirements is said to be **well-behaved** 品优函数
+
+
+### Postulate 2: Operator
+To every observable in classical mechanics, there corresponds a quantum-mechanical operator算符 that is linear线性 and hermitian厄米
+
+>position: $x$ ---- $\hat{X}$ ---- x  
+
+>Momentum: $p_x$ ---- $\hat{P_x} ---- $-i\hbar \frac{\partial}{\partial x}$  
+
+>Momentum: $\vec{p}$ ---- $\hat{\vec{P}}$ ---- $-i\hbar (\vec{i}\frac{\partial}{\partial x}+\vec{j}\frac{\partial}{\partial y}+\vec{k}\frac{\partial}{\partial z})$  
+
+>Kinetic energy: $T_x$ ---- $\hat{T_x}$ ---- $-\frac{h^2}{2m}\frac{\partial^2}{\partial x^2}$  
+
+>Kinetic energy: $\vec{T}$ ---- $\hat{\vec{T}}$ ---- $-\frac{h^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})=-\frac{h^2}{2m}\nabla^2$
+
+>Potential energy: $V(x,y,z)$ ---- $\hat{V}(\hat{x},\hat{y},\hat{z})$ ---- $V(x,y,z)$
+
+>Total energu: $E$ ---- $\hat{H}$哈密顿算符 ---- $-\frac{h^2}{2m}\nabla^2+V(x,y,z)$
+
+For a 3D system with n particles:
+$$E=\frac{p_{x_1}^2+p_{y_1}^2+p_{z_1}^2}{2m_1}+...+\frac{p_{x_n}^2+p_{y_n}^2+p_{z_n}^2}{2m_n}+V(x_1，y_1,z_1,...,x_n,y_n,z_n)$$
+$$\hat{H}=-\Sigma_{i=1}^n \frac{\hbar^2}{2m_i}\nabla_i^2+V(x_1，y_1,z_1,...,x_n,y_n,z_n)$$
+
+### Postulate 3: Eigenvalues
+In any measurement of the observable associated with an operator, the only values that will ever be observed are the eigenvalues特征值 of this operator算符, which satisfy the eigenvalue equation:
+
+$$\hat{A}\psi_n=a_n\psi_n$$
+
+本征值$a_n$，本征函数$\psi_n$
+
+本征值架起了算符和可观测物理量的桥梁
+
+### Postulate 4: average value of the observable B
+If a system is in a state described by a normalized wave function $\psi$, then the average value of the observable B is given by:
+$$<B>=\int \psi^* \hat{B} \psi d\tau, d\tau=dx_xdy_1dz_1...dx_ndy_ndz_n$$
 
 
 
