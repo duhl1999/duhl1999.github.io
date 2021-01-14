@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-12 12:04:11
+update: 2021-01-14 18:54:11
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -396,5 +396,32 @@ Prove that the kinetic energy operator is Hermitian:
 $$\hat{T}=-\frac{\hbar}{2m}\frac{d^2}{dx^2}$$
 只需证明:
 $$< f|\hat{T}|f > = < f|\hat{T}|f >^*$$
+
+## Section 3：Eigenfunctions of Commutative Operators
+
+For a state function状态函数 $\psi$ is simultaneously an eigenfunction本征函数 of the two commuting operators $\hat{A}$ and $\hat{B}$ with eigenvalues本征值 $a_i$ and $b_i$ respectively, then a measurement测量 of $A$ will yield the result $a_i$, and a measurement of $B$ yield $b_i$
+
+**Theorem:** For a set of hermitian operators $\hat{A},\hat{B},\hat{C},...$, there exists存在 a common complete set of eigenfunctions共同点完备本征函数集, if and only if every operator commutes对易 with each other.
+
+## Section 4: Orthonormal Basis
+
+**Thorem:** The eigenfunctions本征函数 of a hermitian operator that represents a physically observable property可观测属性 from a complete orthonormal set完备正交集.
+
+In general, suppose: $\hat{B}f_i=b_if_i,i=1,2,...$  
+Thus, $\{f_i,1=1,2,...\}$ is a complete orthonormal set完备正交集: $\int f_i^*f_j d\tau = \delta_{ij}$  
+Since an arbitrary任意 function can be expanded as a linear combination线性组合 of a complete set of functions, we have: $\psi=\sum\limits_i c_i f_i$
+
+To obtain the coefficients in the expansion, we multiply左乘 both sides by $f_m^*(x)$ and integrate, then we find:
+$$\int_{-\infty}^{\infty}f_m^*(x)\psi(x)dx=\Sigma_{n=1}^\infty c_n \int_{-\infty}^{\infty}f_m^*(x)f_n(x)dx=\Sigma_{n=1}^\infty c_n\delta_{mn}=c_m$$
+$$c_n=\int_{-\infty}^{\infty}f_n^*(x)\psi(x)dx=< f_n|\psi >$$
+
+The coefficients系数 $c_n$ in the expansion are called **Fourier coefficients**
+
+In the status function $\psi(x)$, which is not an eigenfunction of $\hat{B}$, from **Postulate3**, we can calculate the average value of the property $B$. In a series of measurements:
+$$< B > = \int \psi^*\hat{B}\psi d\tau=\sum\limits_i \sum\limits_j c_i^*c_j\int f_i^*\hat{B}f_jd\tau=\sum\limits_i \sum\limits_j c_i^*c_jb_j\int f_i^*f_jd\tau \\ =\sum\limits_i \sum\limits_j c_i^*c_jb_j\delta_{ij}=\sum\limits_i|c_i|^2b_i$$
+
+If the system is not in a state described by an eigenfunction of $\hat{B}$, we will get one of the eigenvalues of $\hat{B}$ when we measure $B$, but we cannot predict which eigenvalue will be obtained. Instead, the probabilities概率 for obtaining various eigenvalues of $\hat{B}$ can be predicted.
+
+
 
 
