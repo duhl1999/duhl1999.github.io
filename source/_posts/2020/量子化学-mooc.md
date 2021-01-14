@@ -418,7 +418,11 @@ $$c_n=\int_{-\infty}^{\infty}f_n^*(x)\psi(x)dx=< f_n|\psi >$$
 The coefficients系数 $c_n$ in the expansion are called **Fourier coefficients**
 
 In the status function $\psi(x)$, which is not an eigenfunction of $\hat{B}$, from **Postulate3**, we can calculate the average value of the property $B$. In a series of measurements:
-$$< B > = \int \psi^*\hat{B}\psi d\tau=\sum\limits_i \sum\limits_j c_i^*c_j\int f_i^*\hat{B}f_jd\tau=\sum\limits_i \sum\limits_j c_i^*c_jb_j\int f_i^*f_jd\tau \\ =\sum\limits_i \sum\limits_j c_i^*c_jb_j\delta_{ij}=\sum\limits_i|c_i|^2b_i$$
+$$ < B > = \int \psi^* \hat{B} \psi d\tau $$
+$$\qquad\qquad\qquad\qquad= \sum\limits_i \sum\limits_j c_i^* c_j \int f_i^* \hat{B} f_j d\tau $$
+$$\qquad\qquad\qquad\qquad=\sum\limits_i \sum\limits_j c_i^* c_j b_j \int f_i^* f_j d\tau $$
+$$\qquad\qquad\quad=\sum\limits_i \sum\limits_j c_i^* c_j b_j \delta_{ij} $$
+$$\qquad\quad=\sum\limits_i |c_i|^2 b_i $$
 
 If the system is not in a state described by an eigenfunction of $\hat{B}$, we will get one of the eigenvalues of $\hat{B}$ when we measure $B$, but we cannot predict which eigenvalue will be obtained. Instead, the probabilities概率 for obtaining various eigenvalues of $\hat{B}$ can be predicted.
 
