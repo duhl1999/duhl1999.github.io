@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-14 10:37:11
+update: 2021-01-15 19:51:11
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -310,3 +310,142 @@ The general solution to time-dependent Schrodinger equation is:
 $$\Psi(x,t)=\sum\limits_n C_n \psi_n(x) e^{-iE_nt/\hbar}$$
 
 
+# Chapter 3: Exact精确 Energy and Wave Functions for Simple Systems
+
+## Section 1: A particle in 1D Box
+
+The potential is 0 inside the 1D infinite potential box, and is infinite outside the box. 一维无限深势阱
+$$V(x)=0,x \in [0,a]; \infty, else$$
+
+Hamiltonian:
+$$\hat{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x)$$
+Schrodinge equation:
+$$\frac{d^2\psi}{dx^2}+\frac{2mE}{\hbar^2}\psi(x)=0 \quad x \in [0,a]$$
+
+let $k=\frac{(2mE)^{1/2}}{\hbar}=\frac{2\pi (2mE)^{1/2}}{h}$
+
+so, Schrodinge equation:
+$$\frac{d^2\psi}{dx^2}+k^2 \psi(x)=0 \quad x \in [0,a]$$
+
+The general solution is(with the Euler's formula):
+$$\psi(x)=Acos \frac{(2mE)^{1/2}}{\hbar} x+Bsin \frac{(2mE)^{1/2}}{\hbar} x$$
+
+The boundary conditions(Continuity): $\psi(0)=\psi(a)=0$
+
+$$\psi(0)=A=0$$
+$$\psi(a)=Bsin \frac{(2mE)^{1/2}}{\hbar} a=0$$
+
+Therefore:
+$$\frac{n\pi}{a}=\frac{2\pi (2mE)^{1/2}}{h}$$
+$$E_n=\frac{h^2n^2}{8ma^2} \qquad n=1,2,3,...$$
+
+The energies of the particle are said to be **quantized** and the interger $n$ is called a **quantum number**量子数
+
+如果要求出$B$的值，可以根据波函数的归一化条件:
+$$B=\sqrt{a/2}$$
+$$\psi(x)=\sqrt{a/2} sin \frac{(2mE)^{1/2}}{\hbar} x$$
+
+
+随着能级升高，粒子行为逐渐趋于经典粒子：**The correspondence principle**  
+Quantum mechanical results and classical mechanical results tend to agree in the limit of large quantum numbers (classical limit).
+
+## Section 2: Applications and Extensions扩展 of a Partcle in a Box
+
+### explaining the sbsorption spectrum of lineat conjugated hydrocarbons
+Absorption Spectrum of Conjugated Hydrocarbons直链共轭烯烃吸收光谱：  
+the free-electron model is quite successful at explaining the sbsorption吸收 spectrum光谱 of lineat线性 conjugated hydrocarbons共轭烯烃
+
+Butadiene丁二烯：$H_2C=CHCH=CH_2$  
+Four π electrons move along a straight line whose length is the distance between the two H atom at both ends, L=555pm.
+
+According to the Pauli Exclusion principle: The for π electrons fill the first two levels.
+
+Upon radiation with UV light, the system will make a transition from the $n=2$ state to the $n=3$ state with the energy:
+$$\Delta E= \frac{h^2}{8m_8a^2}(3^2-2^2)=9.78 \times 10^{-19}J$$
+$$\tilde{\nu}=\frac{\Delta E}{hc}=4.92 \times 10^4 cm^{-1}$$
+Butadiene has an absorption band at $4.61 \times 10^4 cm^{-1}$
+
+###  The Average Momentum of a Particle in a Box is Zero
+The everage value of the physucal quantity a (its quantum-mechanical operator is $\hat{A}$)
+$$< a > = \int \psi_n^*(x) \hat{A} \psi(x)dx$$
+
+Therefore, the average momentum of a particle in a box is:
+$$< p >= \int_0^a [(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}](-i\hbar\frac{d}{dx})[(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}]dx=-i\hbar\frac{2\pi n}{a^2}\int_0^a sin\frac{n\pi x}{a}cos\frac{n\pi x}{a}dx=0$$
+Thus, a particle in a box is equally likely to be moving in either direction.
+
+### Verification of the Heisenberg Uncertainty Principle
+
+$$< p^2 >= \int_0^a [(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}](-\hbar^2 \frac{d^2}{dx^2})[(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}]dx= \frac{n^2 \pi^2 \hbar^2}{a^2}$$
+
+The variance方差 of the momentum of a particle in a box is:
+$$\sigma_p^2 =< p^2 > - < p >^2= \frac{n^2 \pi^2 \hbar^2}{a^2}$$
+$$\sigma_p=\frac{n\pi \hbar}{a}$$
+
+$$< x > = \frac{2}{a}\int_0^a xsin^2\frac{n\pi x}{a}dx = \frac{a}{a} \qquad < x^2 > = \frac{2}{a}\int_0^a x^2 sin^2\frac{n\pi x}{a}dx = \frac{a}{a}$$
+
+$$\sigma_x^2 =< x^2 > - < x >^2= (\frac{a}{2\pi n})^2(\frac{\pi^2 n^2}{3}-2)$$
+
+$$\sigma_x \sigma_p=\frac{\hbar}{2}(\frac{\pi^2 n^2}{3}-2)^{1/2} > \frac{\hbar}{2}$$
+
+### The Problem of a particle in a 3D Box is a Simple Extension of the 1D Case
+
+Hamilltonian for a 3D box: 
+$$\hat{H}=-\frac{\hbar^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})+V(x,y,z)$$
+Thus, the Schrodinger equation for the system:
+$$-\frac{\hbar^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})=E\psi(x,y,z) \qquad x \in [0,a];y \in [0,b];z \in [0,c]$$
+
+The wave function satisfies the boundary conditions:
+$$\psi(0,y,z)=\psi(a,y,z)=0$$
+$$\psi(x,0,z)=\psi(x,b,z)=0$$
+$$\psi(x,y,0)=\psi(x,y,c)=0$$
+
+We use the method of sparation of variables变量分离 to solove the equation: 
+$\psi(x,y,z)=X(x)Y(y)Z(z)$
+$$\frac{1}{X(x)}\frac{\partial^2 X}{\partial x^2}+\frac{1}{Y(y)}\frac{\partial^2 Y}{\partial y^2}+\frac{1}{Z(z)}\frac{\partial^2 Z}{\partial z^2}+\frac{2m}{\hbar}E=0$$
+It can be concerted into three equations:
+$$\frac{1}{X(x)}\frac{\partial^2 X}{\partial x^2}=-\frac{2m}{\hbar}E_x$$
+$$\frac{1}{Y(y)}\frac{\partial^2 Y}{\partial y^2}=-\frac{2m}{\hbar}E_y$$
+$$\frac{1}{Z(z)}\frac{\partial^2 Z}{\partial z^2}=-\frac{2m}{\hbar}E_z$$
+Where$E=E_x+E_y+E_z$
+
+Same as 1D to solve the equation:
+$$\psi_{n_x n_y n_z}=(\frac{8}{abc})^{1/2} sin\frac{n_x\pi x}{a} sin\frac{n_y\pi y}{b} sin\frac{n_z\pi z}{c} \qquad n_x,n_y,n_z=1,2,3,...$$
+$$E_{n_x n_y n_z}=\frac{h^2}{8m}(\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\frac{n_z^2}{c^2})$$
+
+For a particle in a cube $(a=b=c)$:
+$$E_{n_x n_y n_z}=\frac{h^2}{8ma^2}(n_x^2+n_y^2+n_z^2)$$
+
+量子数不同，但是能级相同——能级简并  
+Degeneracy 简并度
+
+### A Particle in a Box with Different Potential Energies in Three Different Regions 
+$$V(x)=V_0,x \in [0,a]; 0, else$$
+
+If $E>V_0$, the solution to the Schrodinger Equation:
+$$\frac{d^2\psi}{dx^2}+\frac{2m}{\hbar}[E-V(x)]\psi(x)=0$$
+let $k_1=\sqrt{\frac{2mE}{\hbar^2}} \qquad k_2=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}$, in each region is:
+$$\psi_1(x)=Ae^{ik_1x}+Be^{-ik_1x} \qquad x<0$$
+$$\psi_2(x)=Ce^{ik_2x}+De^{-ik_2x} \qquad 0<x<a$$
+$$\psi_3(x)=Ee^{ik_1x}+Fe^{-ik_1x} \qquad x>a$$
+
+exclude the situation of the particle coming from large position values of x:
+$$F=0$$
+
+The boundary conditions:$\psi(x)$ and $d\psi / dx$ must be continuous at $x=0$ and $x=a$:
+$$B=\frac{2i(k_1^2-k_2^2)sin(k_2a)}{(k_1-k_2)^2e^{ik_2a}-(k_1+k_2)^2e^{-ik_2a}}A$$
+$$E=\frac{4k_1 k_2 e^{-ik_1a}}{(k_1+k_2)^2e^{-ik_2a}-(k_1-k_2)^2e^{ik_2a}}A$$
+
+So we transmission coefficient, the probability the particle will get through the barrrier透射系数, is:
+$$T=|\frac{E}{A}|^2=\frac{4k_1^2k_2^2}{(k_1-k_2)^2sin^2(k_2a)+4k_1^2k_2^2}$$
+
+and the refrection coefficient反射系数, is:
+$$R=|\frac{B}{A}|^2=\frac{(k_1-k_2)^2sin^2(k_2a)}{(k_1-k_2)^2sin^2(k_2a)+4k_1^2k_2^2}=1-T$$
+**If the energy $E$ is greater than the barrier height, the particle will be reflected to some extent.**
+
+If $E<V_0$
+$$k_1=\sqrt{\frac{2mE}{\hbar^2}} \qquad k_2=\sqrt{\frac{2m(V_0-E)}{\hbar^2}}$$
+
+$$T=|\frac{E}{A}|^2=\frac{4}{4+\frac{(k_1^2+k_2^2)^2}{k_1^2 k_2^2}sinh^2 k_2 a}$$
+**If the energy $E$ is less than the barrier height, the particle will have a chance to get through the barrier.**
+
+"隧穿效应"
