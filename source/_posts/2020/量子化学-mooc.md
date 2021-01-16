@@ -470,6 +470,7 @@ $$\vec{r_1}=\vec{R}-\frac{m_2}{m_1+m_2}\vec{r} \qquad \vec{r_2}=\vec{R}+\frac{m_
 
 This represents a transformation of coordinates from $x_1,y_1,z_1,x_2,y_2,z_2$ to {x,y,z,X,Y,Z}
 
+The kinetic energy动能 of the two particles:
 
 
 注：$\dot{\vec{R}}=\frac{d\vec{r}}{dt}$
