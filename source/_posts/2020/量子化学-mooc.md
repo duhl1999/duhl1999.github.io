@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-15 19:51:11
+update: 2021-01-16 18:21:11
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -449,3 +449,107 @@ $$T=|\frac{E}{A}|^2=\frac{4}{4+\frac{(k_1^2+k_2^2)^2}{k_1^2 k_2^2}sinh^2 k_2 a}$
 **If the energy $E$ is less than the barrier height, the particle will have a chance to get through the barrier.**
 
 "隧穿效应"
+
+## Section 3: Rigid Rotator and Rotational Spectroscopy of Diatomic Molecules双原子分子
+
+For a diatomic molecule with two interacting actoms  
+particle 1: $\vec{r_1}(x_1,y_1,z_1)$  
+particle 2: $\vec{r_2}(x_2,y_2,z_2)$
+
+the Hamiltonian for its nuclear motion核运动 can be disctibed as
+$$\hat{H}=-\frac{\hbar^2}{2m_1}\nabla_1^2-\frac{\hbar^2}{2m_2}\nabla_2^2+V(x_1,y_1,z_1,x_2,y_2,z_2)$$
+
+Assume the center of mass of this two-particle system is $\vec{R}$: $C(X,Y,Z)$
+$$\vec{R}=\frac{m_1 \vec{r_1}+m_2 \vec{r_2}}{m_1 + m_2}$$
+
+On the other hand, the ralative motion is described by $\vec{r}$: $(x,y,z)$
+$$\vec{r}=\vec{r_2}-\vec{r_1}$$
+
+so:
+$$\vec{r_1}=\vec{R}-\frac{m_2}{m_1+m_2}\vec{r} \qquad \vec{r_2}=\vec{R}+\frac{m_1}{m_1+m_2}\vec{r}$$
+
+This represents a transformation of coordinates from $x_1,y_1,z_1,x_2,y_2,z_2$ to {x,y,z,X,Y,Z}
+
+
+
+注：$\dot{\vec{R}}=\frac{d\vec{r}}{dt}$
+
+Let $C_1=\frac{-m_2}{m_1+m_2}$, $C_2=\frac{m_1}{m_1=m_2}$, then
+$$T=\frac{1}{2}m_1[\dot{\vec{R}} \cdot \dot{\vec{R}} + \dot{\vec{R}} \cdot \dot{\vec{r}} \cdot C_1 + C_1 \cdot \dot{\vec{r}} \cdot \dot{\vec{R}} +\dot{\vec{r}} \cdot \dot{\vec{r}} \cdot C_1^2] + \frac{1}{2}m_2[\dot{\vec{R}} \cdot \dot{\vec{R}} + \dot{\vec{R}} \cdot \dot{\vec{r}} \cdot C_2 + C_2 \cdot \dot{\vec{r}} \cdot \dot{\vec{R}} +\dot{\vec{r}} \cdot \dot{\vec{r}} \cdot C_2^2]$$
+$$=\frac{1}{2}(m_1 + m_2)|\dot{\vec{R}}|^2 + (m_1C_1+m_2C_2)\dot{\vec{R}} \cdot \dot{\vec{r}} + \frac{1}{2}(m_1 C_1^2 + m_2 C_2^2)|\dot{\vec{r}}|^2 $$
+
+Let $M=m_1 + m_2$ be total mass, define the reduced mass $\mu = \frac{m_1 m_2}{m_1 +m_2}$ then,
+$$T=\frac{1}{2}M |\dot{\vec{R}}|^2+\frac{1}{2} \mu |\dot{\vec{r}}|^2$$
+
+$1/2M |\dot{\vec{R}}|^2$: the kinetic energy of translational motion平动动能 vibration  
+$1/2 \mu |\dot{\vec{r}}|^2$: the kinetic energy of relative motion相对运动动能 rotation 
+
+Hence, the total Hamiltonian is now reduced as
+$$\hat{H}=\hat{H_{tr}}+\hat{H_{int}}$$
+$$\hat{H_{tr}}=-\frac{\hbar^2}{2M}\nabla_R^2, \qquad \hat{H_{int}}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z) $$
+
+Thus, the total wave functions and energies have forms
+$$\Psi(X,Y,Z,x,y,z)=\Lambda(X,Y,Z)\psi(x,y,z) \qquad E=E_{tr}+E_{vr}$$
+
+### translational motion the mass center behaves like a free particle, $V=0$
+$$[-\frac{\hbar^2}{2M}\nabla_R^2] \Lambda(X,Y,Z)= E_{tr} \Lambda(X,Y,Z)$$
+
+$$\Lambda(X,Y,Z)=Ae^{i\vec{K}\cdot \vec{R}}$$
+$$E_{tr}=\frac{K^2 \hbar^2}{2M} \geq 0$$
+K取值不受限制，因此$E_{tr}$是连续的，不是量子化的
+
+### the Schrodinger Equation for the Relative Motion
+$$[-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)] \psi(x,y,z) = E_{vr} \psi(x,y,z)$$
+
+The above equations also hold true for other two-partice system like a hydrogen atom:
+$$M=m_e + m_p \qquad \mu=\frac{m_e m_p}{m_e + m_p}$$
+
+In spherical coordinates,
+$$\hat{H_{int}}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)=-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{r^2 \hbar^2}\hat{L}^2)+V(r)$$
+$$\hat{L}^2=-\hbar^2 [\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]$$
+
+For a two-particle rigid rotor(刚性转子), we mean: $|\vec{r}|=r_e(constant)$, $V(x,y,z)=V(r)=0$
+$$-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})=0$$
+Thus, the Hamiltonian operator fo the rotation is defind as
+$$\hat{H_{rot}}=\frac{\hat{L}^2}{2 \mu r_e^2}=\frac{\hat{L}^2}{2I} \qquad I=\mu r_e^2$$
+here $I$ is the moment of inertia(转动惯量)
+
+***
+角动量平方算符$\hat{L}^2$的本征方程：
+$$\hat{L}^2 Y_J^m(\theta,\phi)=\hbar^2J(J+1) Y_J^m(\theta,\phi)$$
+The eigenvalues本征值:
+$$L^2=\hbar^2J(J+1)$$
+$$J=0,1,2,... \qquad m=0, \pm1, \pm2,...,\pm J$$
+***
+
+### The Energy Levels of a Rigid Rotator刚性转子
+The schridubger equation for a rigid rotator is:
+$$\frac{\hat{L}^2}{2I}Y(\theta,\phi)=-\frac{\hbar^2}{2I} [\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]Y(\theta,\phi)=E_{rot}Y(\theta,\phi)$$
+
+The spherical harmonics球谐函数 $Y_J^m(\theta,\phi)$ are the eigenfunctions, and the allowed rotational energies are easy to obtain:
+$$\hat{H}_{rot}Y(\theta,\phi)=E_{rot}Y(\theta,\phi) \qquad J=0,1,2,... \quad m=0,\pm1,\pm2...,\pm J$$
+$$E_{rot}=\frac{\hbar^2}{2I}J(J+1) \qquad J=0,1,2,...$$
+
+we obtain a set of discrete energy levels离散能级 for the rotational energies转动能, and we can also notice:  
+(1) $E_{rot}=0(J=0)$ means no zero-point rotational energy  
+(2) Each energy level has a degeneracy $g_j=2J+1$ since for each value of $J$ there are $(2J+1)$ values of m($-J$ to $J$)
+
+### Rotational Spectroscopy pf Diatomic Molecules
+Electromagnetic radiation can cause a rigid rotator to undergo transitions from one state to another
+
+
+**Selection rules** 跃迁选率：满足要求才能发生跃迁:  
+(1) These transitions occur between adjacent states相邻状态, or $\Delta J=\pm 1$  
+(2) The molecule must alse possess a permanent dipole moment分子拥有永久偶极矩
+
+$$\Delta E=E_{J+1}-E_J=\frac{\hbar^2}{I}(J+1)$$
+Since $\Delta E=h\nu$
+$$\nu=\frac{h}{4\pi^2 I}(J+1) \qquad J=0,1,2,...$$
+
+rotational constant of the molecule(转动常数Hz) $B=\frac{h}{8\pi^2 I}$:
+$$\nu=2B(J+1) \qquad J=0,1,2,...$$
+
+If the transition frequency is expressed in terms of wave numbers 跃迁频率用波数表示：
+$$\tilde{\nu}=2\tilde{B}(J+1) \qquad J=0,1,2,... \qquad \tilde{B}=\frac{h}{8\pi^2 cI}$$
+
+可以看出跃迁频率是等差数列，因此跃迁光谱是等间距谱线
