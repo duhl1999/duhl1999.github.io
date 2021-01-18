@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-16 18:34:40
+update: 2021-01-18 19:24:40
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -554,3 +554,30 @@ If the transition frequency is expressed in terms of wave numbers 跃迁频率�
 $$\tilde{\nu}=2\tilde{B}(J+1) \qquad J=0,1,2,... \qquad \tilde{B}=\frac{h}{8\pi^2 cI}$$
 
 可以看出跃迁频率是等差数列，因此跃迁光谱是等间距谱线
+
+## Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程
+
+$$\hat{H}_{int}=-\frac{\hbar^2}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})+\frac{1}{2\mu r^2}\hat{L}^2+V(r)$$
+$$\hat{H}_{int}\Psi(r,\theta,\phi)=E_{vr}\Psi(r,\theta,\phi)$$
+
+Let $\Psi(r,\theta,\phi)=\psi(r)Y_J^m(\theta,\phi)$,   
+With $\hat{L}^2Y_J^m(\theta,\phi)=J(J+1)\hbar^2 Y_J^m(\theta,\phi)$  
+Let $f(r)=r\psi(r)$
+$$\frac{\partial^2 \psi(r)}{\partial r^2}+\frac{2}{r}\frac{\partial \psi(r)}{\partial r}=\frac{1}{r} \frac{\partial^2 f(r)}{\partial r^2}$$
+
+The equation can be simplified as:
+$$-\frac{\hbar^2}{2\mu}\frac{d^2f(r)}{dr^2}+\frac{J(J+1) \hbar^2}{2\mu r^2}f(r)+V(r)f(r)=E_{vr}f(r)$$
+
+Let $r=r_e+x$, $\chi(x)=f(r_e+x)=r\psi(r)$
+$$-\frac{\hbar^2}{2\mu}\frac{d^2\chi(x)}{dx^2}+\frac{J(J+1) \hbar^2}{2\mu (x+r_e)^2}\chi(x)+V(x+r_e)\chi(x)=E_{vr}\chi(x)$$
+
+When $x<<r_e$
+$$\frac{J(J+1) \hbar^2}{2\mu (x+r_e)^2} \approx \frac{J(J+1) \hbar^2}{2\mu r_e^2}=\frac{J(J+1)\hbar^2}{2I}=E_{rot}$$
+$$-\frac{\hbar^2}{2\mu}\frac{d^2\chi(x)}{dx^2}+V(x+r_e)\chi(x)=E_{vib}\chi(x) \qquad E_{vr}=E_{vib}+E_{rot}$$
+
+简谐近似$V(x+r_e) \approx \frac{1}{2}kx^2$：
+$$[-\frac{\hbar^2}{2\mu}\frac{d^2}{dx^2}+\frac{1}{2}kx^2]\chi(x)=E_{vib}\chi(x)$$
+
+**It can be shown that the vibrational振动 Hamiltonian of a diatomic molecule obtained above is exactly the same as that of the harmonic oscillator简谐振子**
+
+
