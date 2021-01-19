@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-18 19:24:40
+update: 2021-01-19 22:48:40
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -579,5 +579,64 @@ $$-\frac{\hbar^2}{2\mu}\frac{d^2\chi(x)}{dx^2}+V(x+r_e)\chi(x)=E_{vib}\chi(x) \q
 $$[-\frac{\hbar^2}{2\mu}\frac{d^2}{dx^2}+\frac{1}{2}kx^2]\chi(x)=E_{vib}\chi(x)$$
 
 **It can be shown that the vibrational振动 Hamiltonian of a diatomic molecule obtained above is exactly the same as that of the harmonic oscillator简谐振子**
+
+## Section 5: Infrared Spectrum of Diatomic Molecules  双原子分子红外振动光谱
+
+### The energy levels of a Harmonic Oscillator
+$$-\frac{\hbar^2}{2\mu}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E \psi(x) \qquad V(x)=\frac{1}{2}kx^2$$
+Transformed into the second-order differential equation:
+$$\frac{d^2\psi}{dx^2}+\frac{2u}{\hbar^2}(E-\frac{1}{2}kx^2)\psi(x)=0 \qquad -\infty< x < +\infty$$
+
+With **the power series method**幂级数法, solve the equation:
+$$E_n=h\nu(n+\frac{1}{2}) \qquad n=0,1,2,... \quad \nu=\frac{1}{2\pi}(\frac{k}{\mu})^{1/2}$$
+
+The groundd state energy (the state with $n=0$) is $E=\frac{1}{2}h\nu$, called **zero-point energy**
+
+vibrational transitions振动 of diatomic molecules occur is the infrared region红外区域
+
+Selection rules:  
+(1) Transitions occur only between adjacent states. 相邻能级之间  
+(2) The dipole moment of the molecule must change as the molecule vibrates.振动引起偶极矩改变
+
+For ansorption to occur:
+$$\Delta E=E_{n+1}-E_n=\hbar(\frac{k}{\nu})^{1/2}$$
+Thus, the observed frequency of the radiation absorbed辐射频率 is:
+$$\nu_{obs}=\frac{1}{2\pi}(\frac{k}{\mu})^{1/2}$$
+$$\tilde{\omega}=\frac{1}{2\pi}(\frac{k}{\mu})^{1/2} \quad (cm^{-1})$$
+
+### The Wave Function of the Harmonic Oscillator一维谐振子
+$$\psi_n(x)=N_n H_n (\alpha^{1/2}x)e^{\alpha x^2/2} \qquad \alpha=(\frac{k\mu}{\hbar^2})^{1/2}$$
+The normalization constant归一化系数 $N_n=\frac{1}{(2^n n!)^{1/2}}(\frac{\alpha}{\pi})^{1/4}$
+Hermite polynomials厄米多项式: $H_n(\alpha^{1/2}x)$
+
+### Rotational Transitions Accompany Vibrational Transitions
+振动能级差大，转动能级差小。 相当于同一个振动态具有不同的转动态
+
+within the rigid rotator-harmonic oscillator approximation刚性转子和简谐振子近似, the rotational and vibrational energy(Hz) of a diatomic molecule is given by
+$$E_{n.J}=(n+\frac{1}{2})\nu+BJ(J+1) \qquad n=0,1,2,... \quad J=0,1,2,...$$
+$$\tilde{E}_{n,J}=(n+\frac{1}{2})\tilde{\nu}+\tilde{B}J(J+1) \qquad \tilde{\nu}=\frac{1}{2\pi c}(\frac{k}{\mu})^{1/2} \quad \tilde{B}=\frac{h}{8\pi^2 cI}$$
+
+跃迁时，可能发生：  
+(1) 跃迁到更高振动态($\Delta n=+1$)的更高转动态($\Delta J=+1$)——光谱R支  
+(2) 跃迁到更高振动态($\Delta n=+1$)的更低转动态($\Delta J=-1$)——光谱P支  
+
+### The Vibrations of Polyatomic Molecules Are Represented by Normal Coordinates多原子分子振动光谱
+
+|   |Linear线性分子|Nolinear非线性|
+|---|---|---|
+| **Translational** degree of freedom平动自由度 | 3 | 3 |
+| **Rotational** degrees of freedom转动自由度 | 2 | 3 |
+| **Vibrational** degrees of freedom振动自由度 | 3N-5 | 3N-6 |
+
+The potential energy of molecule is a function of vibrational coordinates ($3N-5$ or $3N-6$)
+$$\Delta V=V(x_1,x_2,...x_{N_{vib})}-V(0,0,...,0)=\frac{1}{2}\sum\limits_{j=1}^{N_{vib}}F_jQ_j^2$$
+The new coordinates are called **normal coordinates or normal modes**简正坐标
+
+Then the vibrational Hamiltonian operator is :
+$$\hat{H}_{vib}=-\sum\limits_{j=1}^{N_{vib}}\frac{\hbar^2}{2\mu_j}\frac{d^2}{dQ_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}}F_jQ_j^2$$
+
+每一项对应一个简谐振子的哈密顿，振动波函数可以写成每个简谐振子波函数相乘
+$$\psi_{vib}(Q_1,Q_2,...,Q_{vib})=\psi_{vib,1}(Q_1)\psi_{vib,2}(Q_2)...\psi_{vib,n}(Q_n)$$
+$$E_{vib}=\sum\limits_{i=1}^{N_{vib}}hv_i(\nu_i+\frac{1}{2}) \qquad each \quad \nu_i=0,1,2,...$$
 
 
