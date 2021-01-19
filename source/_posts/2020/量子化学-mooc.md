@@ -632,8 +632,8 @@ The potential energy of molecule is a function of vibrational coordinates ($3N-5
 $$\Delta V=V(x_1,x_2,...x_{N_{vib})}-V(0,0,...,0)=\frac{1}{2}\sum\limits_{j=1}^{N_{vib}}F_jQ_j^2$$
 The new coordinates are called **normal coordinates or normal modes**简正坐标
 
-Then the vibrational Hamiltonian operator is :
-$$\hat{H}_{vib}=-\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$
+Then the vibrational Hamiltonian operator is:
+$$\hat{H_{vib}} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$
 
 每一项对应一个简谐振子的哈密顿，振动波函数可以写成每个简谐振子波函数相乘
 $$\psi_{vib}(Q_1,Q_2,...,Q_{vib})=\psi_{vib,1}(Q_1)\psi_{vib,2}(Q_2)...\psi_{vib,n}(Q_n)$$
