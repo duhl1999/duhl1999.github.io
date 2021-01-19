@@ -580,7 +580,7 @@ $$[-\frac{\hbar^2}{2\mu}\frac{d^2}{dx^2}+\frac{1}{2}kx^2]\chi(x)=E_{vib}\chi(x)$
 
 **It can be shown that the vibrational振动 Hamiltonian of a diatomic molecule obtained above is exactly the same as that of the harmonic oscillator简谐振子**
 
-## Section 5: Infrared Spectrum of Diatomic Molecules  双原子分子红外振动光谱
+## Section 5: Infrared Spectrum of Diatomic Molecules  双原子分子红外光谱
 
 ### The energy levels of a Harmonic Oscillator
 $$-\frac{\hbar^2}{2\mu}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E \psi(x) \qquad V(x)=\frac{1}{2}kx^2$$
