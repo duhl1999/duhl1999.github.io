@@ -629,7 +629,7 @@ $$\tilde{E}_{n,J}=(n+\frac{1}{2})\tilde{\nu}+\tilde{B}J(J+1) \qquad \tilde{\nu}=
 | **Vibrational** degrees of freedom振动自由度 | 3N-5 | 3N-6 |
 
 The potential energy of molecule is a function of vibrational coordinates ($3N-5$ or $3N-6$)
-$$\Delta V=V(x_1,x_2,...x_{N_{vib})}-V(0,0,...,0)=\frac{1}{2}\sum\limits_{j=1}^{N_{vib}}F_jQ_j^2$$
+$$\Delta V=V(x_1,x_2,...x_{N_{vib}})-V(0,0,...,0)=\frac{1}{2}\sum\limits_{j=1}^{N_{vib}}F_jQ_j^2$$
 The new coordinates are called **normal coordinates or normal modes**简正坐标
 
 Then the vibrational Hamiltonian operator is:
