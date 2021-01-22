@@ -1,5 +1,5 @@
 ---
-title: resources
+title: RESOURCES
 date: 2020-12-30 12:43:03
 type: "resources"
 ---
