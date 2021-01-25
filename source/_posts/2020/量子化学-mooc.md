@@ -486,8 +486,8 @@ $1/2M |\dot{\vec{R}}|^2$: the kinetic energy of translational motion平动动能
 $1/2 \mu |\dot{\vec{r}}|^2$: the kinetic energy of relative motion相对运动动能 rotation 
 
 Hence, the total Hamiltonian is now reduced as
-$$\hat{H}=\hat{H_{tr}}+\hat{H_{int}}$$
-$$\hat{H_{tr}}=-\frac{\hbar^2}{2M}\nabla_R^2, \qquad \hat{H_{int}}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z) $$
+$$\hat{H}=\hat{H} _{tr}+\hat{H} _{int}$$
+$$\hat{H} _{tr}=-\frac{\hbar^2}{2M}\nabla_R^2, \qquad \hat{H} _{int}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z) $$
 
 Thus, the total wave functions and energies have forms
 $$\Psi(X,Y,Z,x,y,z)=\Lambda(X,Y,Z)\psi(x,y,z) \qquad E=E_{tr}+E_{vr}$$
@@ -506,13 +506,13 @@ The above equations also hold true for other two-partice system like a hydrogen 
 $$M=m_e + m_p \qquad \mu=\frac{m_e m_p}{m_e + m_p}$$
 
 In spherical coordinates,
-$$\hat{H_{int}}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)=-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{r^2 \hbar^2}\hat{L}^2)+V(r)$$
+$$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)=-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{r^2 \hbar^2}\hat{L}^2)+V(r)$$
 $$\hat{L}^2=-\hbar^2 [\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]$$
 
 For a two-particle rigid rotor(刚性转子), we mean: $|\vec{r}|=r_e(constant)$, $V(x,y,z)=V(r)=0$
 $$-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})=0$$
 Thus, the Hamiltonian operator fo the rotation is defind as
-$$\hat{H_{rot}}=\frac{\hat{L}^2}{2 \mu r_e^2}=\frac{\hat{L}^2}{2I} \qquad I=\mu r_e^2$$
+$$\hat{H} _{rot}=\frac{\hat{L}^2}{2 \mu r_e^2}=\frac{\hat{L}^2}{2I} \qquad I=\mu r_e^2$$
 here $I$ is the moment of inertia(转动惯量)
 
 ***
@@ -558,7 +558,7 @@ $$\tilde{\nu}=2\tilde{B}(J+1) \qquad J=0,1,2,... \qquad \tilde{B}=\frac{h}{8\pi^
 ## Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程
 
 $$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})+\frac{1}{2\mu r^2}\hat{L}^2+V(r)$$
-$$\hat{H} _{int}\Psi(r,\theta,\phi)=E_{vr}\Psi(r,\theta,\phi)$$
+$$\hat{H} _{int} \Psi(r,\theta,\phi)=E _{vr}\Psi(r,\theta,\phi)$$
 
 Let $\Psi(r,\theta,\phi)=\psi(r)Y_J^m(\theta,\phi)$,   
 With $\hat{L}^2Y_J^m(\theta,\phi)=J(J+1)\hbar^2 Y_J^m(\theta,\phi)$  
@@ -633,7 +633,7 @@ $$\Delta V=V(x_1,x_2,...x_{N_{vib}})-V(0,0,...,0)=\frac{1}{2}\sum\limits_{j=1}^{
 The new coordinates are called **normal coordinates or normal modes**简正坐标
 
 Then the vibrational Hamiltonian operator is:
-$$\hat{H_{vib}} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$
+$$\hat{H} _{vib} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$
 
 每一项对应一个简谐振子的哈密顿，振动波函数可以写成每个简谐振子波函数相乘
 $$\psi_{vib}(Q_1,Q_2,...,Q_{vib})=\psi_{vib,1}(Q_1)\psi_{vib,2}(Q_2)...\psi_{vib,n}(Q_n)$$
