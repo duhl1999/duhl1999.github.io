@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-19 22:48:40
+update: 2021-01-25 15:12:40
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -638,5 +638,49 @@ $$\hat{H_{vib}} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2
 每一项对应一个简谐振子的哈密顿，振动波函数可以写成每个简谐振子波函数相乘
 $$\psi_{vib}(Q_1,Q_2,...,Q_{vib})=\psi_{vib,1}(Q_1)\psi_{vib,2}(Q_2)...\psi_{vib,n}(Q_n)$$
 $$E_{vib}=\sum\limits_{i=1}^{N_{vib}}hv_i(\nu_i+\frac{1}{2}) \qquad each \quad \nu_i=0,1,2,...$$
+
+
+# Chapter 4: The Hydrogen Atom
+
+## Section 1: Schrodinger Equation for the Hydrogen Atom
+
+### Hamiltonian Operator for the Hydrogen Atom
+
+$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 +V(r) \qquad V(r)=-\frac{e^2}{4\pi \epsilon_0 r}$$
+
+In spherical coordinates求极坐标, the Laplaceian operator is:
+$$\nabla^2=\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2 \qquad \hat{L}^2=-\hbar^2[\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta} \frac{\partial^2}{\partial \phi^2}]$$
+
+The corresponding Schrodinger equation in spherical coordinate is:
+$$-\frac{\hbar^2}{2m_e}[\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2]+V(r)\psi=E\psi$$
+
+The operators $\hat{H}$ and $\hat{L}^2$ commute对易 (simultaneous eigenfunctions)
+The equation can be turner into the radial equation:
+$$\frac{\hbar}{2m_e r^2}\frac{d}{dr}(r^2 \frac{dR}{dr})+[\frac{\hbar^2 l(l+1)}{2m_e r^2}+V(r)-E]R_{nl}(r)=0$$
+
+Solved, find the energu must be quantized according to:
+$$E_n=-\frac{e^2}{8\pi \epsilon_0 a_0 n^2} \quad n=1,2,3...$$
+Bohr radius波尔半径: $a_0=\frac{4\pi \epsilon_0 \hbar^2}{m_e e^2}$
+
+The radial wave functions径向波函数, depending on n and l:
+$$R_{nl}(r)=(\frac{(n-l-1)!}{2n[(n+l)!]^3})^{1/2} (\frac{2}{na_0})^{l+3/2}r^l e^{-r/na_0} L_{n+1}^{2l+1}(\frac{2r}{na_0}) \quad l=0,1,2,...,n-1$$
+
+The $L_{n+1}^{2l+1}$ are called **associated Laguerre polynomials**.
+
+球谐函数与径向函数相乘得到完整版波函数:
+$$\Psi_{nlm_l}(r,\theta,\phi)=R_{nl}(r)Y_l^{m_l}(\theta,\phi)$$
+$$n=1,2,...; \qquad l=0,1,...,n-1; \qquad m_l=0,\pm 1,...,\pm l$$
+
+完备的波函数形成了一个正交归一的集合，两个不同的波函数内积等于0
+
+
+### Quantum Numbers $n$, $l$, $m_l$
+Three mutually commuting operators: $\hat{H}$, $\hat{L}^2$, $\hat{L_z}$两两对易，  
+$\Psi_{nlm_l}(r,\theta,\phi)$ are the simultaneous eigenfunctions of these operators氢原子波函数使他们共同的本征函数
+$$\hat{H}\Psi_{nlm_l}(r,\theta,\phi)=E_n\Psi_{nlm_l}(r,\theta,\phi)$$
+$$\hat{L}^2\Psi_{nlm_l}(r,\theta,\phi) = l(l+1)\hbar^2\Psi_{nlm_l}(r,\theta,\phi) \qquad l=0,1,2,...,n-1$$
+$$\hat{L_z}\Psi_{nlm_l}(r,\theta,\phi)=m_l\hbar\Psi_{nlm_l}(r,\theta,\phi) \qquad m_l=0,\pm 1,..., \pm l$$
+
+
 
 
