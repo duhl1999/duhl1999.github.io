@@ -528,8 +528,9 @@ The schridubger equation for a rigid rotator is:
 $$\frac{\hat{L}^2}{2I}Y(\theta,\phi)=-\frac{\hbar^2}{2I} [\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]Y(\theta,\phi)=E_{rot}Y(\theta,\phi)$$
 
 The spherical harmonics球谐函数 $Y_J^m(\theta,\phi)$ are the eigenfunctions, and the allowed rotational energies are easy to obtain:
-$$\hat{H} _{rot}Y(\theta,\phi)=E _{rot}Y(\theta,\phi) \qquad J=0,1,2,... \quad m=0,\pm1,\pm2...,\pm J$$
-$$E _{rot}=\frac{\hbar^2}{2I}J(J+1) \qquad J=0,1,2,...$$
+$$\hat{H} _{rot} Y(\theta,\phi)=E _{rot} Y(\theta,\phi) \qquad J=0,1,2,... \quad m=0,\pm1,\pm2...,\pm J$$
+
+$$E _{rot}=\frac{\hbar^2}{2I} J(J+1) \qquad J=0,1,2,...$$
 
 we obtain a set of discrete energy levels离散能级 for the rotational energies转动能, and we can also notice:  
 (1) $E_{rot}=0(J=0)$ means no zero-point rotational energy  
