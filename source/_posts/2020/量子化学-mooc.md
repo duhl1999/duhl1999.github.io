@@ -557,8 +557,8 @@ $$\tilde{\nu}=2\tilde{B}(J+1) \qquad J=0,1,2,... \qquad \tilde{B}=\frac{h}{8\pi^
 
 ## Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程
 
-$$\hat{H}_{int}=-\frac{\hbar^2}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})+\frac{1}{2\mu r^2}\hat{L}^2+V(r)$$
-$$\hat{H}_{int}\Psi(r,\theta,\phi)=E_{vr}\Psi(r,\theta,\phi)$$
+$$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})+\frac{1}{2\mu r^2}\hat{L}^2+V(r)$$
+$$\hat{H} _{int}\Psi(r,\theta,\phi)=E_{vr}\Psi(r,\theta,\phi)$$
 
 Let $\Psi(r,\theta,\phi)=\psi(r)Y_J^m(\theta,\phi)$,   
 With $\hat{L}^2Y_J^m(\theta,\phi)=J(J+1)\hbar^2 Y_J^m(\theta,\phi)$  
