@@ -682,6 +682,20 @@ $$\hat{H}\Psi_{nlm_l}(r,\theta,\phi)=E_n\Psi_{nlm_l}(r,\theta,\phi)$$
 $$\hat{L}^2\Psi_{nlm_l}(r,\theta,\phi) = l(l+1)\hbar^2\Psi_{nlm_l}(r,\theta,\phi) \qquad l=0,1,2,...,n-1$$
 $$\hat{L_z}\Psi_{nlm_l}(r,\theta,\phi)=m_l\hbar\Psi_{nlm_l}(r,\theta,\phi) \qquad m_l=0,\pm 1,..., \pm l$$
 
+## Section 2: s Orbitals are Spherically Symmetric 球对称的s轨道
 
+### Degeneracy of hydrogen atomic level简并度
+$$n^2$$
+n=1:1($1s$)  
+n=2:4($2s$, $2p_0$, $2p_{+1}$, $2p_{-1}$)  
+...
 
+### Radial distribution function of hydrogen atom 氢原子径向分布函数
+
+在氢原子$r$到$r+dr$薄膜中找到电子的概率：
+$$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\phi)|^2 sin\theta d\theta d\phi=[R_{nl}(r)]^2 r^2 dr$$
+$P(r) = [R_{nl}(r)]^2 r^2$ is called **the radial distribution function**
+
+![avatar](figure/4-2radial_distribution_func.png)
+The number of nodes in the radial function=$n-l-1$
 
