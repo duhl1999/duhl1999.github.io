@@ -696,6 +696,26 @@ n=2:4($2s$, $2p_0$, $2p_{+1}$, $2p_{-1}$)
 $$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\phi)|^2 sin\theta d\theta d\phi=[R_{nl}(r)]^2 r^2 dr$$
 $P(r) = [R_{nl}(r)]^2 r^2$ is called **the radial distribution function**
 
-![avatar](figure/4-2radial_distribution_func.png)
-The number of nodes in the radial function=$n-l-1$
+The number of nodes节点 in the radial function $=n-l-1$  
+在节点上电子出现的概率为0
+
+### The complete $1s$ wave function
+$$\psi_{1s}=\psi_{100}(r,\theta,\phi)=R_{10}(r)Y_0^0(\theta,\phi)=(\pi a_0^3)^{-1/2}e^{-r/a_0}$$
+
+The average value of $r$:
+$$< r >_{1s}=< 100|r|100 > = \frac{4}{a_0^3} \int_0^\infty r^3e^{-2r/a_0}dr=\frac{3}{2}a_0$$
+
+In the similar way, we obtain the Potenial energy:
+$$< V(r) >_{1s}=< 100|V|100 > =\int_0^{2\pi}d\phi \int_0^\pi d\theta sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \epsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \epsilon_0 a_0}$$
+
+$$E_{1s}=-\frac{e^2}{8\pi \epsilon_0 a_0}=2V$$
+
+Show that the most probable value of $r$ ($r_{mp}$) in is state is $a_0$电子出现最大概率处:
+$$P'(r_{mp})=0 \Rightarrow r_{mp}=a_0$$
+It is **The Bohr radius**
+
+### The complete $2s$ wave function
+$$\psi_{2s}(r,\theta,\phi)=\frac{1}{\sqrt{32\pi}} (\frac{1}{a_0})^{3/2}(2-\frac{2}{a_0})e^{-r/2a_0}$$
+
+$$< r >_{2s}=< 200|r|200 > = 6a_0$$
 
