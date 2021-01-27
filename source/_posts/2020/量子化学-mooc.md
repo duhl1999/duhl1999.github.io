@@ -328,7 +328,7 @@ so, Schrodinge equation:
 $$\frac{d^2\psi}{dx^2}+k^2 \psi(x)=0 \quad x \in [0,a]$$
 
 The general solution is(with the Euler's formula):
-$$\psi(x)=Acos \frac{(2mE)^{1/2}}{\hbar} x+B\sin \frac{(2mE)^{1/2}}{\hbar} x$$
+$$\psi(x)=A\cos \frac{(2mE)^{1/2}}{\hbar} x+B\sin \frac{(2mE)^{1/2}}{\hbar} x$$
 
 The boundary conditions(Continuity): $\psi(0)=\psi(a)=0$
 
@@ -724,7 +724,7 @@ $$< r >_{2s}=< 200|r|200 > = 6a_0$$
 ### p Orbitas
 
 When $l=1$ states with $m_l \neq 0$ 球谐函数:
-$$Y_1^{+1}(\theta,\phi)=-(\frac{3}{8\pi})^{1/2} sin\theta e^{+i\theta} \qquad Y_1^{-1}(\theta,\phi)=(\frac{3}{8\pi})^{1/2} sin\theta e^{-i\theta}$$
+$$Y_1^{+1}(\theta,\phi)=-(\frac{3}{8\pi})^{1/2} \sin\theta e^{+i\theta} \qquad Y_1^{-1}(\theta,\phi)=(\frac{3}{8\pi})^{1/2} \sin\theta e^{-i\theta}$$
 
 对应能量相同。  
 若本征函数简并，那么重新组合后得到的新的本征函数，仍是哈密顿算符的本征函数：
@@ -733,7 +733,7 @@ $$p_y=\frac{i}{\sqrt{2}}(Y_1^{-1}+Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \si
 
 ***
 When $l=1$ states with $m_l=0$
-$$p_z=Y_1^0=(\frac{3}{4\pi})^{1/2}cos\theta$$
+$$p_z=Y_1^0=(\frac{3}{4\pi})^{1/2}\cos\theta$$
 
 $2p_x$与$3p_x$的差别主要在径向函数上
 
