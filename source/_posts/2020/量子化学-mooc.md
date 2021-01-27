@@ -781,5 +781,5 @@ $$E=-\frac{m_e e^4}{8 \epsilon_0^2 h^2 n^2}+\beta_B m_l B_z \qquad n=1,2,3,... \
 $\beta_B$, **A Bohr magneton**, defined as 
 $$\beta_B=\frac{|e|\hbar}{2m_e}=9.274 \times 10^{-24} J \cdot T^{-1}$$
 
-A state with given values of $n$ and $l$ is split into $2l+1$ levels by an external magnetic firld特定的nl能级，在磁场作用下可以分裂  
+A state with given values of $n$ and $l$ is split into $2l+1$ levels by an external magnetic firld特定的nl能级，在磁场作用下可以分裂，各个$m_l$的能量不再相同  
 因此$m_l$称为磁量子数
