@@ -328,12 +328,12 @@ so, Schrodinge equation:
 $$\frac{d^2\psi}{dx^2}+k^2 \psi(x)=0 \quad x \in [0,a]$$
 
 The general solution is(with the Euler's formula):
-$$\psi(x)=Acos \frac{(2mE)^{1/2}}{\hbar} x+Bsin \frac{(2mE)^{1/2}}{\hbar} x$$
+$$\psi(x)=Acos \frac{(2mE)^{1/2}}{\hbar} x+B\sin \frac{(2mE)^{1/2}}{\hbar} x$$
 
 The boundary conditions(Continuity): $\psi(0)=\psi(a)=0$
 
 $$\psi(0)=A=0$$
-$$\psi(a)=Bsin \frac{(2mE)^{1/2}}{\hbar} a=0$$
+$$\psi(a)=B\sin \frac{(2mE)^{1/2}}{\hbar} a=0$$
 
 Therefore:
 $$\frac{n\pi}{a}=\frac{2\pi (2mE)^{1/2}}{h}$$
@@ -343,7 +343,7 @@ The energies of the particle are said to be **quantized** and the interger $n$ i
 
 如果要求出$B$的值，可以根据波函数的归一化条件:
 $$B=\sqrt{a/2}$$
-$$\psi(x)=\sqrt{a/2} sin \frac{(2mE)^{1/2}}{\hbar} x$$
+$$\psi(x)=\sqrt{a/2} \sin \frac{(2mE)^{1/2}}{\hbar} x$$
 
 
 随着能级升高，粒子行为逐渐趋于经典粒子：**The correspondence principle**  
@@ -370,18 +370,18 @@ The everage value of the physucal quantity a (its quantum-mechanical operator is
 $$< a > = \int \psi_n^*(x) \hat{A} \psi(x)dx$$
 
 Therefore, the average momentum of a particle in a box is:
-$$< p >= \int_0^a [(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}](-i\hbar\frac{d}{dx})[(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}]dx=-i\hbar\frac{2\pi n}{a^2}\int_0^a sin\frac{n\pi x}{a}cos\frac{n\pi x}{a}dx=0$$
+$$< p >= \int_0^a [(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}](-i\hbar\frac{d}{dx})[(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}]dx=-i\hbar\frac{2\pi n}{a^2}\int_0^a \sin\frac{n\pi x}{a}cos\frac{n\pi x}{a}dx=0$$
 Thus, a particle in a box is equally likely to be moving in either direction.
 
 ### Verification of the Heisenberg Uncertainty Principle
 
-$$< p^2 >= \int_0^a [(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}](-\hbar^2 \frac{d^2}{dx^2})[(\frac{2}{a})^{1/2}sin\frac{n\pi x}{a}]dx= \frac{n^2 \pi^2 \hbar^2}{a^2}$$
+$$< p^2 >= \int_0^a [(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}](-\hbar^2 \frac{d^2}{dx^2})[(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}]dx= \frac{n^2 \pi^2 \hbar^2}{a^2}$$
 
 The variance方差 of the momentum of a particle in a box is:
 $$\sigma_p^2 =< p^2 > - < p >^2= \frac{n^2 \pi^2 \hbar^2}{a^2}$$
 $$\sigma_p=\frac{n\pi \hbar}{a}$$
 
-$$< x > = \frac{2}{a}\int_0^a xsin^2\frac{n\pi x}{a}dx = \frac{a}{a} \qquad < x^2 > = \frac{2}{a}\int_0^a x^2 sin^2\frac{n\pi x}{a}dx = \frac{a}{a}$$
+$$< x > = \frac{2}{a}\int_0^a x\sin^2\frac{n\pi x}{a}dx = \frac{a}{a} \qquad < x^2 > = \frac{2}{a}\int_0^a x^2 \sin^2\frac{n\pi x}{a}dx = \frac{a}{a}$$
 
 $$\sigma_x^2 =< x^2 > - < x >^2= (\frac{a}{2\pi n})^2(\frac{\pi^2 n^2}{3}-2)$$
 
@@ -409,7 +409,7 @@ $$\frac{1}{Z(z)}\frac{\partial^2 Z}{\partial z^2}=-\frac{2m}{\hbar}E_z$$
 Where$E=E_x+E_y+E_z$
 
 Same as 1D to solve the equation:
-$$\psi_{n_x n_y n_z}=(\frac{8}{abc})^{1/2} sin\frac{n_x\pi x}{a} sin\frac{n_y\pi y}{b} sin\frac{n_z\pi z}{c} \qquad n_x,n_y,n_z=1,2,3,...$$
+$$\psi_{n_x n_y n_z}=(\frac{8}{abc})^{1/2} \sin\frac{n_x\pi x}{a} \sin\frac{n_y\pi y}{b} \sin\frac{n_z\pi z}{c} \qquad n_x,n_y,n_z=1,2,3,...$$
 $$E_{n_x n_y n_z}=\frac{h^2}{8m}(\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\frac{n_z^2}{c^2})$$
 
 For a particle in a cube $(a=b=c)$:
@@ -432,20 +432,20 @@ exclude the situation of the particle coming from large position values of x:
 $$F=0$$
 
 The boundary conditions:$\psi(x)$ and $d\psi / dx$ must be continuous at $x=0$ and $x=a$:
-$$B=\frac{2i(k_1^2-k_2^2)sin(k_2a)}{(k_1-k_2)^2e^{ik_2a}-(k_1+k_2)^2e^{-ik_2a}}A$$
+$$B=\frac{2i(k_1^2-k_2^2)\sin(k_2a)}{(k_1-k_2)^2e^{ik_2a}-(k_1+k_2)^2e^{-ik_2a}}A$$
 $$E=\frac{4k_1 k_2 e^{-ik_1a}}{(k_1+k_2)^2e^{-ik_2a}-(k_1-k_2)^2e^{ik_2a}}A$$
 
 So we transmission coefficient, the probability the particle will get through the barrrier透射系数, is:
-$$T=|\frac{E}{A}|^2=\frac{4k_1^2k_2^2}{(k_1-k_2)^2sin^2(k_2a)+4k_1^2k_2^2}$$
+$$T=|\frac{E}{A}|^2=\frac{4k_1^2k_2^2}{(k_1-k_2)^2\sin^2(k_2a)+4k_1^2k_2^2}$$
 
 and the refrection coefficient反射系数, is:
-$$R=|\frac{B}{A}|^2=\frac{(k_1-k_2)^2sin^2(k_2a)}{(k_1-k_2)^2sin^2(k_2a)+4k_1^2k_2^2}=1-T$$
+$$R=|\frac{B}{A}|^2=\frac{(k_1-k_2)^2\sin^2(k_2a)}{(k_1-k_2)^2\sin^2(k_2a)+4k_1^2k_2^2}=1-T$$
 **If the energy $E$ is greater than the barrier height, the particle will be reflected to some extent.**
 
 If $E<V_0$
 $$k_1=\sqrt{\frac{2mE}{\hbar^2}} \qquad k_2=\sqrt{\frac{2m(V_0-E)}{\hbar^2}}$$
 
-$$T=|\frac{E}{A}|^2=\frac{4}{4+\frac{(k_1^2+k_2^2)^2}{k_1^2 k_2^2}sinh^2 k_2 a}$$
+$$T=|\frac{E}{A}|^2=\frac{4}{4+\frac{(k_1^2+k_2^2)^2}{k_1^2 k_2^2}\sinh^2 k_2 a}$$
 **If the energy $E$ is less than the barrier height, the particle will have a chance to get through the barrier.**
 
 "隧穿效应"
@@ -507,7 +507,7 @@ $$M=m_e + m_p \qquad \mu=\frac{m_e m_p}{m_e + m_p}$$
 
 In spherical coordinates,
 $$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)=-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{r^2 \hbar^2}\hat{L}^2)+V(r)$$
-$$\hat{L}^2=-\hbar^2 [\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]$$
+$$\hat{L}^2=-\hbar^2 [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]$$
 
 For a two-particle rigid rotor(刚性转子), we mean: $|\vec{r}|=r_e(constant)$, $V(x,y,z)=V(r)=0$
 $$-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})=0$$
@@ -525,7 +525,7 @@ $$J=0,1,2,... \qquad m=0, \pm1, \pm2,...,\pm J$$
 
 ### The Energy Levels of a Rigid Rotator刚性转子
 The schridubger equation for a rigid rotator is:
-$$\frac{\hat{L}^2}{2I}Y(\theta,\phi)=-\frac{\hbar^2}{2I} [\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]Y(\theta,\phi)=E_{rot}Y(\theta,\phi)$$
+$$\frac{\hat{L}^2}{2I}Y(\theta,\phi)=-\frac{\hbar^2}{2I} [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]Y(\theta,\phi)=E_{rot}Y(\theta,\phi)$$
 
 The spherical harmonics球谐函数 $Y_J^m(\theta,\phi)$ are the eigenfunctions, and the allowed rotational energies are easy to obtain:
 $$\hat{H} _{rot} Y(\theta,\phi)=E _{rot} Y(\theta,\phi) \qquad J=0,1,2,... \quad m=0,\pm1,\pm2...,\pm J$$
@@ -650,7 +650,7 @@ $$E_{vib}=\sum\limits_{i=1}^{N_{vib}}hv_i(\nu_i+\frac{1}{2}) \qquad each \quad \
 $$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 +V(r) \qquad V(r)=-\frac{e^2}{4\pi \epsilon_0 r}$$
 
 In spherical coordinates求极坐标, the Laplaceian operator is:
-$$\nabla^2=\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2 \qquad \hat{L}^2=-\hbar^2[\frac{1}{sin \theta} \frac{\partial}{\partial \theta}(sin \theta \frac{\partial}{\partial \theta})+\frac{1}{sin^2 \theta} \frac{\partial^2}{\partial \phi^2}]$$
+$$\nabla^2=\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2 \qquad \hat{L}^2=-\hbar^2[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2}]$$
 
 The corresponding Schrodinger equation in spherical coordinate is:
 $$-\frac{\hbar^2}{2m_e}[\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2]+V(r)\psi=E\psi$$
@@ -693,7 +693,7 @@ n=2:4($2s$, $2p_0$, $2p_{+1}$, $2p_{-1}$)
 ### Radial distribution function of hydrogen atom 氢原子径向分布函数
 
 在氢原子$r$到$r+dr$薄膜中找到电子的概率：
-$$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\phi)|^2 sin\theta d\theta d\phi=[R_{nl}(r)]^2 r^2 dr$$
+$$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\phi)|^2 \sin\theta d\theta d\phi=[R_{nl}(r)]^2 r^2 dr$$
 $P(r) = [R_{nl}(r)]^2 r^2$ is called **the radial distribution function**
 
 The number of nodes节点 in the radial function $=n-l-1$  
@@ -706,7 +706,7 @@ The average value of $r$:
 $$< r >_{1s}=< 100|r|100 > = \frac{4}{a_0^3} \int_0^\infty r^3e^{-2r/a_0}dr=\frac{3}{2}a_0$$
 
 In the similar way, we obtain the Potenial energy:
-$$< V(r) >_{1s}=< 100|V|100 > =\int_0^{2\pi}d\phi \int_0^\pi d\theta sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \epsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \epsilon_0 a_0}$$
+$$< V(r) >_{1s}=< 100|V|100 > =\int_0^{2\pi}d\phi \int_0^\pi d\theta \sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \epsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \epsilon_0 a_0}$$
 
 $$E_{1s}=-\frac{e^2}{8\pi \epsilon_0 a_0}=2V$$
 
@@ -719,3 +719,67 @@ $$\psi_{2s}(r,\theta,\phi)=\frac{1}{\sqrt{32\pi}} (\frac{1}{a_0})^{3/2}(2-\frac{
 
 $$< r >_{2s}=< 200|r|200 > = 6a_0$$
 
+
+## Section 3: p Orbitas p轨道 and the Zeeman Effect
+### p Orbitas
+
+When $l=1$ states with $m_l \neq 0$ 球谐函数:
+$$Y_1^{+1}(\theta,\phi)=-(\frac{3}{8\pi})^{1/2} sin\theta e^{+i\theta} \qquad Y_1^{-1}(\theta,\phi)=(\frac{3}{8\pi})^{1/2} sin\theta e^{-i\theta}$$
+
+对应能量相同。  
+若本征函数简并，那么重新组合后得到的新的本征函数，仍是哈密顿算符的本征函数：
+$$p_x=\frac{1}{\sqrt{2}}(Y_1^{-1}-Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \cos\phi$$
+$$p_y=\frac{i}{\sqrt{2}}(Y_1^{-1}+Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \sin\phi$$
+
+***
+When $l=1$ states with $m_l=0$
+$$p_z=Y_1^0=(\frac{3}{4\pi})^{1/2}cos\theta$$
+
+$2p_x$与$3p_x$的差别主要在径向函数上
+
+
+When $l=2$: $m_l=0,\pm 1, \pm 2$
+$$d_{z^2}=Y_2^0=\sqrt{\frac{5}{16\pi}}(3cos^2\theta -1)$$
+$$d_{xz}=\frac{1}{\sqrt{2}}(Y_2^{-1}-Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \cos \phi$$
+$$d_{yz}=\frac{i}{\sqrt{2}}(Y_2^{-1}+Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \sin \phi$$
+$$d_{xy}=\frac{1}{\sqrt{2}i}(Y_2^{+2}-Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \sin 2\phi$$
+$$d_{x^2-y^2}=\frac{1}{\sqrt{2}}(Y_2^{+2}+Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \cos 2\phi$$
+
+
+类氢离子完整波函数：
+$$\psi_{1s}=\frac{1}{\sqrt{\pi}}(\frac{Z}{a_0})^{3/2}e^{-\rho}$$
+$$\psi_{2s}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}(2-\rho)e^{-\rho/2}$$
+$$\psi_{2p_z}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \cos \theta$$
+$$\psi_{2p_x}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \cos \phi$$
+$$\psi_{2p_y}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \sin \phi$$
+$Z$ is the nuclear charge, and $\rho=Zr/a_0$, where $a_0$ is Bohr radius 
+
+### Zeeman Effect塞曼效应
+The motion of an electric charge around a closed loop produces a magnetic dipole $\vec{m}$, whose magnitude is电荷沿封闭圆环运动产生一个磁偶极：
+$$\vec{m}=\frac{q(\vec{r} \times \vec{v})}{2}$$
+$v$：The velocity速度 of the charge q
+
+$$\vec{m}=\frac{q}{2m} \vec{L} \qquad (\vec{L}=\vec{r} \times \vec{p} \quad \vec{p}=m\vec{v})$$
+For a electron, $q=-|e|$ and $m=m_e$,so
+$$\vec{m}=-\frac{|e|}{2m_e} \vec{L}$$
+
+The potential energy of a magnetic dipole in a magentic field is given by
+$$V=-\vec{m} \cdot \vec{B}$$
+$\vec{B}: The strength of the magnetic field(T:tesla)$
+
+We take the magnetic field to be in the $z$ direction磁场方向指向z方向, then
+$$V=-m_z B_z=\frac{|e|B_z}{2m_e}\vec{L_z}$$
+
+The Hamiltonian operator for a hydrogen atom in an external magnetic field在外部磁场中的氢原子的哈密顿算符:
+$$\hat{H}=\hat{H}_0+\frac{|e|B_z}{2m_e}\vec{L_z}$$
+
+The corresponding Schrodinger Equation:
+$$(\hat{H}_0+\frac{|e|B_z}{2m_e}\vec{L_z})\psi=E\psi$$
+
+The hydrogen atomic wave functions are also eigenfunctions of this Hamiltonian, with the energy levels of a hydrogen atom in a magnetic field
+$$E=-\frac{m_e e^4}{8 \epsilon_0^2 h^2 n^2}+\beta_B m_l B_z \qquad n=1,2,3,... \quad m_l=0,\pm 1, \pm 2,...,\pm l$$
+$\beta_B$, **A Bohr magneton**, defined as 
+$$\beta_B=\frac{|e|\hbar}{2m_e}=9.274 \times 10^{-24} J \cdot T^{-1}$$
+
+A state with given values of $n$ and $l$ is split into $2l+1$ levels by an external magnetic firld特定的nl能级，在磁场作用下可以分裂  
+因此$m_l$称为磁量子数
