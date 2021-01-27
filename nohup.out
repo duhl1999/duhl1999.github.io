@@ -1,0 +1,111 @@
+#######################################
+ 
+                start!                 
+ 
+#######################################
+mv: cannot stat ‘./source/_posts/*.md’: No such file or directory
+INFO  Validating config
+INFO  ==================================
+  ███╗   ██╗███████╗██╗  ██╗████████╗
+  ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝
+  ██╔██╗ ██║█████╗   ╚███╔╝    ██║
+  ██║╚██╗██║██╔══╝   ██╔██╗    ██║
+  ██║ ╚████║███████╗██╔╝ ██╗   ██║
+  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝
+========================================
+NexT version 8.1.0
+Documentation: https://theme-next.js.org
+========================================
+INFO  Deleted database.
+INFO  Deleted public folder.
+INFO  Validating config
+INFO  ==================================
+  ███╗   ██╗███████╗██╗  ██╗████████╗
+  ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝
+  ██╔██╗ ██║█████╗   ╚███╔╝    ██║
+  ██║╚██╗██║██╔══╝   ██╔██╗    ██║
+  ██║ ╚████║███████╗██╔╝ ██╗   ██║
+  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝
+========================================
+NexT version 8.1.0
+Documentation: https://theme-next.js.org
+========================================
+INFO  Start processing
+INFO  Files loaded in 922 ms
+(node:14995) Warning: Accessing non-existent property 'lineno' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14995) Warning: Accessing non-existent property 'column' of module exports inside circular dependency
+(node:14995) Warning: Accessing non-existent property 'filename' of module exports inside circular dependency
+(node:14995) Warning: Accessing non-existent property 'lineno' of module exports inside circular dependency
+(node:14995) Warning: Accessing non-existent property 'column' of module exports inside circular dependency
+(node:14995) Warning: Accessing non-existent property 'filename' of module exports inside circular dependency
+INFO  Generated: categories/index.html
+INFO  Generated: resources/index.html
+INFO  Generated: tags/index.html
+INFO  Generated: archives/index.html
+INFO  Generated: archives/2020/index.html
+INFO  Generated: archives/2020/12/index.html
+INFO  Generated: archives/2021/index.html
+INFO  Generated: archives/2021/01/index.html
+INFO  Generated: categories/FHI-aims/index.html
+INFO  Generated: categories/VASP/index.html
+INFO  Generated: categories/语言学习/index.html
+INFO  Generated: categories/理论学习/index.html
+INFO  Generated: categories/固体物理/index.html
+INFO  Generated: tags/FHI-aims/index.html
+INFO  Generated: tags/编译安装/index.html
+INFO  Generated: tags/VASP/index.html
+INFO  Generated: tags/教程/index.html
+INFO  Generated: tags/输入文件/index.html
+INFO  Generated: tags/输出文件/index.html
+INFO  Generated: tags/markdown/index.html
+INFO  Generated: tags/语言/index.html
+INFO  Generated: tags/固体物理/index.html
+INFO  Generated: tags/笔记/index.html
+INFO  Generated: tags/理论/index.html
+INFO  Generated: tags/量子化学/index.html
+INFO  Generated: 757cf1cfa703/index.html
+INFO  Generated: ec36bac5ff8d/index.html
+INFO  Generated: 11ae7f9ad9be/index.html
+INFO  Generated: beab9bcad8ea/index.html
+INFO  Generated: b71119f662f2/index.html
+INFO  Generated: images/apple-touch-icon-next.png
+INFO  Generated: 1aa159575f58/index.html
+INFO  Generated: 58666b256db8/index.html
+INFO  Generated: index.html
+INFO  Generated: CNAME
+INFO  Generated: images/avatar.gif
+INFO  Generated: images/cc-by-nc-nd.svg
+INFO  Generated: images/cc-by-nc-sa.svg
+INFO  Generated: images/cc-by-nc.svg
+INFO  Generated: images/cc-by-nd.svg
+INFO  Generated: images/cc-by-sa.svg
+INFO  Generated: images/cc-by.svg
+INFO  Generated: images/cc-zero.svg
+INFO  Generated: images/favicon-16x16-next.png
+INFO  Generated: images/favicon-32x32-next.png
+INFO  Generated: images/logo-algolia-nebula-blue-full.svg
+INFO  Generated: images/logo.svg
+INFO  Generated: js/algolia-search.js
+INFO  Generated: js/schemes/muse.js
+INFO  Generated: js/bookmark.js
+INFO  Generated: js/local-search.js
+INFO  Generated: js/motion.js
+INFO  Generated: js/next-boot.js
+INFO  Generated: js/schedule.js
+INFO  Generated: js/utils.js
+INFO  Generated: e10808c0a9ce/index.html
+INFO  Generated: css/main.css
+INFO  Generated: search.xml
+INFO  Generated: images/duhl.jpg
+INFO  59 files generated in 2.96 s
+INFO  Deploying: git
+INFO  Clearing .deploy_git folder...
+INFO  Copying files from public folder...
+INFO  Copying files from extend dirs...
+[master d15c439] Site updated: 2021-01-27 17:49:18
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+To git@github.com:duhl1999/duhl1999.github.io
+   7a51720..d15c439  HEAD -> master
+Branch master set up to track remote branch master from git@github.com:duhl1999/duhl1999.github.io.
+INFO  Deploy done: git
