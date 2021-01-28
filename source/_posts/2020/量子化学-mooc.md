@@ -2,7 +2,7 @@
 title: 量子化学_mooc_NJU
 tags: [量子化学,笔记,理论]
 date: 2020-12-30 13:38:33
-update: 2021-01-27 17:48:40
+update: 2021-01-28 17:13:40
 categories: 理论学习
 ---
 2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程  
@@ -370,7 +370,7 @@ The everage value of the physucal quantity a (its quantum-mechanical operator is
 $$< a > = \int \psi_n^*(x) \hat{A} \psi(x)dx$$
 
 Therefore, the average momentum of a particle in a box is:
-$$< p >= \int_0^a [(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}](-i\hbar\frac{d}{dx})[(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}]dx=-i\hbar\frac{2\pi n}{a^2}\int_0^a \sin\frac{n\pi x}{a}cos\frac{n\pi x}{a}dx=0$$
+$$< p >  = \int_0^a [( \frac{2}{a} )^{1/2} \sin\frac{n\pi x}{a}] (-i\hbar\frac{d}{dx})[(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}]dx =-i\hbar\frac{2\pi n}{a^2}\int_0^a \sin\frac{n\pi x}{a}cos\frac{n\pi x}{a}dx=0$$
 Thus, a particle in a box is equally likely to be moving in either direction.
 
 ### Verification of the Heisenberg Uncertainty Principle
@@ -634,7 +634,7 @@ $$\Delta V=V(x_1,x_2,...x_{N_{vib}})-V(0,0,...,0)=\frac{1}{2}\sum\limits_{j=1}^{
 The new coordinates are called **normal coordinates or normal modes**简正坐标
 
 Then the vibrational Hamiltonian operator is:
-$$\hat{H} _{vib} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$
+$$\hat{H} _ {vib} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$
 
 每一项对应一个简谐振子的哈密顿，振动波函数可以写成每个简谐振子波函数相乘
 $$\psi_{vib}(Q_1,Q_2,...,Q_{vib})=\psi_{vib,1}(Q_1)\psi_{vib,2}(Q_2)...\psi_{vib,n}(Q_n)$$
@@ -783,3 +783,96 @@ $$\beta_B=\frac{|e|\hbar}{2m_e}=9.274 \times 10^{-24} J \cdot T^{-1}$$
 
 A state with given values of $n$ and $l$ is split into $2l+1$ levels by an external magnetic firld特定的nl能级，在磁场作用下可以分裂，各个$m_l$的能量不再相同  
 因此$m_l$称为磁量子数
+
+
+## Section 4: Spin Angular Momentum自旋角动量 and Spin-Orbit Interaction自旋轨道相互作用
+### Spin Angular Momentum
+Just as we have the eigenvalue equations for $\hat{L} ^2$ and $\hat{L}_z$,
+$$\hat{L}^2 Y_l^{m_l}(\theta,\phi)=\hbar^2l(l+1) Y_l^{m_l}(\theta,\phi)$$
+$$\hat{L}_z Y_l^{m_l}(\theta,\phi)=m_l \hbar Y_l^{m_l}(\theta,\phi)$$
+We define the spin自旋 operators $\hat{S}^2$ and $\hat{S}_z$ and their eigenfunctions $\alpha$(spin up) and $\beta$(spin down) by the equations:
+$$\hat{S}^2 \alpha=\hbar^2 s(s+1)\alpha \qquad \hat{S}^2 \beta=\hbar^2 s(s+1)\beta \qquad s=\frac{1}{2}(Only)$$
+$$\hat{S}_z \alpha =\frac{1}{2}\hbar \alpha \qquad \hat{S}_z \beta =-\frac{1}{2}\hbar \beta$$
+
+The magnitude of the spin angular momentum of an electron is自旋角动量大小:
+$$S=\hbar\sqrt{s(s+1)}=\frac{\sqrt{3}}{2}\hbar \qquad (s=\frac{1}{2})$$
+
+Two spin functions are complete完备 and they are orthonormal正交归一
+
+
+
+***
+完整的单电子波函数需要四个量子数来描述$n,l,m_l,m_s$，称为自旋轨道  
+The spatial and spin parts of the wave function are independent and so we write:
+$$\psi_{n,l,m_l,m_s}(r,\theta,\phi,\sigma) = \psi_{n,l,m_l}(r,\theta,\phi) \alpha(\sigma) \quad or \quad \psi_{n,l,m_l}(r,\theta,\phi) \beta(\sigma)$$
+$\sigma$spin variable 自旋变量
+
+自旋轨道也都是正交归一的
+
+### Spin-Orbit Interaction
+The magnetic moment associated with the spin of the electron与电子自旋相关的磁矩:
+$$\vec{m}_s=-\frac{g|e|}{2m_e}\vec{S} \qquad m_s=-g\beta_B [s(s+1)]^{1/2}$$
+Here $g=2$ is called **anomalous spin factor**反常自旋因子
+
+In fact, the **spin-orbital interaction term**自旋-轨道相互作用, from the interactions between the magnetic of moments of spin and orbital angular momentum, must be included in the Hamiltonian operator:
+$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 - \frac{e^2}{4\pi\epsilon_0 r}+\xi(r)\vec{l} \cdot \vec{s}$$
+It is difficult to find the eigenfunctions and eigenvalues of the operator, since the spin-orbital interaction term is usually estimated with first-order perturbation theory一阶微扰理论.
+
+The **spin-orbital interaction** is small in a hydrogen atom
+
+When the spin-orbital interaction is taken into account, $\hat{L}^2$ and $\hat{S}^2$ no longer commute with $\hat{H}$不再对易, so $\vec{L}$ and $\vec{S}$ are no longer conserved守恒, only $\vec{J}=\vec{L}+\vec{S}$ is conserved:
+$$\hat{J}^2| J M_J > =\hbar J(J+1)|J M_J > \qquad \hat{J}_z|J M_J=\hbar M_J|J M_J > $$
+
+***
+角动量耦合：  
+对于每一个$L$，存在$2L+1$个可能的轨道角动量的态，且有$2S+1=2$个自旋角动量的态，因此总的态数:$2(2L+1)$
+$$J=L+S,L+S-1,...,|L_S|$$
+$$M_J=\pm J, \pm (J-1), ...,0$$
+
+The total electron angular momentum电子角动量 for a hydrogen atom:
+$$\vec{J}=\vec{L}+\vec{S}$$
+When the spin-orbital interaction is included, the schrodinger equation for a hydrogen atom cannot be solved exactly, but $\psi_{nml}(r,\theta,\phi)$ is a good approximation.
+
+For a hydrogen atom, the energy shift due to the spin-orbital interaction is estimated旋轨耦合带来的能量偏移(with the first perturbation theory一阶微扰理论)
+$$E_{S.Q.}= < \psi_{nml}|\xi(r)\vec{L} \cdot \vec{S}|\psi_{nml} > =\frac{1}{2}A\hbar^2[J(J+1)-L(L+1)-S(S+1)]$$
+
+***
+1. The similar expression exists for a many-electron atom  
+2. So each atomic term is split into levels, each level with a different $J$
+3. The set of states that belong to the same term and have the same value of $J$ consitutes and atomic level能级. Each level consists of $(2J+1)$ states of equal energy.
+
+
+## Section 5: Term symbols of a Hydrogen Atom and Spectrum of Atomic Hydrogen in an External Magnetic Field
+
+We designate the electronic states of a hydrogen atom by an atomic term symble, which is expressed by the occupied orbital followed by the symbol $^2l_j$  
+l: 占据轨道对应的光谱符号  
+2：自旋多重度$2s+1=2$  
+j: 总角动量的值
+
+We can use **the Rydberg formula** to calculate the frequencies of the lines in the Lyman series:
+$$\vec{\nu}=109677.58(1-\frac{1}{n^2}) cm^{-1} \quad n=2,3,...$$
+
+***
+Selection rules:  
+1. $\Delta L=\pm 1$
+2. $\Delta S=0$  
+3. $\Delta J= 0, \pm 1$ ($J=0 \rightarrow J=0$ is forbidden)
+
+So for Lyman series of atom hydrogen, the allowed transitions into the ground state are:
+$$np \quad ^2P_{1/2} \qquad \rightarrow 1s \quad ^2S_{1/2}$$
+$$np \quad ^2P_{3/2} \qquad \rightarrow 1s \quad ^2S_{1/2}$$
+
+The first line of the Lyman series is a doublet, due to the spin-orbital coupling
+
+### in an External Magnetic Field
+The magnetic moments associated with orbital and spin angular momentum:
+$$\vec{m}_L=-\frac{|e|}{2m_e} \vec{L} \qquad \vec{m}_S=-\frac{g|e|}{2m_e} \vec{S}$$
+
+The **total magnetic moment** is $\vec{m}_L+\vec{m}_S$, and the potential energy of its interaction with an external magnetic field is given by:
+$$V=\frac{|e|B_z}{2m_e}(L_z+gS_z)$$
+
+Taken it into the Hamiltonian operator, and treat by perturbation theory微扰理论, then the final state are split by:
+$$\Delta E_{mag}=g(j,l)\beta_B m_j B_z$$
+**Lande g factor**: $g(j,l)=1+\frac{j(j+1)-l(l+1)+s(s+1)}{2j(j+1)} \qquad (s=1/2)$
+
+在弱外加磁场下，每个$j$分裂成$2j+1$个能态，对应不同$m_j$
