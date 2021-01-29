@@ -879,3 +879,5 @@ $$\Delta E_{mag}=g(j,l)\beta_B m_j B_z$$
 
 # Chapter 5: Approximate Methods
 量子化学中使用的近似方法
+
+https://blog.oddish.cn/ed179b815fc1/
