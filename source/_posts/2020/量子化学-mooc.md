@@ -25,11 +25,11 @@ $${\lambda_{max}}T=2.9*10^{-3}m \cdot k$$
 ### Photoelectric Effect
 The ejection of electrons from the surface of a metal by radiation is called the photoelectric effect.  
 爱因斯坦依据普朗克的理论成功解释了该现象  
-$$KE=1/2mv^2=h\nu-\Phi$$
+$$KE=1/2mv^2=h\nu-\varphi$$
 <center>hν: the energy of the incident photon</center>
 <center>Φ: the work function of the metal  </center>
 
-$$ \Phi = h\nu_0 $$
+$$ \varphi = h\nu_0 $$
 
 ## Section 2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory
 ### Hydrogen Atomic Spectrum
@@ -39,14 +39,14 @@ Rydberg formula： 波速$\tilde{\nu}=R_H({1/n_1^2}-{1/n_2^2})$，$R_H=109677.58
 波尔：库仑力等于向心力，能量量子化：
 $$r=\frac{4\pi\hbar^2n^2}{m_ee^2}$$
 据此可以计算波尔半径r，带入能量公式：
-$$E=KE+V(r)=1/2m_ev^2-\frac{e^2}{4\pi\epsilon_0 r}=-\frac{e^2}{8\pi\epsilon_0 r}$$
+$$E=KE+V(r)=1/2m_ev^2-\frac{e^2}{4\pi\varepsilon_0 r}=-\frac{e^2}{8\pi\varepsilon_0 r}$$
 With the allow radii半径 of the orbits轨道：
-$$E_n=-\frac{m_ee^4}{8\epsilon^2h^2}\frac{1}{n^2}, n=1,2,3...$$
+$$E_n=-\frac{m_ee^4}{8\varepsilon^2h^2}\frac{1}{n^2}, n=1,2,3...$$
 
 The observed spectrum of the hydrogen atom is due to transitions from one allowed energy state to another:
-$$\Delta E=\frac{m_ee^4}{8\epsilon^2h^2}(\frac{1}{n_1^2}-\frac{1}{n_2^2})=h\nu$$
+$$\Delta E=\frac{m_ee^4}{8\varepsilon^2h^2}(\frac{1}{n_1^2}-\frac{1}{n_2^2})=h\nu$$
 依据频率与波速关系$h\nu=hc\tilde{\nu}$：
-$$\tilde{\nu}=\frac{m_ee^4}{8\epsilon^2ch^3}(\frac{1}{n_1^2}-\frac{1}{n_2^2})$$
+$$\tilde{\nu}=\frac{m_ee^4}{8\varepsilon^2ch^3}(\frac{1}{n_1^2}-\frac{1}{n_2^2})$$
 <p align="right">--Rydberg formula</p>
 可以用于计算eg: ionization energy电离能(IE)
 
@@ -507,7 +507,7 @@ $$M=m_e + m_p \qquad \mu=\frac{m_e m_p}{m_e + m_p}$$
 
 In spherical coordinates,
 $$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)=-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{r^2 \hbar^2}\hat{L}^2)+V(r)$$
-$$\hat{L}^2=-\hbar^2 [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]$$
+$$\hat{L}^2=-\hbar^2 [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \varphi^2}]$$
 
 For a two-particle rigid rotor(刚性转子), we mean: $|\vec{r}|=r_e(constant)$, $V(x,y,z)=V(r)=0$
 $$-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})=0$$
@@ -517,7 +517,7 @@ here $I$ is the moment of inertia(转动惯量)
 
 ***
 角动量平方算符$\hat{L}^2$的本征方程：
-$$\hat{L}^2 Y_J^m(\theta,\phi)=\hbar^2J(J+1) Y_J^m(\theta,\phi)$$
+$$\hat{L}^2 Y_J^m(\theta,\varphi)=\hbar^2J(J+1) Y_J^m(\theta,\varphi)$$
 The eigenvalues本征值:
 $$L^2=\hbar^2J(J+1)$$
 $$J=0,1,2,... \qquad m=0, \pm1, \pm2,...,\pm J$$
@@ -525,10 +525,10 @@ $$J=0,1,2,... \qquad m=0, \pm1, \pm2,...,\pm J$$
 
 ### The Energy Levels of a Rigid Rotator刚性转子
 The schridubger equation for a rigid rotator is:
-$$\frac{\hat{L}^2}{2I}Y(\theta,\phi)=-\frac{\hbar^2}{2I} [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \phi^2}]Y(\theta,\phi)=E_{rot}Y(\theta,\phi)$$
+$$\frac{\hat{L}^2}{2I}Y(\theta,\varphi)=-\frac{\hbar^2}{2I} [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \varphi^2}]Y(\theta,\varphi)=E_{rot}Y(\theta,\varphi)$$
 
-The spherical harmonics球谐函数 $Y_J^m(\theta,\phi)$ are the eigenfunctions, and the allowed rotational energies are easy to obtain:
-$$\hat{H} _{rot} Y(\theta,\phi)=E _{rot} Y(\theta,\phi) \qquad J=0,1,2,... \quad m=0,\pm1,\pm2...,\pm J$$
+The spherical harmonics球谐函数 $Y_J^m(\theta,\varphi)$ are the eigenfunctions, and the allowed rotational energies are easy to obtain:
+$$\hat{H} _{rot} Y(\theta,\varphi)=E _{rot} Y(\theta,\varphi) \qquad J=0,1,2,... \quad m=0,\pm1,\pm2...,\pm J$$
 
 $$E _{rot}=\frac{\hbar^2}{2I} J(J+1) \qquad J=0,1,2,...$$
 
@@ -559,10 +559,10 @@ $$\tilde{\nu}=2\tilde{B}(J+1) \qquad J=0,1,2,... \qquad \tilde{B}=\frac{h}{8\pi^
 ## Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程
 
 $$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})+\frac{1}{2\mu r^2}\hat{L}^2+V(r)$$
-$$\hat{H} _{int} \Psi(r,\theta,\phi)=E _{vr}\Psi(r,\theta,\phi)$$
+$$\hat{H} _{int} \Psi(r,\theta,\varphi)=E _{vr}\Psi(r,\theta,\varphi)$$
 
-Let $\Psi(r,\theta,\phi)=\psi(r)Y_J^m(\theta,\phi)$,   
-With $\hat{L}^2Y_J^m(\theta,\phi)=J(J+1)\hbar^2 Y_J^m(\theta,\phi)$  
+Let $\Psi(r,\theta,\varphi)=\psi(r)Y_J^m(\theta,\varphi)$,   
+With $\hat{L}^2Y_J^m(\theta,\varphi)=J(J+1)\hbar^2 Y_J^m(\theta,\varphi)$  
 Let $f(r)=r\psi(r)$
 $$\frac{\partial^2 \psi(r)}{\partial r^2}+\frac{2}{r}\frac{\partial \psi(r)}{\partial r}=\frac{1}{r} \frac{\partial^2 f(r)}{\partial r^2}$$
 
@@ -647,10 +647,10 @@ $$E_{vib}=\sum\limits_{i=1}^{N_{vib}}hv_i(\nu_i+\frac{1}{2}) \qquad each \quad \
 
 ### Hamiltonian Operator for the Hydrogen Atom
 
-$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 +V(r) \qquad V(r)=-\frac{e^2}{4\pi \epsilon_0 r}$$
+$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 +V(r) \qquad V(r)=-\frac{e^2}{4\pi \varepsilon_0 r}$$
 
 In spherical coordinates求极坐标, the Laplaceian operator is:
-$$\nabla^2=\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2 \qquad \hat{L}^2=-\hbar^2[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2}]$$
+$$\nabla^2=\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2 \qquad \hat{L}^2=-\hbar^2[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \varphi^2}]$$
 
 The corresponding Schrodinger equation in spherical coordinate is:
 $$-\frac{\hbar^2}{2m_e}[\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2]+V(r)\psi=E\psi$$
@@ -660,8 +660,8 @@ The equation can be turner into the radial equation:
 $$\frac{\hbar}{2m_e r^2}\frac{d}{dr}(r^2 \frac{dR}{dr})+[\frac{\hbar^2 l(l+1)}{2m_e r^2}+V(r)-E]R_{nl}(r)=0$$
 
 Solved, find the energu must be quantized according to:
-$$E_n=-\frac{e^2}{8\pi \epsilon_0 a_0 n^2} \quad n=1,2,3...$$
-Bohr radius波尔半径: $a_0=\frac{4\pi \epsilon_0 \hbar^2}{m_e e^2}$
+$$E_n=-\frac{e^2}{8\pi \varepsilon_0 a_0 n^2} \quad n=1,2,3...$$
+Bohr radius波尔半径: $a_0=\frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}$
 
 The radial wave functions径向波函数, depending on n and l:
 $$R_{nl}(r)=(\frac{(n-l-1)!}{2n[(n+l)!]^3})^{1/2} (\frac{2}{na_0})^{l+3/2}r^l e^{-r/na_0} L_{n+1}^{2l+1}(\frac{2r}{na_0}) \quad l=0,1,2,...,n-1$$
@@ -669,7 +669,7 @@ $$R_{nl}(r)=(\frac{(n-l-1)!}{2n[(n+l)!]^3})^{1/2} (\frac{2}{na_0})^{l+3/2}r^l e^
 The $L_{n+1}^{2l+1}$ are called **associated Laguerre polynomials**.
 
 球谐函数与径向函数相乘得到完整版波函数:
-$$\Psi_{nlm_l}(r,\theta,\phi)=R_{nl}(r)Y_l^{m_l}(\theta,\phi)$$
+$$\Psi_{nlm_l}(r,\theta,\varphi)=R_{nl}(r)Y_l^{m_l}(\theta,\varphi)$$
 $$n=1,2,...; \qquad l=0,1,...,n-1; \qquad m_l=0,\pm 1,...,\pm l$$
 
 完备的波函数形成了一个正交归一的集合，两个不同的波函数内积等于0
@@ -677,10 +677,10 @@ $$n=1,2,...; \qquad l=0,1,...,n-1; \qquad m_l=0,\pm 1,...,\pm l$$
 
 ### Quantum Numbers $n$, $l$, $m_l$
 Three mutually commuting operators: $\hat{H}$, $\hat{L}^2$, $\hat{L_z}$两两对易，  
-$\Psi_{nlm_l}(r,\theta,\phi)$ are the simultaneous eigenfunctions of these operators氢原子波函数使他们共同的本征函数
-$$\hat{H}\Psi_{nlm_l}(r,\theta,\phi)=E_n\Psi_{nlm_l}(r,\theta,\phi)$$
-$$\hat{L}^2\Psi_{nlm_l}(r,\theta,\phi) = l(l+1)\hbar^2\Psi_{nlm_l}(r,\theta,\phi) \qquad l=0,1,2,...,n-1$$
-$$\hat{L_z}\Psi_{nlm_l}(r,\theta,\phi)=m_l\hbar\Psi_{nlm_l}(r,\theta,\phi) \qquad m_l=0,\pm 1,..., \pm l$$
+$\Psi_{nlm_l}(r,\theta,\varphi)$ are the simultaneous eigenfunctions of these operators氢原子波函数使他们共同的本征函数
+$$\hat{H}\Psi_{nlm_l}(r,\theta,\varphi)=E_n\Psi_{nlm_l}(r,\theta,\varphi)$$
+$$\hat{L}^2\Psi_{nlm_l}(r,\theta,\varphi) = l(l+1)\hbar^2\Psi_{nlm_l}(r,\theta,\varphi) \qquad l=0,1,2,...,n-1$$
+$$\hat{L_z}\Psi_{nlm_l}(r,\theta,\varphi)=m_l\hbar\Psi_{nlm_l}(r,\theta,\varphi) \qquad m_l=0,\pm 1,..., \pm l$$
 
 ## Section 2: s Orbitals are Spherically Symmetric 球对称的s轨道
 
@@ -693,29 +693,29 @@ n=2:4($2s$, $2p_0$, $2p_{+1}$, $2p_{-1}$)
 ### Radial distribution function of hydrogen atom 氢原子径向分布函数
 
 在氢原子$r$到$r+dr$薄膜中找到电子的概率：
-$$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\phi)|^2 \sin\theta d\theta d\phi=[R_{nl}(r)]^2 r^2 dr$$
+$$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\varphi)|^2 \sin\theta d\theta d\varphi=[R_{nl}(r)]^2 r^2 dr$$
 $P(r) = [R_{nl}(r)]^2 r^2$ is called **the radial distribution function**
 
 The number of nodes节点 in the radial function $=n-l-1$  
 在节点上电子出现的概率为0
 
 ### The complete $1s$ wave function
-$$\psi_{1s}=\psi_{100}(r,\theta,\phi)=R_{10}(r)Y_0^0(\theta,\phi)=(\pi a_0^3)^{-1/2}e^{-r/a_0}$$
+$$\psi_{1s}=\psi_{100}(r,\theta,\varphi)=R_{10}(r)Y_0^0(\theta,\varphi)=(\pi a_0^3)^{-1/2}e^{-r/a_0}$$
 
 The average value of $r$:
 $$< r >_{1s}=< 100|r|100 > = \frac{4}{a_0^3} \int_0^\infty r^3e^{-2r/a_0}dr=\frac{3}{2}a_0$$
 
 In the similar way, we obtain the Potenial energy:
-$$< V(r) >_{1s}=< 100|V|100 > =\int_0^{2\pi}d\phi \int_0^\pi d\theta \sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \epsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \epsilon_0 a_0}$$
+$$< V(r) >_{1s}=< 100|V|100 > =\int_0^{2\pi}d\varphi \int_0^\pi d\theta \sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \varepsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \varepsilon_0 a_0}$$
 
-$$E_{1s}=-\frac{e^2}{8\pi \epsilon_0 a_0}=2V$$
+$$E_{1s}=-\frac{e^2}{8\pi \varepsilon_0 a_0}=2V$$
 
 Show that the most probable value of $r$ ($r_{mp}$) in is state is $a_0$电子出现最大概率处:
 $$P'(r_{mp})=0 \Rightarrow r_{mp}=a_0$$
 It is **The Bohr radius**
 
 ### The complete $2s$ wave function
-$$\psi_{2s}(r,\theta,\phi)=\frac{1}{\sqrt{32\pi}} (\frac{1}{a_0})^{3/2}(2-\frac{2}{a_0})e^{-r/2a_0}$$
+$$\psi_{2s}(r,\theta,\varphi)=\frac{1}{\sqrt{32\pi}} (\frac{1}{a_0})^{3/2}(2-\frac{2}{a_0})e^{-r/2a_0}$$
 
 $$< r >_{2s}=< 200|r|200 > = 6a_0$$
 
@@ -724,12 +724,12 @@ $$< r >_{2s}=< 200|r|200 > = 6a_0$$
 ### p Orbitas
 
 When $l=1$ states with $m_l \neq 0$ 球谐函数:
-$$Y_1^{+1}(\theta,\phi)=-(\frac{3}{8\pi})^{1/2} \sin\theta e^{+i\theta} \qquad Y_1^{-1}(\theta,\phi)=(\frac{3}{8\pi})^{1/2} \sin\theta e^{-i\theta}$$
+$$Y_1^{+1}(\theta,\varphi)=-(\frac{3}{8\pi})^{1/2} \sin\theta e^{+i\theta} \qquad Y_1^{-1}(\theta,\varphi)=(\frac{3}{8\pi})^{1/2} \sin\theta e^{-i\theta}$$
 
 对应能量相同。  
 若本征函数简并，那么重新组合后得到的新的本征函数，仍是哈密顿算符的本征函数：
-$$p_x=\frac{1}{\sqrt{2}}(Y_1^{-1}-Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \cos\phi$$
-$$p_y=\frac{i}{\sqrt{2}}(Y_1^{-1}+Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \sin\phi$$
+$$p_x=\frac{1}{\sqrt{2}}(Y_1^{-1}-Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \cos\varphi$$
+$$p_y=\frac{i}{\sqrt{2}}(Y_1^{-1}+Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \sin\varphi$$
 
 ***
 When $l=1$ states with $m_l=0$
@@ -740,18 +740,18 @@ $2p_x$与$3p_x$的差别主要在径向函数上
 
 When $l=2$: $m_l=0,\pm 1, \pm 2$
 $$d_{z^2}=Y_2^0=\sqrt{\frac{5}{16\pi}}(3cos^2\theta -1)$$
-$$d_{xz}=\frac{1}{\sqrt{2}}(Y_2^{-1}-Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \cos \phi$$
-$$d_{yz}=\frac{i}{\sqrt{2}}(Y_2^{-1}+Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \sin \phi$$
-$$d_{xy}=\frac{1}{\sqrt{2}i}(Y_2^{+2}-Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \sin 2\phi$$
-$$d_{x^2-y^2}=\frac{1}{\sqrt{2}}(Y_2^{+2}+Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \cos 2\phi$$
+$$d_{xz}=\frac{1}{\sqrt{2}}(Y_2^{-1}-Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \cos \varphi$$
+$$d_{yz}=\frac{i}{\sqrt{2}}(Y_2^{-1}+Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \sin \varphi$$
+$$d_{xy}=\frac{1}{\sqrt{2}i}(Y_2^{+2}-Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \sin 2\varphi$$
+$$d_{x^2-y^2}=\frac{1}{\sqrt{2}}(Y_2^{+2}+Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \cos 2\varphi$$
 
 
 类氢离子完整波函数：
 $$\psi_{1s}=\frac{1}{\sqrt{\pi}}(\frac{Z}{a_0})^{3/2}e^{-\rho}$$
 $$\psi_{2s}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}(2-\rho)e^{-\rho/2}$$
 $$\psi_{2p_z}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \cos \theta$$
-$$\psi_{2p_x}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \cos \phi$$
-$$\psi_{2p_y}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \sin \phi$$
+$$\psi_{2p_x}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \cos \varphi$$
+$$\psi_{2p_y}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \sin \varphi$$
 $Z$ is the nuclear charge, and $\rho=Zr/a_0$, where $a_0$ is Bohr radius 
 
 ### Zeeman Effect塞曼效应
@@ -777,7 +777,7 @@ The corresponding Schrodinger Equation:
 $$(\hat{H}_0+\frac{|e|B_z}{2m_e}\vec{L_z})\psi=E\psi$$
 
 The hydrogen atomic wave functions are also eigenfunctions of this Hamiltonian, with the energy levels of a hydrogen atom in a magnetic field
-$$E=-\frac{m_e e^4}{8 \epsilon_0^2 h^2 n^2}+\beta_B m_l B_z \qquad n=1,2,3,... \quad m_l=0,\pm 1, \pm 2,...,\pm l$$
+$$E=-\frac{m_e e^4}{8 \varepsilon_0^2 h^2 n^2}+\beta_B m_l B_z \qquad n=1,2,3,... \quad m_l=0,\pm 1, \pm 2,...,\pm l$$
 $\beta_B$, **A Bohr magneton**, defined as 
 $$\beta_B=\frac{|e|\hbar}{2m_e}=9.274 \times 10^{-24} J \cdot T^{-1}$$
 
@@ -788,8 +788,8 @@ A state with given values of $n$ and $l$ is split into $2l+1$ levels by an exter
 ## Section 4: Spin Angular Momentum自旋角动量 and Spin-Orbit Interaction自旋轨道相互作用
 ### Spin Angular Momentum
 Just as we have the eigenvalue equations for $\hat{L} ^2$ and $\hat{L}_z$,
-$$\hat{L}^2 Y_l^{m_l}(\theta,\phi)=\hbar^2l(l+1) Y_l^{m_l}(\theta,\phi)$$
-$$\hat{L}_z Y_l^{m_l}(\theta,\phi)=m_l \hbar Y_l^{m_l}(\theta,\phi)$$
+$$\hat{L}^2 Y_l^{m_l}(\theta,\varphi)=\hbar^2l(l+1) Y_l^{m_l}(\theta,\varphi)$$
+$$\hat{L}_z Y_l^{m_l}(\theta,\varphi)=m_l \hbar Y_l^{m_l}(\theta,\varphi)$$
 We define the spin自旋 operators $\hat{S}^2$ and $\hat{S}_z$ and their eigenfunctions $\alpha$(spin up) and $\beta$(spin down) by the equations:
 $$\hat{S}^2 \alpha=\hbar^2 s(s+1)\alpha \qquad \hat{S}^2 \beta=\hbar^2 s(s+1)\beta \qquad s=\frac{1}{2}(Only)$$
 $$\hat{S}_z \alpha =\frac{1}{2}\hbar \alpha \qquad \hat{S}_z \beta =-\frac{1}{2}\hbar \beta$$
@@ -804,7 +804,7 @@ Two spin functions are complete完备 and they are orthonormal正交归一
 ***
 完整的单电子波函数需要四个量子数来描述$n,l,m_l,m_s$，称为自旋轨道  
 The spatial and spin parts of the wave function are independent and so we write:
-$$\psi_{n,l,m_l,m_s}(r,\theta,\phi,\sigma) = \psi_{n,l,m_l}(r,\theta,\phi) \alpha(\sigma) \quad or \quad \psi_{n,l,m_l}(r,\theta,\phi) \beta(\sigma)$$
+$$\psi_{n,l,m_l,m_s}(r,\theta,\varphi,\sigma) = \psi_{n,l,m_l}(r,\theta,\varphi) \alpha(\sigma) \quad or \quad \psi_{n,l,m_l}(r,\theta,\varphi) \beta(\sigma)$$
 $\sigma$spin variable 自旋变量
 
 自旋轨道也都是正交归一的
@@ -815,7 +815,7 @@ $$\vec{m}_s=-\frac{g|e|}{2m_e}\vec{S} \qquad m_s=-g\beta_B [s(s+1)]^{1/2}$$
 Here $g=2$ is called **anomalous spin factor**反常自旋因子
 
 In fact, the **spin-orbital interaction term**自旋-轨道相互作用, from the interactions between the magnetic of moments of spin and orbital angular momentum, must be included in the Hamiltonian operator:
-$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 - \frac{e^2}{4\pi\epsilon_0 r}+\xi(r)\vec{l} \cdot \vec{s}$$
+$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 - \frac{e^2}{4\pi\varepsilon_0 r}+\xi(r)\vec{l} \cdot \vec{s}$$
 It is difficult to find the eigenfunctions and eigenvalues of the operator, since the spin-orbital interaction term is usually estimated with first-order perturbation theory一阶微扰理论.
 
 The **spin-orbital interaction** is small in a hydrogen atom
@@ -831,7 +831,7 @@ $$M_J=\pm J, \pm (J-1), ...,0$$
 
 The total electron angular momentum电子角动量 for a hydrogen atom:
 $$\vec{J}=\vec{L}+\vec{S}$$
-When the spin-orbital interaction is included, the schrodinger equation for a hydrogen atom cannot be solved exactly, but $\psi_{nml}(r,\theta,\phi)$ is a good approximation.
+When the spin-orbital interaction is included, the schrodinger equation for a hydrogen atom cannot be solved exactly, but $\psi_{nml}(r,\theta,\varphi)$ is a good approximation.
 
 For a hydrogen atom, the energy shift due to the spin-orbital interaction is estimated旋轨耦合带来的能量偏移(with the first perturbation theory一阶微扰理论)
 $$E_{S.Q.}= < \psi_{nml}|\xi(r)\vec{L} \cdot \vec{S}|\psi_{nml} > =\frac{1}{2}A\hbar^2[J(J+1)-L(L+1)-S(S+1)]$$
