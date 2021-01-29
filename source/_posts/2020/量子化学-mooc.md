@@ -876,3 +876,6 @@ $$\Delta E_{mag}=g(j,l)\beta_B m_j B_z$$
 **Lande g factor**: $g(j,l)=1+\frac{j(j+1)-l(l+1)+s(s+1)}{2j(j+1)} \qquad (s=1/2)$
 
 在弱外加磁场下，每个$j$分裂成$2j+1$个能态，对应不同$m_j$
+
+# Chapter 5: Approximate Methods
+量子化学中使用的近似方法
