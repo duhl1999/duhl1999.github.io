@@ -157,24 +157,24 @@ $$\hat{A}[c_1f_1(x)+c_2f_2(x)]=c_1\hat{A}c_1f_1(x)+c_2\hat{A}f_2(x)$$
 例如：求导数、积分算符就是线性的
 
 Dirac notation for functions and  interger狄拉克符号：方便表示波函数
-> $| n >$: $\psi_n(x)$  
-> $< n |$: $\psi_n^*(x)$  
-> $< m|n >$: $< m||n >$: $\int \psi_m^*(x)\psi_n(x)dx$  
-$< m|A|n >$: $\int \psi_m^*(x)\hat{A}\psi_n(x)dx$
+> $| n \rangle$: $\psi_n(x)$  
+> $\langle n |$: $\psi_n^*(x)$  
+> $\langle m|n \rangle$: $\langle m||n \rangle$: $\int \psi_m^*(x)\psi_n(x)dx$  
+> $\langle m|A|n \rangle$: $\int \psi_m^*(x)\hat{A}\psi_n(x)dx$
 
 An operator is said to be Hermitian if: 
 $$\int f^*(x)\hat{A}g(x)dx=\int g(x)\hat{A}f^*(x)dx=[\int g^*(x)\hat{A}f(x)dx]^*$$
 
 In Dirac notation, 
-$$< f|\hat{A}|g > = < g|\hat{A}|f >^*$$
+$$\langle f|\hat{A}|g \rangle = {\langle g|\hat{A}|f \rangle}^*$$
 
 Another definition:
-$$< f|\hat{A}|f > = < f|\hat{A}|f >^*$$
-$< f|\hat{A}|f >$表示算符对应物理量的平均值，复共轭与原值相等说明平均值是实数，等价于厄米
+$$\langle f|\hat{A}|f \rangle = {\langle f|\hat{A}|f \rangle}^*$$
+$\langle f|\hat{A}|f \rangle$表示算符对应物理量的平均值，复共轭与原值相等说明平均值是实数，等价于厄米
 
 #### The definition of Hermitian operator:
-$$< f|\hat{A}|g > = < g|\hat{A}|f >^*$$
-$$< f|\hat{A}|f > = < f|\hat{A}|f >^*$$
+$$\langle f|\hat{A}|g \rangle = {\langle g|\hat{A}|f \rangle}^*$$
+$$\langle f|\hat{A}|f \rangle = {\langle f|\hat{A}|f \rangle}^*$$
 
 #### The properties of a Hermitian operator:
 1. The eigenvalues of a hermitian operator are real 厄米算符的本征值是实数
@@ -184,18 +184,18 @@ $$< f|\hat{A}|f > = < f|\hat{A}|f >^*$$
 ### Gram-Schmidt orthonormalization procedure正交化方法
 Any linear combination of degenerate eigenvectors is also an eigenfunction with the same eigenvalue 将简并本征函数线性组合后可以得到相同本质值的本征函数
 
-两个不正交的矢量$| 1 >$和$| 2 >$  
-令$| I > = |1>  \quad  | II' > = | 1 > + C | 2 >$  
-因为$< I|II' > =0$  
+两个不正交的矢量$| 1 \rangle$和$| 2 \rangle$  
+令$| I > = |1\rangle  \quad  | II' \rangle = | 1 \rangle + C | 2 \rangle$  
+因为$\langle I|II' \rangle =0$  
 解得$C=-1/S$ (S为1和2的内积)  
 归一化得
-$$| II > = \frac{1}{\sqrt{S^{-2}-1}}(|1>-S^{-1}|2 >)$$
+$$| II \rangle = \frac{1}{\sqrt{S^{-2}-1}}(|1\rangle -S^{-1}|2 \rangle)$$
 
 ### 证明算符是厄米的
 Prove that the kinetic energy operator is Hermitian:
 $$\hat{T}=-\frac{\hbar}{2m}\frac{d^2}{dx^2}$$
 只需证明:
-$$< f|\hat{T}|f > = < f|\hat{T}|f >^*$$
+$$\langle f|\hat{T}|f \rangle = {\langle f|\hat{T}|f \rangle}^*$$
 
 
 
@@ -254,7 +254,7 @@ Since an arbitrary任意 function can be expanded as a linear combination线性�
 
 To obtain the coefficients in the expansion, we multiply左乘 both sides by $f_m^*(x)$ and integrate, then we find:
 $$\int_{-\infty}^{\infty}f_m^*(x)\psi(x)dx=\Sigma_{n=1}^\infty c_n \int_{-\infty}^{\infty}f_m^*(x)f_n(x)dx=\Sigma_{n=1}^\infty c_n\delta_{mn}=c_m$$
-$$c_n=\int_{-\infty}^{\infty}f_n^*(x)\psi(x)dx=< f_n|\psi >$$
+$$c_n=\int_{-\infty}^{\infty}f_n^*(x)\psi(x)dx=\langle f_n|\psi \rangle$$
 
 The coefficients系数 $c_n$ in the expansion are called **Fourier coefficients**
 
@@ -703,7 +703,7 @@ The number of nodes节点 in the radial function $=n-l-1$
 $$\psi_{1s}=\psi_{100}(r,\theta,\varphi)=R_{10}(r)Y_0^0(\theta,\varphi)=(\pi a_0^3)^{-1/2}e^{-r/a_0}$$
 
 The average value of $r$:
-$$< r >_{1s}=< 100|r|100 > = \frac{4}{a_0^3} \int_0^\infty r^3e^{-2r/a_0}dr=\frac{3}{2}a_0$$
+$$< r >_{1s}=\langle 100|r|100 \rangle = \frac{4}{a_0^3} \int_0^\infty r^3e^{-2r/a_0}dr=\frac{3}{2}a_0$$
 
 In the similar way, we obtain the Potenial energy:
 $$< V(r) >_{1s}=< 100|V|100 > =\int_0^{2\pi}d\varphi \int_0^\pi d\theta \sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \varepsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \varepsilon_0 a_0}$$
@@ -717,7 +717,7 @@ It is **The Bohr radius**
 ### The complete $2s$ wave function
 $$\psi_{2s}(r,\theta,\varphi)=\frac{1}{\sqrt{32\pi}} (\frac{1}{a_0})^{3/2}(2-\frac{2}{a_0})e^{-r/2a_0}$$
 
-$$< r >_{2s}=< 200|r|200 > = 6a_0$$
+$$< r >_{2s}=\langle 200|r|200 \rangle = 6a_0$$
 
 
 ## Section 3: p Orbitas p轨道 and the Zeeman Effect
@@ -821,7 +821,7 @@ It is difficult to find the eigenfunctions and eigenvalues of the operator, sinc
 The **spin-orbital interaction** is small in a hydrogen atom
 
 When the spin-orbital interaction is taken into account, $\hat{L}^2$ and $\hat{S}^2$ no longer commute with $\hat{H}$不再对易, so $\vec{L}$ and $\vec{S}$ are no longer conserved守恒, only $\vec{J}=\vec{L}+\vec{S}$ is conserved:
-$$\hat{J}^2| J M_J > =\hbar J(J+1)|J M_J > \qquad \hat{J}_z|J M_J=\hbar M_J|J M_J > $$
+$$\hat{J}^2| J M_J > =\hbar J(J+1)|J M_J \rangle \qquad \hat{J}_z|J M_J=\hbar M_J|J M_J \rangle $$
 
 ***
 角动量耦合：  
@@ -834,7 +834,7 @@ $$\vec{J}=\vec{L}+\vec{S}$$
 When the spin-orbital interaction is included, the schrodinger equation for a hydrogen atom cannot be solved exactly, but $\psi_{nml}(r,\theta,\varphi)$ is a good approximation.
 
 For a hydrogen atom, the energy shift due to the spin-orbital interaction is estimated旋轨耦合带来的能量偏移(with the first perturbation theory一阶微扰理论)
-$$E_{S.Q.}= < \psi_{nml}|\xi(r)\vec{L} \cdot \vec{S}|\psi_{nml} > =\frac{1}{2}A\hbar^2[J(J+1)-L(L+1)-S(S+1)]$$
+$$E_{S.Q.}= \langle \psi_{nml}|\xi(r)\vec{L} \cdot \vec{S}|\psi_{nml} \rangle =\frac{1}{2}A\hbar^2[J(J+1)-L(L+1)-S(S+1)]$$
 
 ***
 1. The similar expression exists for a many-electron atom  
@@ -881,3 +881,5 @@ $$\Delta E_{mag}=g(j,l)\beta_B m_j B_z$$
 量子化学中使用的近似方法
 
 https://blog.oddish.cn/c3e569a74248/
+
+# Chapter 6: 
