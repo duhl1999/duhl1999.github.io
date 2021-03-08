@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"duhl1999.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="记录了markdown中常用的数学公式的代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown数学公式语法">
+<meta property="og:url" content="https://duhl1999.github.io/ec36bac5ff8d/index.html">
+<meta property="og:site_name" content="ODDISH">
+<meta property="og:description" content="记录了markdown中常用的数学公式的代码">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-30T11:30:24.000Z">
+<meta property="article:modified_time" content="2020-12-30T11:30:24.000Z">
+<meta property="article:author" content="HL Du">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="语言">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://duhl1999.github.io/ec36bac5ff8d/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>markdown数学公式语法 | ODDISH</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ODDISH</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-sitemap fa-fw"></i>资源</a></li>
+        <li class="menu-item menu-item-日程"><a href="https://www.notion.so/Dashboard-eb86603d44db418a84002f4455a28fb5" rel="noopener" target="_blank"><i class="fa fa-calendar fa-fw"></i>日程</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E4%B8%8E%E7%8B%AC%E8%A1%8C"><span class="nav-text">行内与独行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E5%9E%8B"><span class="nav-text">字型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="nav-text">数学运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E8%BF%90%E7%AE%97"><span class="nav-text">高级运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="nav-text">逻辑运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%BF%90%E7%AE%97"><span class="nav-text">集合运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="nav-text">数学符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">希腊字母</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HL Du"
+      src="/images/duhl.jpg">
+  <p class="site-author-name" itemprop="name">HL Du</p>
+  <div class="site-description" itemprop="description">SCCE@HIT</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/duhl1999" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;duhl1999" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:duhl1999@outlook.com" title="E-Mail → mailto:duhl1999@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://duhl1999.github.io/ec36bac5ff8d/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/duhl.jpg">
+      <meta itemprop="name" content="HL Du">
+      <meta itemprop="description" content="SCCE@HIT">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ODDISH">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          markdown数学公式语法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-30 19:30:24" itemprop="dateCreated datePublished" datetime="2020-12-30T19:30:24+08:00">2020-12-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">语言学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>记录了markdown中常用的数学公式的代码</p>
+<a id="more"></a>
+
+<h1 id="行内与独行"><a href="#行内与独行" class="headerlink" title="行内与独行"></a>行内与独行</h1><p>行内公式：<code>$xyz$</code><br>独行公式：<code>$$xyz$$</code></p>
+<h1 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h1><p>上标符号$x^4$: <code>$x^4$</code><br>下标符号$x_1$: <code>$x_1$</code><br>组合符号$O^{2+}_{2}$: <code>$O^&#123;2+&#125;_&#123;2&#125;$</code></p>
+<h1 id="字型"><a href="#字型" class="headerlink" title="字型"></a>字型</h1><p>下划线符号$\underline{x+y}$: <code>$\underline&#123;x+y&#125;$</code><br>上大括号$\overbrace{a+b+c+d}^{2.0}$: <code>$\overbrace&#123;a+b+c+d&#125;^&#123;2.0&#125;$</code><br>下大括号$a+\underbrace{b+c}_{1.0}+d$: <code>$a+\underbrace&#123;b+c&#125;_&#123;1.0&#125;+d$</code><br>上位符号$x\stackrel{\Delta}{=}x_1+x_2$: <code>$x\stackrel&#123;\Delta&#125;&#123;=&#125;x_1+x_2$</code></p>
+<h1 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h1><p>两个quad空格$x\quad y$: <code>$x\qquad y$</code><br>quad空格$x\quad y$: <code>$x\quad y$</code>  </p>
+<h1 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h1><p>加减运算$x\pm y$: <code>$x\pm y$</code><br>减加运算$x\mp y$: <code>$x\mp y$</code><br>乘法运算$x\times y$: <code>$x\times y$</code><br>点乘运算$x\cdot y$: <code>$x\cdot y$:</code><br>星乘运算$x\ast y$: <code>$x\ast y$</code><br>除法运算$x\div y$: <code>$x\div y$</code><br>分式表示$\frac{x+y}{y+z}$: <code>$\frac&#123;x+y&#125;&#123;y+z&#125;$</code><br>分式表示${x+y}\over{y+z}$: <code>$&#123;x+y&#125;\over&#123;y+z&#125;$</code>  </p>
+<h1 id="高级运算"><a href="#高级运算" class="headerlink" title="高级运算"></a>高级运算</h1><p>平均数运算$\overline{xyz}$: <code>$\overline&#123;xyz&#125;$</code><br>开二次方运算$\sqrt x$: <code>$\sqrt x$</code><br>开方运算$\sqrt[3]{x+y}$: <code>$\sqrt[3]&#123;x+y&#125;$</code><br>求和运算$\sum_{i=0}^n$: <code>$\sum_&#123;i=0&#125;^n$</code><br>积分运算$\int_a^b xdx$: <code>$\int_a^b xdx$</code><br>偏微分运算$\frac{\partial x}{\partial y}$: <code>$\frac&#123;\partial x&#125;&#123;\partial y&#125;$</code><br>矩阵表示$\left[\begin{matrix} 1&amp;2&amp;3 \ 4&amp;5&amp;6 \ 7&amp;8&amp;9 \end{matrix}\right]$: <code>$\left[\begin&#123;matrix&#125; 1&amp;2&amp;3 \\ 4&amp;5&amp;6 \\ 7&amp;8&amp;9 \end&#123;matrix&#125;\right]$</code>  </p>
+<h1 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h1><p>大于等于$x\geq z$: <code>$x\geq z$</code><br>小于等于$x\leq z$: <code>$x\leq z$</code><br>不等于$x\neq z$: <code>$x\neq z$</code><br>不大于等于$x\ngeq z$: <code>$x\ngeq z$</code><br>不小于等于$x\nleq z$: <code>$x\nleq z$</code><br>约等于$x\approx z$: <code>$x\approx z$</code><br>恒定等于$x\equiv z$: <code>$x\equiv z$</code>  </p>
+<h1 id="集合运算"><a href="#集合运算" class="headerlink" title="集合运算"></a>集合运算</h1><p>属于$x \in y$: <code>$x \in y$</code><br>不属于$x \notin y$: <code>$x \notin y$</code><br>子集$x \subset y$: <code>$x \subset y$</code><br>真子集$x \subseteq y$: <code>$x \subseteq y$</code><br>非真子集$x \subsetneq y$: <code>$x \subsetneq y$</code><br>非子集$x \not\subset y$: <code>$x \not\subset y$</code><br>并集$x \cup y$: <code>$x \cup y$</code><br>交集$x \cap y$: <code>$x \cap y$</code><br>差集$x \setminus y$: <code>$x \setminus y$</code><br>同或$x \bigodot y$: <code>$x \bigodot y$</code><br>同与$x \bigotimes y$: <code>$x \bigotimes y$</code><br>实数集合$\mathbb{R}$: <code>$\mathbb&#123;R&#125;$</code><br>自然数集合$\mathbb{Z}$: <code>\mathbb&#123;Z&#125;</code><br>空集$\emptyset$: <code>$\emptyset$</code>  </p>
+<h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1><p>无穷，符号：\infty，如：$\infty$<br>虚数，符号：\imath，如：$\imath$<br>虚数，符号：\jmath，如：$\jmath$<br>数学符号，符号\hat{a}，如：$\hat{a}$<br>数学符号，符号\check{a}，如：$\check{a}$<br>数学符号，符号\breve{a}，如：$\breve{a}$<br>数学符号，符号\tilde{a}，如：$\tilde{a}$<br>数学符号，符号\bar{a}，如：$\bar{a}$<br>矢量符号，符号\vec{a}，如：$\vec{a}$<br>数学符号，符号\acute{a}，如：$\acute{a}$<br>数学符号，符号\grave{a}，如：$\grave{a}$<br>数学符号，符号\mathring{a}，如：$\mathring{a}$<br>一阶导数符号，符号\dot{a}，如：$\dot{a}$<br>二阶导数符号，符号\ddot{a}，如：$\ddot{a}$<br>上箭头，符号：\uparrow，如：$\uparrow$<br>上箭头，符号：\Uparrow，如：$\Uparrow$<br>下箭头，符号：\downarrow，如：$\downarrow$<br>下箭头，符号：\Downarrow，如：$\Downarrow$<br>左箭头，符号：\leftarrow，如：$\leftarrow$<br>左箭头，符号：\Leftarrow，如：$\Leftarrow$<br>右箭头，符号：\rightarrow，如：$\rightarrow$<br>右箭头，符号：\Rightarrow，如：$\Rightarrow$<br>底端对齐的省略号，符号：\ldots，如：$1,2,\ldots,n$<br>中线对齐的省略号，符号：\cdots，如：$x_1^2 + x_2^2 + \cdots + x_n^2$<br>竖直对齐的省略号，符号：\vdots，如：$\vdots$<br>斜对齐的省略号，符号：\ddots，如：$\ddots$  </p>
+<h1 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h1><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td><code>A</code></td>
+<td>α</td>
+<td><code>\alhpa</code></td>
+</tr>
+<tr>
+<td>B</td>
+<td><code>B</code></td>
+<td>β</td>
+<td><code>\beta</code></td>
+</tr>
+<tr>
+<td>Γ</td>
+<td><code>\Gamma</code></td>
+<td>γ</td>
+<td><code>\gamma</code></td>
+</tr>
+<tr>
+<td>Δ</td>
+<td><code>\Delta</code></td>
+<td>δ</td>
+<td><code>\delta</code></td>
+</tr>
+<tr>
+<td>E</td>
+<td><code>E</code></td>
+<td>ϵ</td>
+<td><code>\epsilon</code></td>
+</tr>
+<tr>
+<td>Z</td>
+<td><code>Z</code></td>
+<td>ζ</td>
+<td><code>\zeta</code></td>
+</tr>
+<tr>
+<td>H</td>
+<td><code>H</code></td>
+<td>η</td>
+<td><code>\eta</code></td>
+</tr>
+<tr>
+<td>Θ</td>
+<td><code>\Theta</code></td>
+<td>θ</td>
+<td><code>\theta</code></td>
+</tr>
+<tr>
+<td>I</td>
+<td><code>I</code></td>
+<td>ι</td>
+<td><code>\iota</code></td>
+</tr>
+<tr>
+<td>K</td>
+<td><code>K</code></td>
+<td>κ</td>
+<td><code>\kappa</code></td>
+</tr>
+<tr>
+<td>Λ</td>
+<td><code>\Lambda</code></td>
+<td>λ</td>
+<td><code>\lambda</code></td>
+</tr>
+<tr>
+<td>M</td>
+<td><code>M</code></td>
+<td>μ</td>
+<td><code>\mu</code></td>
+</tr>
+<tr>
+<td>N</td>
+<td><code>N</code></td>
+<td>ν</td>
+<td><code>\nu</code></td>
+</tr>
+<tr>
+<td>Ξ</td>
+<td><code>\Xi</code></td>
+<td>ξ</td>
+<td><code>\xi</code></td>
+</tr>
+<tr>
+<td>O</td>
+<td><code>O</code></td>
+<td>ο</td>
+<td><code>\omicron</code></td>
+</tr>
+<tr>
+<td>Π</td>
+<td><code>\Pi</code></td>
+<td>π</td>
+<td><code>\pi</code></td>
+</tr>
+<tr>
+<td>P</td>
+<td><code>P</code></td>
+<td>ρ</td>
+<td><code>\rho</code></td>
+</tr>
+<tr>
+<td>Σ</td>
+<td><code>\Sigma</code></td>
+<td>σ</td>
+<td><code>\sigma</code></td>
+</tr>
+<tr>
+<td>T</td>
+<td><code>T</code></td>
+<td>τ</td>
+<td><code>\tau</code></td>
+</tr>
+<tr>
+<td>Υ</td>
+<td><code>\Upsilon</code></td>
+<td>υ</td>
+<td><code>\upsilon</code></td>
+</tr>
+<tr>
+<td>Φ</td>
+<td><code>\Phi</code></td>
+<td>ϕ</td>
+<td><code>\phi</code></td>
+</tr>
+<tr>
+<td>X</td>
+<td><code>X</code></td>
+<td>χ</td>
+<td><code>\chi</code></td>
+</tr>
+<tr>
+<td>Ψ</td>
+<td><code>\Psi</code></td>
+<td>ψ</td>
+<td><code>\psi</code></td>
+</tr>
+<tr>
+<td>Ω</td>
+<td><code>\v</code></td>
+<td>ω</td>
+<td><code>\omega</code></td>
+</tr>
+</tbody></table>
+<p>$\hbar$: <code>$\hbar$</code><br>$\nabla$: <code>$\nabla$</code></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>HL Du
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://duhl1999.github.io/ec36bac5ff8d/" title="markdown数学公式语法">https://duhl1999.github.io/ec36bac5ff8d/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
+              <a href="/tags/%E8%AF%AD%E8%A8%80/" rel="tag"># 语言</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/e10808c0a9ce/" rel="prev" title="量子化学_mooc_NJU">
+                  <i class="fa fa-chevron-left"></i> 量子化学_mooc_NJU
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/1aa159575f58/" rel="next" title="固体物理">
+                  固体物理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HL Du</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>

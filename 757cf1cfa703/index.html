@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"duhl1999.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="1 Reciprocal Lattice衍射斑点是晶体倒易点阵的二维投影放大 1.1 Fourier series 傅里叶级数周期性函数可以变成无穷多项同周期正弦波叠加 $$f(x+2\pi)&#x3D;f(x)&#x3D;\frac{a_0}{2}+\sum_{i&#x3D;1}^\infty(a_ncosnx+b_nsinnx)$$其中，$a_0&#x3D;\frac{1}{\pi}\int_{-\pi}^\pi f(x)dx$,$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="倒易点阵和布里渊区">
+<meta property="og:url" content="https://duhl1999.github.io/757cf1cfa703/index.html">
+<meta property="og:site_name" content="ODDISH">
+<meta property="og:description" content="1 Reciprocal Lattice衍射斑点是晶体倒易点阵的二维投影放大 1.1 Fourier series 傅里叶级数周期性函数可以变成无穷多项同周期正弦波叠加 $$f(x+2\pi)&#x3D;f(x)&#x3D;\frac{a_0}{2}+\sum_{i&#x3D;1}^\infty(a_ncosnx+b_nsinnx)$$其中，$a_0&#x3D;\frac{1}{\pi}\int_{-\pi}^\pi f(x)dx$,$">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-04T12:12:00.000Z">
+<meta property="article:modified_time" content="2021-01-04T12:12:00.000Z">
+<meta property="article:author" content="HL Du">
+<meta property="article:tag" content="固体物理">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://duhl1999.github.io/757cf1cfa703/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>倒易点阵和布里渊区 | ODDISH</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ODDISH</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-sitemap fa-fw"></i>资源</a></li>
+        <li class="menu-item menu-item-日程"><a href="https://www.notion.so/Dashboard-eb86603d44db418a84002f4455a28fb5" rel="noopener" target="_blank"><i class="fa fa-calendar fa-fw"></i>日程</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Reciprocal-Lattice"><span class="nav-text">1 Reciprocal Lattice</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Fourier-series-%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="nav-text">1.1 Fourier series 傅里叶级数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Reciprocal-Lattice-space-%E5%80%92%E6%98%93%E7%82%B9%E9%98%B5"><span class="nav-text">1.2 Reciprocal Lattice(space) 倒易点阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E4%B8%80%E7%BB%B4%E6%99%B6%E4%BD%93-n-x-a-n-x"><span class="nav-text">对于一维晶体 ($n(x+a)&#x3D;n(x)$):</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4-n-vec-r-vec-R-n-vec-r"><span class="nav-text">对于三维空间 ($n(\vec{r}+\vec{R})&#x3D;n(\vec{r})$):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%80%92%E6%98%93%E7%A9%BA%E9%97%B4%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">倒易空间的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%93%E7%A7%AF%E5%85%B3%E7%B3%BB"><span class="nav-text">体积关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%99%B6%E9%9D%A2%E5%85%B3%E7%B3%BB"><span class="nav-text">晶面关系</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A3%E7%82%B9%E9%98%B5%E5%92%8C%E5%80%92%E6%98%93%E7%82%B9%E9%98%B5%E7%9A%84%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB"><span class="nav-text">正点阵和倒易点阵的对应关系</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Crystal-Diffraction-%E6%99%B6%E4%BD%93%E8%A1%8D%E5%B0%84"><span class="nav-text">2 Crystal Diffraction 晶体衍射</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HL Du"
+      src="/images/duhl.jpg">
+  <p class="site-author-name" itemprop="name">HL Du</p>
+  <div class="site-description" itemprop="description">SCCE@HIT</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/duhl1999" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;duhl1999" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:duhl1999@outlook.com" title="E-Mail → mailto:duhl1999@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://duhl1999.github.io/757cf1cfa703/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/duhl.jpg">
+      <meta itemprop="name" content="HL Du">
+      <meta itemprop="description" content="SCCE@HIT">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ODDISH">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          倒易点阵和布里渊区
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-04 20:12:00" itemprop="dateCreated datePublished" datetime="2021-01-04T20:12:00+08:00">2021-01-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">固体物理</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="1-Reciprocal-Lattice"><a href="#1-Reciprocal-Lattice" class="headerlink" title="1 Reciprocal Lattice"></a>1 Reciprocal Lattice</h1><p>衍射斑点是晶体倒易点阵的二维投影放大</p>
+<h2 id="1-1-Fourier-series-傅里叶级数"><a href="#1-1-Fourier-series-傅里叶级数" class="headerlink" title="1.1 Fourier series 傅里叶级数"></a>1.1 Fourier series 傅里叶级数</h2><p>周期性函数可以变成无穷多项同周期正弦波叠加</p>
+<p>$$f(x+2\pi)=f(x)=\frac{a_0}{2}+\sum_{i=1}^\infty(a_ncosnx+b_nsinnx)$$<br>其中，$a_0=\frac{1}{\pi}\int_{-\pi}^\pi f(x)dx$,<br>$a_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)cosnxdx$,<br>$b_n=\frac{1}{\pi}\int_{-\pi}^\pi f(x)sinnxdx$</p>
+<a id="more"></a>
+
+<p>由欧拉公式$e^{\pm ix}=cosx\pm isin x$</p>
+<p>$$f(x)=\sum_n c_ne^{inx}$$<br>其中$c_n=\frac{1}{2\pi}\int_{-\pi}^\pi f(x)e^{-inx}dx$</p>
+<p>更一般的，以周期为n：<br>$$n(x+a)=n(x)=\sum_p n_pe^{i\frac{2\pi p}{a}x}$$<br>其中$n_p=\frac{1}{n}\int_{0}^a n(x)e^{-i\frac{2\pi p}{a}x}dx$</p>
+<h2 id="1-2-Reciprocal-Lattice-space-倒易点阵"><a href="#1-2-Reciprocal-Lattice-space-倒易点阵" class="headerlink" title="1.2 Reciprocal Lattice(space) 倒易点阵"></a>1.2 Reciprocal Lattice(space) 倒易点阵</h2><h3 id="对于一维晶体-n-x-a-n-x"><a href="#对于一维晶体-n-x-a-n-x" class="headerlink" title="对于一维晶体 ($n(x+a)=n(x)$):"></a>对于一维晶体 ($n(x+a)=n(x)$):</h3><p>基矢: $\vec{a}=a\vec{i}$，其中$\vec{i}$表示方向矢量<br>格矢: $\vec{R}=ma\vec{i}=m\vec{a}$</p>
+<p>令$\vec{x}=x\vec{i}$  ,$\vec{G}=\frac{2\pi p}{a}\vec{i}$<br>$$n(x)=\sum_{p}n_pe^{i\vec{G}\cdot \vec{x}}=\sum_{G}n_G e^{i\vec{G}\cdot \vec{x}}$$</p>
+<p>令：<br>$$\vec{b}=\frac{2\pi}{a}\vec{i}$$<br>$$G=\frac{2\pi p}{a}\vec{i}=p\vec{b}$$<br>在这里，$\vec{G}$由$\vec{b}$线性组合而来，$\vec{b}$可以作为基矢，$\vec{G}$可以作为格矢。这样构建出来的空间称为倒易空间（倒易点阵、波矢空间）</p>
+<p>$\vec{G}$称为倒格矢，单位为长度的倒数<br>$\vec{b}$称为倒易基矢</p>
+<h3 id="对于三维空间-n-vec-r-vec-R-n-vec-r"><a href="#对于三维空间-n-vec-r-vec-R-n-vec-r" class="headerlink" title="对于三维空间 ($n(\vec{r}+\vec{R})=n(\vec{r})$):"></a>对于三维空间 ($n(\vec{r}+\vec{R})=n(\vec{r})$):</h3><p>格矢: $\vec{R}=u_1\vec{a_1}+u_2\vec{a_2}+u_3\vec{a_3}$</p>
+<p>$$n(\vec{r})=\sum_{G}n_G e^{i\vec{G}\cdot \vec{r}}$$<br>由$n(\vec{r}+\vec{R})=n(\vec{r})$:<br>$$\sum_{G}n_G e^{i\vec{G}\cdot \vec{r}}=\sum_{G}n_G e^{i\vec{G}\cdot \vec{r}} e^{i\vec{G}\cdot \vec{R}}$$<br>因此:<br>$$e^{i\vec{G}\cdot \vec{R}}=1$$<br>进而:<br>$$\vec{G}\cdot \vec{R}=2\pi m，m为整数$$ </p>
+<p>对正空间：$\vec{R}=u_1\vec{a_1}+u_2\vec{a_2}+u_3\vec{a_3}$<br>对倒易空间：$\vec{G}=v_1\vec{b_1}+v_2\vec{b_2}+v_3\vec{b_3}$</p>
+<p>因此：<br>$$\vec{b_i} \cdot \vec{a_j}=2\pi(i=j),0(i\neq j)$$</p>
+<p>$\vec{R}$的端点对应布拉维点阵中的格点，$\vec{G}$的端点对应倒易点阵中的格点，这些倒易点阵也是布拉维点阵<br>(对应方式： SC-SC  FCC-BCC  BCC-FCC)</p>
+<p>由$\vec{b_1}\bot (\vec{a_2},\vec{a_3})$:<br>$$\vec{b_1}= c(\vec{a_2}\times\vec{a_3})$$<br>两边同时左点乘$\vec{c_1}$<br>$$\vec{c_1}\cdot\vec{b_1}= c\vec{c_1}\cdot(\vec{a_2}\times\vec{a_3})$$<br>$$2\pi=cv,v为原胞体积$$</p>
+<p>因此：<br>$$\vec{b_1}=\frac{2\pi}{v}\vec{a_2}\times\vec{a_3}$$<br>$$\vec{b_2}=\frac{2\pi}{v}\vec{a_3}\times\vec{a_1}$$<br>$$\vec{b_3}=\frac{2\pi}{v}\vec{a_1}\times\vec{a_2}$$</p>
+<h4 id="倒易空间的性质"><a href="#倒易空间的性质" class="headerlink" title="倒易空间的性质"></a>倒易空间的性质</h4><h5 id="体积关系"><a href="#体积关系" class="headerlink" title="体积关系"></a>体积关系</h5><p>正点阵原胞体积$v_a=\vec{a_1}\cdot\vec{a_2}\times\vec{a_3}$<br>倒易点阵原胞体积$v_b=\vec{b_1}\cdot\vec{b_2}\times\vec{b_3}$<br>$$v_a=\frac{(2\pi)^3}{v_b}$$</p>
+<h5 id="晶面关系"><a href="#晶面关系" class="headerlink" title="晶面关系"></a>晶面关系</h5><p>$$G_{h_1 h_2 h_3} \bot (h_1 h_2 h_3)$$<br>$$|G_{h_1 h_2 h_3}| =\frac{2\pi}{d_{h_1 h_2 h_3}} ,d_{h_1 h_2 h_3}晶面间距$$</p>
+<h5 id="正点阵和倒易点阵的对应关系"><a href="#正点阵和倒易点阵的对应关系" class="headerlink" title="正点阵和倒易点阵的对应关系"></a>正点阵和倒易点阵的对应关系</h5><p>SC-SC<br>FCC-BCC<br>BCC-FCC</p>
+<h1 id="2-Crystal-Diffraction-晶体衍射"><a href="#2-Crystal-Diffraction-晶体衍射" class="headerlink" title="2 Crystal Diffraction 晶体衍射"></a>2 Crystal Diffraction 晶体衍射</h1>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>HL Du
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://duhl1999.github.io/757cf1cfa703/" title="倒易点阵和布里渊区">https://duhl1999.github.io/757cf1cfa703/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/" rel="tag"># 固体物理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/1aa159575f58/" rel="prev" title="固体物理">
+                  <i class="fa fa-chevron-left"></i> 固体物理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/c3e569a74248/" rel="next" title="量子化学中使用的近似方法">
+                  量子化学中使用的近似方法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HL Du</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>

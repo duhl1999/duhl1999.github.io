@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"duhl1999.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程MOOC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="量子化学_mooc_NJU">
+<meta property="og:url" content="https://duhl1999.github.io/e10808c0a9ce/index.html">
+<meta property="og:site_name" content="ODDISH">
+<meta property="og:description" content="2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程MOOC">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-30T05:38:33.000Z">
+<meta property="article:modified_time" content="2021-03-08T14:55:38.740Z">
+<meta property="article:author" content="HL Du">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="理论">
+<meta property="article:tag" content="量子化学">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://duhl1999.github.io/e10808c0a9ce/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>量子化学_mooc_NJU | ODDISH</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ODDISH</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-sitemap fa-fw"></i>资源</a></li>
+        <li class="menu-item menu-item-日程"><a href="https://www.notion.so/Dashboard-eb86603d44db418a84002f4455a28fb5" rel="noopener" target="_blank"><i class="fa fa-calendar fa-fw"></i>日程</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-1-The-dawn-of-the-Quantum-Theory-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%9B%99%E5%85%89"><span class="nav-text">Chapter 1: The dawn of the Quantum Theory 量子力学的曙光</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-1-Blackbody-Radiation%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84-and-Photoelectric-Effect%E5%85%89%E7%94%B5%E6%95%88%E5%BA%94"><span class="nav-text">Section 1: Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blackbody-Radiation"><span class="nav-text">Blackbody Radiation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Photoelectric-Effect"><span class="nav-text">Photoelectric Effect</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2-Hydrogen-Atomic-Spectrum%E6%B0%A2%E5%8E%9F%E5%AD%90%E5%85%89%E8%B0%B1-and-Bohr-Theory"><span class="nav-text">Section 2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hydrogen-Atomic-Spectrum"><span class="nav-text">Hydrogen Atomic Spectrum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bohr-Theory"><span class="nav-text">Bohr Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A2%E5%B0%94%E8%BF%9B%E8%A1%8C%E7%9A%84%E5%81%87%E8%AE%BE"><span class="nav-text">波尔进行的假设</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A2%E5%B0%94%E6%8F%90%E5%87%BA%E7%9A%84%E7%90%86%E8%AE%BA%E8%A2%AB%E7%A7%B0%E4%BD%9C%E6%97%A7%E9%87%8F%E5%AD%90%E8%AE%BA"><span class="nav-text">波尔提出的理论被称作旧量子论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-3-de-Broglie-Wave-and-Heisenberg-Uncertainty-Principle"><span class="nav-text">Section 3: de Broglie Wave and Heisenberg Uncertainty Principle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#de-Broglie-Wave"><span class="nav-text">de Broglie Wave</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Heisenberg-Uncertainty-Principle"><span class="nav-text">Heisenberg Uncertainty Principle</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-2-The-Postulates-and-General-Principles-of-Quantum-Mechanics"><span class="nav-text">Chapter 2: The Postulates and General Principles of Quantum Mechanics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-1-Wave-Functions-Operators-and-Eigenvalues"><span class="nav-text">Section 1: Wave Functions, Operators and Eigenvalues</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-1-wave-function"><span class="nav-text">Postulate 1: wave function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Wave-Function-should-be-Normalized"><span class="nav-text">The Wave Function should be Normalized:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Other-Requirements"><span class="nav-text">Other Requirements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-2-Operator"><span class="nav-text">Postulate 2: Operator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-3-Eigenvalues"><span class="nav-text">Postulate 3: Eigenvalues</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-4-average-value-of-the-observable-B"><span class="nav-text">Postulate 4: average value of the observable B</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2-Commutator-and-Hermitian-Operator"><span class="nav-text">Section 2: Commutator and Hermitian Operator</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#commute%E5%AF%B9%E6%98%93%EF%BC%9A"><span class="nav-text">commute对易：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hermitian-%E5%8E%84%E7%B1%B3%EF%BC%9A"><span class="nav-text">Hermitian 厄米：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-definition-of-Hermitian-operator"><span class="nav-text">The definition of Hermitian operator:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-properties-of-a-Hermitian-operator"><span class="nav-text">The properties of a Hermitian operator:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gram-Schmidt-orthonormalization-procedure%E6%AD%A3%E4%BA%A4%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-text">Gram-Schmidt orthonormalization procedure正交化方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E6%98%8E%E7%AE%97%E7%AC%A6%E6%98%AF%E5%8E%84%E7%B1%B3%E7%9A%84"><span class="nav-text">证明算符是厄米的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-2-Operator-1"><span class="nav-text">Postulate 2: Operator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-3-Eigenvalues-1"><span class="nav-text">Postulate 3: Eigenvalues</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-4-average-value-of-the-observable-B-1"><span class="nav-text">Postulate 4: average value of the observable B</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-3%EF%BC%9AEigenfunctions-of-Commutative-Operators"><span class="nav-text">Section 3：Eigenfunctions of Commutative Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-4-Orthonormal-Basis"><span class="nav-text">Section 4: Orthonormal Basis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-5-Time-Dependent-Schrodinger-Equation"><span class="nav-text">Section 5: Time-Dependent Schrodinger Equation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Postulate-5"><span class="nav-text">Postulate 5:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-3-Exact%E7%B2%BE%E7%A1%AE-Energy-and-Wave-Functions-for-Simple-Systems"><span class="nav-text">Chapter 3: Exact精确 Energy and Wave Functions for Simple Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-1-A-particle-in-1D-Box"><span class="nav-text">Section 1: A particle in 1D Box</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2-Applications-and-Extensions%E6%89%A9%E5%B1%95-of-a-Partcle-in-a-Box"><span class="nav-text">Section 2: Applications and Extensions扩展 of a Partcle in a Box</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explaining-the-sbsorption-spectrum-of-lineat-conjugated-hydrocarbons"><span class="nav-text">explaining the sbsorption spectrum of lineat conjugated hydrocarbons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Average-Momentum-of-a-Particle-in-a-Box-is-Zero"><span class="nav-text">The Average Momentum of a Particle in a Box is Zero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verification-of-the-Heisenberg-Uncertainty-Principle"><span class="nav-text">Verification of the Heisenberg Uncertainty Principle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Problem-of-a-particle-in-a-3D-Box-is-a-Simple-Extension-of-the-1D-Case"><span class="nav-text">The Problem of a particle in a 3D Box is a Simple Extension of the 1D Case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Particle-in-a-Box-with-Different-Potential-Energies-in-Three-Different-Regions"><span class="nav-text">A Particle in a Box with Different Potential Energies in Three Different Regions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-3-Rigid-Rotator-and-Rotational-Spectroscopy-of-Diatomic-Molecules%E5%8F%8C%E5%8E%9F%E5%AD%90%E5%88%86%E5%AD%90"><span class="nav-text">Section 3: Rigid Rotator and Rotational Spectroscopy of Diatomic Molecules双原子分子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#translational-motion-the-mass-center-behaves-like-a-free-particle-V-0"><span class="nav-text">translational motion the mass center behaves like a free particle, $V&#x3D;0$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#the-Schrodinger-Equation-for-the-Relative-Motion"><span class="nav-text">the Schrodinger Equation for the Relative Motion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Energy-Levels-of-a-Rigid-Rotator%E5%88%9A%E6%80%A7%E8%BD%AC%E5%AD%90"><span class="nav-text">The Energy Levels of a Rigid Rotator刚性转子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rotational-Spectroscopy-pf-Diatomic-Molecules"><span class="nav-text">Rotational Spectroscopy pf Diatomic Molecules</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-4-Harmonic-Oscillator-%E5%8F%8C%E5%8E%9F%E5%AD%90%E5%88%86%E5%AD%90%E6%8C%AF%E5%8A%A8%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B"><span class="nav-text">Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-5-Infrared-Spectrum-of-Diatomic-Molecules-%E5%8F%8C%E5%8E%9F%E5%AD%90%E5%88%86%E5%AD%90%E7%BA%A2%E5%A4%96%E5%85%89%E8%B0%B1"><span class="nav-text">Section 5: Infrared Spectrum of Diatomic Molecules  双原子分子红外光谱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-energy-levels-of-a-Harmonic-Oscillator"><span class="nav-text">The energy levels of a Harmonic Oscillator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Wave-Function-of-the-Harmonic-Oscillator%E4%B8%80%E7%BB%B4%E8%B0%90%E6%8C%AF%E5%AD%90"><span class="nav-text">The Wave Function of the Harmonic Oscillator一维谐振子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rotational-Transitions-Accompany-Vibrational-Transitions"><span class="nav-text">Rotational Transitions Accompany Vibrational Transitions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Vibrations-of-Polyatomic-Molecules-Are-Represented-by-Normal-Coordinates%E5%A4%9A%E5%8E%9F%E5%AD%90%E5%88%86%E5%AD%90%E6%8C%AF%E5%8A%A8%E5%85%89%E8%B0%B1"><span class="nav-text">The Vibrations of Polyatomic Molecules Are Represented by Normal Coordinates多原子分子振动光谱</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-The-Hydrogen-Atom"><span class="nav-text">Chapter 4: The Hydrogen Atom</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-1-Schrodinger-Equation-for-the-Hydrogen-Atom"><span class="nav-text">Section 1: Schrodinger Equation for the Hydrogen Atom</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hamiltonian-Operator-for-the-Hydrogen-Atom"><span class="nav-text">Hamiltonian Operator for the Hydrogen Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quantum-Numbers-n-l-m-l"><span class="nav-text">Quantum Numbers $n$, $l$, $m_l$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2-s-Orbitals-are-Spherically-Symmetric-%E7%90%83%E5%AF%B9%E7%A7%B0%E7%9A%84s%E8%BD%A8%E9%81%93"><span class="nav-text">Section 2: s Orbitals are Spherically Symmetric 球对称的s轨道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Degeneracy-of-hydrogen-atomic-level%E7%AE%80%E5%B9%B6%E5%BA%A6"><span class="nav-text">Degeneracy of hydrogen atomic level简并度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Radial-distribution-function-of-hydrogen-atom-%E6%B0%A2%E5%8E%9F%E5%AD%90%E5%BE%84%E5%90%91%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-text">Radial distribution function of hydrogen atom 氢原子径向分布函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-complete-1s-wave-function"><span class="nav-text">The complete $1s$ wave function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-complete-2s-wave-function"><span class="nav-text">The complete $2s$ wave function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-3-p-Orbitas-p%E8%BD%A8%E9%81%93-and-the-Zeeman-Effect"><span class="nav-text">Section 3: p Orbitas p轨道 and the Zeeman Effect</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#p-Orbitas"><span class="nav-text">p Orbitas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zeeman-Effect%E5%A1%9E%E6%9B%BC%E6%95%88%E5%BA%94"><span class="nav-text">Zeeman Effect塞曼效应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-4-Spin-Angular-Momentum%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F-and-Spin-Orbit-Interaction%E8%87%AA%E6%97%8B%E8%BD%A8%E9%81%93%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8"><span class="nav-text">Section 4: Spin Angular Momentum自旋角动量 and Spin-Orbit Interaction自旋轨道相互作用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spin-Angular-Momentum"><span class="nav-text">Spin Angular Momentum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spin-Orbit-Interaction"><span class="nav-text">Spin-Orbit Interaction</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-5-Term-symbols-of-a-Hydrogen-Atom-and-Spectrum-of-Atomic-Hydrogen-in-an-External-Magnetic-Field"><span class="nav-text">Section 5: Term symbols of a Hydrogen Atom and Spectrum of Atomic Hydrogen in an External Magnetic Field</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-an-External-Magnetic-Field"><span class="nav-text">in an External Magnetic Field</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-5-Approximate-Methods"><span class="nav-text">Chapter 5: Approximate Methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-6"><span class="nav-text">Chapter 6:</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HL Du"
+      src="/images/duhl.jpg">
+  <p class="site-author-name" itemprop="name">HL Du</p>
+  <div class="site-description" itemprop="description">SCCE@HIT</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/duhl1999" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;duhl1999" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:duhl1999@outlook.com" title="E-Mail → mailto:duhl1999@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://duhl1999.github.io/e10808c0a9ce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/duhl.jpg">
+      <meta itemprop="name" content="HL Du">
+      <meta itemprop="description" content="SCCE@HIT">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ODDISH">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          量子化学_mooc_NJU
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-30 13:38:33" itemprop="dateCreated datePublished" datetime="2020-12-30T13:38:33+08:00">2020-12-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-08 22:55:38" itemprop="dateModified" datetime="2021-03-08T22:55:38+08:00">2021-03-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">理论学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>2021年初，mooc平台学习南京大学黎书华 、李伟 、马晶的量子化学课程<br><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/NJU-1462082163?tid=1462882445#">MOOC</a></p>
+<a id="more"></a>
+
+<h1 id="Chapter-1-The-dawn-of-the-Quantum-Theory-量子力学的曙光"><a href="#Chapter-1-The-dawn-of-the-Quantum-Theory-量子力学的曙光" class="headerlink" title="Chapter 1: The dawn of the Quantum Theory 量子力学的曙光"></a>Chapter 1: The dawn of the Quantum Theory 量子力学的曙光</h1><h2 id="Section-1-Blackbody-Radiation黑体辐射-and-Photoelectric-Effect光电效应"><a href="#Section-1-Blackbody-Radiation黑体辐射-and-Photoelectric-Effect光电效应" class="headerlink" title="Section 1: Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应"></a>Section 1: Blackbody Radiation黑体辐射 and Photoelectric Effect光电效应</h2><h3 id="Blackbody-Radiation"><a href="#Blackbody-Radiation" class="headerlink" title="Blackbody Radiation"></a>Blackbody Radiation</h3><p>黑体：完全吸收照射到它上面全部辐射的物体<br>planck:<br>&emsp;&emsp;1.blackbody radiation was caused by the oscillations of the electrons<br>&emsp;&emsp;2.the energies of the oscillators振子(E) were discrete离散的 and had the form $E=nh\nu$  (n is an interger; h is the Planck constant)<br>可以推出：<br>$${\lambda_{max}}T=hc/4.965k_b$$<br>The equation is in accord with Wien displacement law(Wien位移定律)：<br>$${\lambda_{max}}T=2.9*10^{-3}m \cdot k$$<br>完美解释了实验观测到的频率能量分布图</p>
+<h3 id="Photoelectric-Effect"><a href="#Photoelectric-Effect" class="headerlink" title="Photoelectric Effect"></a>Photoelectric Effect</h3><p>The ejection of electrons from the surface of a metal by radiation is called the photoelectric effect.<br>爱因斯坦依据普朗克的理论成功解释了该现象<br>$$KE=1/2mv^2=h\nu-\varphi$$</p>
+<center>hν: the energy of the incident photon</center>
+<center>Φ: the work function of the metal  </center>
+
+<p>$$ \varphi = h\nu_0 $$</p>
+<h2 id="Section-2-Hydrogen-Atomic-Spectrum氢原子光谱-and-Bohr-Theory"><a href="#Section-2-Hydrogen-Atomic-Spectrum氢原子光谱-and-Bohr-Theory" class="headerlink" title="Section 2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory"></a>Section 2: Hydrogen Atomic Spectrum氢原子光谱 and Bohr Theory</h2><h3 id="Hydrogen-Atomic-Spectrum"><a href="#Hydrogen-Atomic-Spectrum" class="headerlink" title="Hydrogen Atomic Spectrum"></a>Hydrogen Atomic Spectrum</h3><p>Balmer series巴尔末系列:  符合 $1/n^2$的谱线<br>Rydberg formula： 波速$\tilde{\nu}=R_H({1/n_1^2}-{1/n_2^2})$，$R_H=109677.581cm^{-1}$  </p>
+<h3 id="Bohr-Theory"><a href="#Bohr-Theory" class="headerlink" title="Bohr Theory"></a>Bohr Theory</h3><p>波尔：库仑力等于向心力，能量量子化：<br>$$r=\frac{4\pi\hbar^2n^2}{m_ee^2}$$<br>据此可以计算波尔半径r，带入能量公式：<br>$$E=KE+V(r)=1/2m_ev^2-\frac{e^2}{4\pi\varepsilon_0 r}=-\frac{e^2}{8\pi\varepsilon_0 r}$$<br>With the allow radii半径 of the orbits轨道：<br>$$E_n=-\frac{m_ee^4}{8\varepsilon^2h^2}\frac{1}{n^2}, n=1,2,3…$$</p>
+<p>The observed spectrum of the hydrogen atom is due to transitions from one allowed energy state to another:<br>$$\Delta E=\frac{m_ee^4}{8\varepsilon^2h^2}(\frac{1}{n_1^2}-\frac{1}{n_2^2})=h\nu$$<br>依据频率与波速关系$h\nu=hc\tilde{\nu}$：<br>$$\tilde{\nu}=\frac{m_ee^4}{8\varepsilon^2ch^3}(\frac{1}{n_1^2}-\frac{1}{n_2^2})$$</p>
+<p align="right">--Rydberg formula</p>
+可以用于计算eg: ionization energy电离能(IE)
+
+<h4 id="波尔进行的假设"><a href="#波尔进行的假设" class="headerlink" title="波尔进行的假设"></a>波尔进行的假设</h4><ol>
+<li>角动量是量子化的  </li>
+<li>存在一些稳定运动的轨道</li>
+<li>从一个低能态跃迁到一个高能态要吸收光子：吸收光的能量为能级差（Bohr跃迁条件）</li>
+</ol>
+<h4 id="波尔提出的理论被称作旧量子论"><a href="#波尔提出的理论被称作旧量子论" class="headerlink" title="波尔提出的理论被称作旧量子论"></a>波尔提出的理论被称作旧量子论</h4><p>对氢原子光谱给出了很好的描述<br>但是具有局限性，不能预测其他复杂原子的光谱</p>
+<h2 id="Section-3-de-Broglie-Wave-and-Heisenberg-Uncertainty-Principle"><a href="#Section-3-de-Broglie-Wave-and-Heisenberg-Uncertainty-Principle" class="headerlink" title="Section 3: de Broglie Wave and Heisenberg Uncertainty Principle"></a>Section 3: de Broglie Wave and Heisenberg Uncertainty Principle</h2><h3 id="de-Broglie-Wave"><a href="#de-Broglie-Wave" class="headerlink" title="de Broglie Wave"></a>de Broglie Wave</h3><p>$$ \lambda =\frac{h}{p}\frac{h}{mv}$$<br>联系波动性和粒子性</p>
+<h3 id="Heisenberg-Uncertainty-Principle"><a href="#Heisenberg-Uncertainty-Principle" class="headerlink" title="Heisenberg Uncertainty Principle"></a>Heisenberg Uncertainty Principle</h3><p>the position and the momentum of a particle cannot be specified确定 simultaneously同时 with unlimited precision无限精确：<br>$$\Delta x \Delta p \geq h$$<br>$$\Delta E \Delta t \geq h$$</p>
+<h1 id="Chapter-2-The-Postulates-and-General-Principles-of-Quantum-Mechanics"><a href="#Chapter-2-The-Postulates-and-General-Principles-of-Quantum-Mechanics" class="headerlink" title="Chapter 2: The Postulates and General Principles of Quantum Mechanics"></a>Chapter 2: The Postulates and General Principles of Quantum Mechanics</h1><h2 id="Section-1-Wave-Functions-Operators-and-Eigenvalues"><a href="#Section-1-Wave-Functions-Operators-and-Eigenvalues" class="headerlink" title="Section 1: Wave Functions, Operators and Eigenvalues"></a>Section 1: Wave Functions, Operators and Eigenvalues</h2><h3 id="Postulate-1-wave-function"><a href="#Postulate-1-wave-function" class="headerlink" title="Postulate 1: wave function"></a>Postulate 1: wave function</h3><p>The state of a quantum-mechanical system is completely specified by a wave function that depends upon the coordinates of all particles in the system.<br>$$\Psi=\Psi(x_1,y_1,z_1,…,x_n,y_n,z_n,t)$$</p>
+<p>Born: For a 3D one-particle system, the quantity $\Psi(x’,y’,z’,t)\Psi^*(x’,y’,z’,t)dxdydz$ is the probability of finding the particle in the infinitesimal volume element $dxdydz$, located at the point$(x’,y’,z’)$ at time $t$</p>
+<h4 id="The-Wave-Function-should-be-Normalized"><a href="#The-Wave-Function-should-be-Normalized" class="headerlink" title="The Wave Function should be Normalized:"></a>The Wave Function should be Normalized:</h4><p>$$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |\Psi(x,y,z,t)|^2dxdydz = 1$$<br>For a many-particle system, the total probability of find all the patricle is unity:<br>$$\int_{-\infty}^{\infty}…\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}|\Psi(\vec{r},t)|^2dx_1dy_1dz_1…dx_ndy_ndz_n = 1$$</p>
+<p>$$\int_{-\infty}^{\infty}|\Psi|^2d\tau=1$$</p>
+<h4 id="Other-Requirements"><a href="#Other-Requirements" class="headerlink" title="Other Requirements"></a>Other Requirements</h4><ol start="2">
+<li>The wave function must be single-valued, finite, and quadratically integrable 单值，连续，平方可积</li>
+<li>The wave function and ins first derivatives must be continuous 连续可微</li>
+</ol>
+<p>The wave function meeting these requirements is said to be <strong>well-behaved</strong> 品优函数</p>
+<h3 id="Postulate-2-Operator"><a href="#Postulate-2-Operator" class="headerlink" title="Postulate 2: Operator"></a>Postulate 2: Operator</h3><p>To every observable in classical mechanics, there corresponds a quantum-mechanical operator算符 that is linear线性 and hermitian厄米</p>
+<blockquote>
+<p>position: $x$ —- $\hat{X}$ —- x  </p>
+</blockquote>
+<blockquote>
+<p>Momentum: $p_x$ —- $\hat{P_x}$ —- $-i\hbar \frac{\partial}{\partial x}$  </p>
+</blockquote>
+<blockquote>
+<p>Momentum: $\vec{p}$ —- $\hat{\vec{P}}$ —- $-i\hbar (\vec{i}\frac{\partial}{\partial x}+\vec{j}\frac{\partial}{\partial y}+\vec{k}\frac{\partial}{\partial z})$  </p>
+</blockquote>
+<blockquote>
+<p>Kinetic energy: $T_x$ —- $\hat{T_x}$ —- $-\frac{h^2}{2m}\frac{\partial^2}{\partial x^2}$  </p>
+</blockquote>
+<blockquote>
+<p>Kinetic energy: $\vec{T}$ —- $\hat{\vec{T}}$ —- $-\frac{h^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})=-\frac{h^2}{2m}\nabla^2$</p>
+</blockquote>
+<blockquote>
+<p>Potential energy: $V(x,y,z)$ —- $\hat{V}(\hat{x},\hat{y},\hat{z})$ —- $V(x,y,z)$</p>
+</blockquote>
+<blockquote>
+<p>Total energu: $E$ —- $\hat{H}$哈密顿算符 —- $-\frac{h^2}{2m}\nabla^2+V(x,y,z)$</p>
+</blockquote>
+<p>For a 3D system with n particles:<br>$$E=\frac{p_{x_1}^2+p_{y_1}^2+p_{z_1}^2}{2m_1}+…+\frac{p_{x_n}^2+p_{y_n}^2+p_{z_n}^2}{2m_n}+V(x_1，y_1,z_1,…,x_n,y_n,z_n)$$<br>$$\hat{H}=-\Sigma_{i=1}^n \frac{\hbar^2}{2m_i}\nabla_i^2+V(x_1，y_1,z_1,…,x_n,y_n,z_n)$$</p>
+<h3 id="Postulate-3-Eigenvalues"><a href="#Postulate-3-Eigenvalues" class="headerlink" title="Postulate 3: Eigenvalues"></a>Postulate 3: Eigenvalues</h3><p>In any measurement of the observable associated with an operator, the only values that will ever be observed are the eigenvalues特征值 of this operator算符, which satisfy the eigenvalue equation:</p>
+<p>$$\hat{A}\psi_n=a_n\psi_n$$</p>
+<p>本征值$a_n$，本征函数$\psi_n$</p>
+<p>本征值架起了算符和可观测物理量的桥梁</p>
+<h3 id="Postulate-4-average-value-of-the-observable-B"><a href="#Postulate-4-average-value-of-the-observable-B" class="headerlink" title="Postulate 4: average value of the observable B"></a>Postulate 4: average value of the observable B</h3><p>If a system is in a state described by a normalized wave function $\psi$, then the average value of the observable B is given by:<br>$$&lt; B &gt;=\int \psi^* \hat{B} \psi d\tau, d\tau=dx_xdy_1dz_1…dx_ndy_ndz_n$$</p>
+<h2 id="Section-2-Commutator-and-Hermitian-Operator"><a href="#Section-2-Commutator-and-Hermitian-Operator" class="headerlink" title="Section 2: Commutator and Hermitian Operator"></a>Section 2: Commutator and Hermitian Operator</h2><h3 id="commute对易："><a href="#commute对易：" class="headerlink" title="commute对易："></a>commute对易：</h3><p>two operators act sequentially on a function: $\hat{A}\hat{B}f(x)=\hat{A}[\hat{B}f(x)]=\hat{A}h(x)$</p>
+<p>For an arbitrary function f(x), if $\hat{A}\hat{B}f(x)=\hat{B}\hat{A}f(x)$, the two operators commute对易</p>
+<p>The commmutator: $[\hat{A},\hat{B}]\stackrel{\Delta}{==}\hat{A}\hat{B}-\hat{B}\hat{A}$<br>$$[\hat{A},\hat{B}]=0\Rightarrow \hat{A}\quad and \quad \hat{B}\quad commutes$$</p>
+<p>Heisenberg unncertainty principle: $\sigma_p \sigma_x \geq \hbar/2$ 原因就是动量算符和位置算符不对易</p>
+<blockquote>
+<p>for a 1D system, the momentum operator is $\hat{p}_x=-i\hbar\frac{d}{dx}$<br>and the position operator is $\hat{x}=x$<br>For an arbitrary function $f(x)$:  $[\hat{p_x},\hat{x}]f(x)=\hat{p_x}\hat{x}f(x)-\hat{x}\hat{p_x}f(x)\neq 0$<br>$[\hat{p_x},\hat{x}]=-i\hbar I$ (单位算符I)</p>
+</blockquote>
+<p>If two operators commute, there corresponding observable quantities have simultaneously well-defined values</p>
+<p>If two operators do not commute, there corresponding observable quantities do not have simultaneously well-defined values, and in fact:<br>$$\sigma_A^2\sigma_B^2\geq-\frac{1}{4}(\int\Psi^*[\hat{A},\hat{B}]\Psi d\tau)^2$$<br>其中：$\sigma_A^2=\int\Psi^*(\hat{A}-&lt; \hat{A} &gt;)^2\Psi d\tau$, $\sigma_B^2=\int\Psi^*(\hat{B}-&lt; \hat{B} &gt;)^2\Psi d\tau$</p>
+<h3 id="Hermitian-厄米："><a href="#Hermitian-厄米：" class="headerlink" title="Hermitian 厄米："></a>Hermitian 厄米：</h3><p>An operator is sain to be linear线性 if:<br>$$\hat{A}[c_1f_1(x)+c_2f_2(x)]=c_1\hat{A}c_1f_1(x)+c_2\hat{A}f_2(x)$$<br>例如：求导数、积分算符就是线性的</p>
+<p>Dirac notation for functions and  interger狄拉克符号：方便表示波函数</p>
+<blockquote>
+<p>$| n \rangle$: $\psi_n(x)$<br>$\langle n |$: $\psi_n^*(x)$<br>$\langle m|n \rangle$: $\langle m||n \rangle$: $\int \psi_m^*(x)\psi_n(x)dx$<br>$\langle m|A|n \rangle$: $\int \psi_m^*(x)\hat{A}\psi_n(x)dx$</p>
+</blockquote>
+<p>An operator is said to be Hermitian if:<br>$$\int f^*(x)\hat{A}g(x)dx=\int g(x)\hat{A}f^*(x)dx=[\int g^*(x)\hat{A}f(x)dx]^*$$</p>
+<p>In Dirac notation,<br>$$\langle f|\hat{A}|g \rangle = {\langle g|\hat{A}|f \rangle}^*$$</p>
+<p>Another definition:<br>$$\langle f|\hat{A}|f \rangle = {\langle f|\hat{A}|f \rangle}^*$$<br>$\langle f|\hat{A}|f \rangle$表示算符对应物理量的平均值，复共轭与原值相等说明平均值是实数，等价于厄米</p>
+<h4 id="The-definition-of-Hermitian-operator"><a href="#The-definition-of-Hermitian-operator" class="headerlink" title="The definition of Hermitian operator:"></a>The definition of Hermitian operator:</h4><p>$$\langle f|\hat{A}|g \rangle = {\langle g|\hat{A}|f \rangle}^*$$<br>$$\langle f|\hat{A}|f \rangle = {\langle f|\hat{A}|f \rangle}^*$$</p>
+<h4 id="The-properties-of-a-Hermitian-operator"><a href="#The-properties-of-a-Hermitian-operator" class="headerlink" title="The properties of a Hermitian operator:"></a>The properties of a Hermitian operator:</h4><ol>
+<li>The eigenvalues of a hermitian operator are real 厄米算符的本征值是实数</li>
+<li>The eigenvecors of a hermitian operator are orthogonal 厄米算符的特征向量是正交的</li>
+</ol>
+<h3 id="Gram-Schmidt-orthonormalization-procedure正交化方法"><a href="#Gram-Schmidt-orthonormalization-procedure正交化方法" class="headerlink" title="Gram-Schmidt orthonormalization procedure正交化方法"></a>Gram-Schmidt orthonormalization procedure正交化方法</h3><p>Any linear combination of degenerate eigenvectors is also an eigenfunction with the same eigenvalue 将简并本征函数线性组合后可以得到相同本质值的本征函数</p>
+<p>两个不正交的矢量$| 1 \rangle$和$| 2 \rangle$<br>令$| I &gt; = |1\rangle  \quad  | II’ \rangle = | 1 \rangle + C | 2 \rangle$<br>因为$\langle I|II’ \rangle =0$<br>解得$C=-1/S$ (S为1和2的内积)<br>归一化得<br>$$| II \rangle = \frac{1}{\sqrt{S^{-2}-1}}(|1\rangle -S^{-1}|2 \rangle)$$</p>
+<h3 id="证明算符是厄米的"><a href="#证明算符是厄米的" class="headerlink" title="证明算符是厄米的"></a>证明算符是厄米的</h3><p>Prove that the kinetic energy operator is Hermitian:<br>$$\hat{T}=-\frac{\hbar}{2m}\frac{d^2}{dx^2}$$<br>只需证明:<br>$$\langle f|\hat{T}|f \rangle = {\langle f|\hat{T}|f \rangle}^*$$</p>
+<p>The wave function meeting these requirements is said to be <strong>well-behaved</strong> 品优函数</p>
+<h3 id="Postulate-2-Operator-1"><a href="#Postulate-2-Operator-1" class="headerlink" title="Postulate 2: Operator"></a>Postulate 2: Operator</h3><p>To every observable in classical mechanics, there corresponds a quantum-mechanical operator算符 that is linear线性 and hermitian厄米</p>
+<blockquote>
+<p>position: $x$ —- $\hat{X}$ —- x  </p>
+</blockquote>
+<blockquote>
+<p>Momentum: $p_x$ —- $\hat{P_x}$ —- $-i\hbar \frac{\partial}{\partial x}$  </p>
+</blockquote>
+<blockquote>
+<p>Momentum: $\vec{p}$ —- $\hat{\vec{P}}$ —- $-i\hbar (\vec{i}\frac{\partial}{\partial x}+\vec{j}\frac{\partial}{\partial y}+\vec{k}\frac{\partial}{\partial z})$  </p>
+</blockquote>
+<blockquote>
+<p>Kinetic energy: $T_x$ —- $\hat{T_x}$ —- $-\frac{h^2}{2m}\frac{\partial^2}{\partial x^2}$  </p>
+</blockquote>
+<blockquote>
+<p>Kinetic energy: $\vec{T}$ —- $\hat{\vec{T}}$ —- $-\frac{h^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})=-\frac{h^2}{2m}\nabla^2$</p>
+</blockquote>
+<blockquote>
+<p>Potential energy: $V(x,y,z)$ —- $\hat{V}(\hat{x},\hat{y},\hat{z})$ —- $V(x,y,z)$</p>
+</blockquote>
+<blockquote>
+<p>Total energu: $E$ —- $\hat{H}$哈密顿算符 —- $-\frac{h^2}{2m}\nabla^2+V(x,y,z)$</p>
+</blockquote>
+<p>For a 3D system with n particles:<br>$$E=\frac{p_{x_1}^2+p_{y_1}^2+p_{z_1}^2}{2m_1}+…+\frac{p_{x_n}^2+p_{y_n}^2+p_{z_n}^2}{2m_n}+V(x_1，y_1,z_1,…,x_n,y_n,z_n)$$<br>$$\hat{H}=-\Sigma_{i=1}^n \frac{\hbar^2}{2m_i}\nabla_i^2+V(x_1，y_1,z_1,…,x_n,y_n,z_n)$$</p>
+<h3 id="Postulate-3-Eigenvalues-1"><a href="#Postulate-3-Eigenvalues-1" class="headerlink" title="Postulate 3: Eigenvalues"></a>Postulate 3: Eigenvalues</h3><p>In any measurement of the observable associated with an operator, the only values that will ever be observed are the eigenvalues特征值 of this operator算符, which satisfy the eigenvalue equation:</p>
+<p>$$\hat{A}\psi_n=a_n\psi_n$$</p>
+<p>本征值$a_n$，本征函数$\psi_n$</p>
+<p>本征值架起了算符和可观测物理量的桥梁</p>
+<h3 id="Postulate-4-average-value-of-the-observable-B-1"><a href="#Postulate-4-average-value-of-the-observable-B-1" class="headerlink" title="Postulate 4: average value of the observable B"></a>Postulate 4: average value of the observable B</h3><p>If a system is in a state described by a normalized wave function $\psi$, then the average value of the observable B is given by:<br>$$&lt; B &gt;=\int \psi^* \hat{B} \psi d\tau, d\tau=dx_xdy_1dz_1…dx_ndy_ndz_n$$</p>
+<h2 id="Section-3：Eigenfunctions-of-Commutative-Operators"><a href="#Section-3：Eigenfunctions-of-Commutative-Operators" class="headerlink" title="Section 3：Eigenfunctions of Commutative Operators"></a>Section 3：Eigenfunctions of Commutative Operators</h2><p>For a state function状态函数 $\psi$ is simultaneously an eigenfunction本征函数 of the two commuting operators $\hat{A}$ and $\hat{B}$ with eigenvalues本征值 $a_i$ and $b_i$ respectively, then a measurement测量 of $A$ will yield the result $a_i$, and a measurement of $B$ yield $b_i$</p>
+<p><strong>Theorem:</strong> For a set of hermitian operators $\hat{A},\hat{B},\hat{C},…$, there exists存在 a common complete set of eigenfunctions共同点完备本征函数集, if and only if every operator commutes对易 with each other.</p>
+<h2 id="Section-4-Orthonormal-Basis"><a href="#Section-4-Orthonormal-Basis" class="headerlink" title="Section 4: Orthonormal Basis"></a>Section 4: Orthonormal Basis</h2><p><strong>Thorem:</strong> The eigenfunctions本征函数 of a hermitian operator that represents a physically observable property可观测属性 from a complete orthonormal set完备正交集.</p>
+<p>In general, suppose: $\hat{B}f_i=b_if_i,i=1,2,…$<br>Thus, ${f_i,1=1,2,…}$ is a complete orthonormal set完备正交集: $\int f_i^*f_j d\tau = \delta_{ij}$<br>Since an arbitrary任意 function can be expanded as a linear combination线性组合 of a complete set of functions, we have: $\psi=\sum\limits_i c_i f_i$</p>
+<p>To obtain the coefficients in the expansion, we multiply左乘 both sides by $f_m^*(x)$ and integrate, then we find:<br>$$\int_{-\infty}^{\infty}f_m^*(x)\psi(x)dx=\Sigma_{n=1}^\infty c_n \int_{-\infty}^{\infty}f_m^*(x)f_n(x)dx=\Sigma_{n=1}^\infty c_n\delta_{mn}=c_m$$<br>$$c_n=\int_{-\infty}^{\infty}f_n^*(x)\psi(x)dx=\langle f_n|\psi \rangle$$</p>
+<p>The coefficients系数 $c_n$ in the expansion are called <strong>Fourier coefficients</strong></p>
+<p>In the status function $\psi(x)$, which is not an eigenfunction of $\hat{B}$, from <strong>Postulate3</strong>, we can calculate the average value of the property $B$. In a series of measurements:<br>$$ &lt; B &gt; = \int \psi^* \hat{B} \psi d\tau $$<br>$$\qquad\qquad\qquad\qquad= \sum\limits_i \sum\limits_j c_i^* c_j \int f_i^* \hat{B} f_j d\tau $$<br>$$\qquad\qquad\qquad\qquad=\sum\limits_i \sum\limits_j c_i^* c_j b_j \int f_i^* f_j d\tau $$<br>$$\qquad\qquad\quad=\sum\limits_i \sum\limits_j c_i^* c_j b_j \delta_{ij} $$<br>$$\qquad\quad=\sum\limits_i |c_i|^2 b_i $$</p>
+<p>If the system is not in a state described by an eigenfunction of $\hat{B}$, we will get one of the eigenvalues of $\hat{B}$ when we measure $B$, but we cannot predict which eigenvalue will be obtained. Instead, the probabilities概率 for obtaining various eigenvalues of $\hat{B}$ can be predicted.</p>
+<h2 id="Section-5-Time-Dependent-Schrodinger-Equation"><a href="#Section-5-Time-Dependent-Schrodinger-Equation" class="headerlink" title="Section 5: Time-Dependent Schrodinger Equation"></a>Section 5: Time-Dependent Schrodinger Equation</h2><h3 id="Postulate-5"><a href="#Postulate-5" class="headerlink" title="Postulate 5:"></a>Postulate 5:</h3><p>The wave function of a system evolves in time according the time dependent Schrodinger Equation<br>$$ i\hbar\frac{\partial \Psi}{\partial t} = \hat{H}\Psi$$</p>
+<p>For the one-part 1D case, the Hamiltonian operator is:<br>$$\hat{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x)$$<br>Let $\Psi(x,t)=f(t)\psi(x)$,Then:<br>$$\frac{\partial \Psi(x,t)}{\partial t}=\frac{df(t)}{dt}\psi(x) \qquad \frac{\partial^2 \Psi(x,t)}{\partial x^2}=f(t)\frac{d^2\psi(x)}{dx^2}$$<br>Substituting these expressions into the time-dependent Schrodinger equation leads to:<br>$$-\frac{\hbar}{i}\frac{df(t)}{dt}\psi(x)=-\frac{\hbar}{2m}f(t)\frac{d^2\psi(x)}{dx^2}+V(x)f(t)\psi(x)$$<br>Dividing both sides of this equation by $f(t)\psi(x)$:<br>$$-\frac{\hbar}{i}\frac{1}{f(t)}\frac{df(t)}{dt}=-\frac{\hbar^2}{2m}\frac{1}{\psi(x)}\frac{d^2\psi(x)}{dx^2}+V(x)$$<br>Therefore,<br>$$E=-\frac{\hbar}{i}\frac{1}{f(t)}\frac{df(t)}{dt} \qquad E=-\frac{\hbar^2}{2m}\frac{1}{\psi(x)}\frac{d^2\psi(x)}{dx^2}+V(x)$$</p>
+<p>from which:<br>$$\frac{df(t)}{dt}=-\frac{iE}{\hbar}dt \Rightarrow lnf(t)=-\frac{iE}{\hbar}+C \Rightarrow f(t)=Ae^{-iEt/\hbar} \qquad (1)$$<br>$$-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E\psi(x) \qquad (2)$$</p>
+<p>The above equation can be expressed as:<br>$$ \hat{H}\psi(x)=E\psi(x) \qquad \hat{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x) $$<br>This is the <strong>Time-Dependent Schrodinger Equation</strong> for a one-particle moving in 1D system</p>
+<p>The time-dependent wave function is then:<br>$$\Psi(x,t)=e^{-iEt/\hbar}\psi(x)$$<br>If the system happents to be one of the eigenstates of he Hamiltonian, then:<br>$$\Psi_n(x,t)=e^{-iE_n t/\hbar}\psi_n(x)$$</p>
+<p>概率分布：<br>$$\Psi_n^*(x,t)\Psi_n(x,t)dt=\psi_n^*(x,t)\psi_n(x,t)dt $$<br>与时间无关</p>
+<p>Thus, the probability density and the average values of any observables are independent of time, and $\psi_n(x)$ is called stationary-state wave functions.</p>
+<p><strong>Stationary-state are of central importance in chemisty!</strong></p>
+<p>The general solution to time-dependent Schrodinger equation is:<br>$$\Psi(x,t)=\sum\limits_n C_n \psi_n(x) e^{-iE_nt/\hbar}$$</p>
+<h1 id="Chapter-3-Exact精确-Energy-and-Wave-Functions-for-Simple-Systems"><a href="#Chapter-3-Exact精确-Energy-and-Wave-Functions-for-Simple-Systems" class="headerlink" title="Chapter 3: Exact精确 Energy and Wave Functions for Simple Systems"></a>Chapter 3: Exact精确 Energy and Wave Functions for Simple Systems</h1><h2 id="Section-1-A-particle-in-1D-Box"><a href="#Section-1-A-particle-in-1D-Box" class="headerlink" title="Section 1: A particle in 1D Box"></a>Section 1: A particle in 1D Box</h2><p>The potential is 0 inside the 1D infinite potential box, and is infinite outside the box. 一维无限深势阱<br>$$V(x)=0,x \in [0,a]; \infty, else$$</p>
+<p>Hamiltonian:<br>$$\hat{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x)$$<br>Schrodinge equation:<br>$$\frac{d^2\psi}{dx^2}+\frac{2mE}{\hbar^2}\psi(x)=0 \quad x \in [0,a]$$</p>
+<p>let $k=\frac{(2mE)^{1/2}}{\hbar}=\frac{2\pi (2mE)^{1/2}}{h}$</p>
+<p>so, Schrodinge equation:<br>$$\frac{d^2\psi}{dx^2}+k^2 \psi(x)=0 \quad x \in [0,a]$$</p>
+<p>The general solution is(with the Euler’s formula):<br>$$\psi(x)=A\cos \frac{(2mE)^{1/2}}{\hbar} x+B\sin \frac{(2mE)^{1/2}}{\hbar} x$$</p>
+<p>The boundary conditions(Continuity): $\psi(0)=\psi(a)=0$</p>
+<p>$$\psi(0)=A=0$$<br>$$\psi(a)=B\sin \frac{(2mE)^{1/2}}{\hbar} a=0$$</p>
+<p>Therefore:<br>$$\frac{n\pi}{a}=\frac{2\pi (2mE)^{1/2}}{h}$$<br>$$E_n=\frac{h^2n^2}{8ma^2} \qquad n=1,2,3,…$$</p>
+<p>The energies of the particle are said to be <strong>quantized</strong> and the interger $n$ is called a <strong>quantum number</strong>量子数</p>
+<p>如果要求出$B$的值，可以根据波函数的归一化条件:<br>$$B=\sqrt{a/2}$$<br>$$\psi(x)=\sqrt{a/2} \sin \frac{(2mE)^{1/2}}{\hbar} x$$</p>
+<p>随着能级升高，粒子行为逐渐趋于经典粒子：<strong>The correspondence principle</strong><br>Quantum mechanical results and classical mechanical results tend to agree in the limit of large quantum numbers (classical limit).</p>
+<h2 id="Section-2-Applications-and-Extensions扩展-of-a-Partcle-in-a-Box"><a href="#Section-2-Applications-and-Extensions扩展-of-a-Partcle-in-a-Box" class="headerlink" title="Section 2: Applications and Extensions扩展 of a Partcle in a Box"></a>Section 2: Applications and Extensions扩展 of a Partcle in a Box</h2><h3 id="explaining-the-sbsorption-spectrum-of-lineat-conjugated-hydrocarbons"><a href="#explaining-the-sbsorption-spectrum-of-lineat-conjugated-hydrocarbons" class="headerlink" title="explaining the sbsorption spectrum of lineat conjugated hydrocarbons"></a>explaining the sbsorption spectrum of lineat conjugated hydrocarbons</h3><p>Absorption Spectrum of Conjugated Hydrocarbons直链共轭烯烃吸收光谱：<br>the free-electron model is quite successful at explaining the sbsorption吸收 spectrum光谱 of lineat线性 conjugated hydrocarbons共轭烯烃</p>
+<p>Butadiene丁二烯：$H_2C=CHCH=CH_2$<br>Four π electrons move along a straight line whose length is the distance between the two H atom at both ends, L=555pm.</p>
+<p>According to the Pauli Exclusion principle: The for π electrons fill the first two levels.</p>
+<p>Upon radiation with UV light, the system will make a transition from the $n=2$ state to the $n=3$ state with the energy:<br>$$\Delta E= \frac{h^2}{8m_8a^2}(3^2-2^2)=9.78 \times 10^{-19}J$$<br>$$\tilde{\nu}=\frac{\Delta E}{hc}=4.92 \times 10^4 cm^{-1}$$<br>Butadiene has an absorption band at $4.61 \times 10^4 cm^{-1}$</p>
+<h3 id="The-Average-Momentum-of-a-Particle-in-a-Box-is-Zero"><a href="#The-Average-Momentum-of-a-Particle-in-a-Box-is-Zero" class="headerlink" title="The Average Momentum of a Particle in a Box is Zero"></a>The Average Momentum of a Particle in a Box is Zero</h3><p>The everage value of the physucal quantity a (its quantum-mechanical operator is $\hat{A}$)<br>$$&lt; a &gt; = \int \psi_n^*(x) \hat{A} \psi(x)dx$$</p>
+<p>Therefore, the average momentum of a particle in a box is:<br>$$&lt; p &gt;  = \int_0^a [( \frac{2}{a} )^{1/2} \sin\frac{n\pi x}{a}] (-i\hbar\frac{d}{dx})[(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}]dx =-i\hbar\frac{2\pi n}{a^2}\int_0^a \sin\frac{n\pi x}{a}cos\frac{n\pi x}{a}dx=0$$<br>Thus, a particle in a box is equally likely to be moving in either direction.</p>
+<h3 id="Verification-of-the-Heisenberg-Uncertainty-Principle"><a href="#Verification-of-the-Heisenberg-Uncertainty-Principle" class="headerlink" title="Verification of the Heisenberg Uncertainty Principle"></a>Verification of the Heisenberg Uncertainty Principle</h3><p>$$&lt; p^2 &gt;= \int_0^a [(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}](-\hbar^2 \frac{d^2}{dx^2})[(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a}]dx= \frac{n^2 \pi^2 \hbar^2}{a^2}$$</p>
+<p>The variance方差 of the momentum of a particle in a box is:<br>$$\sigma_p^2 =&lt; p^2 &gt; - &lt; p &gt;^2= \frac{n^2 \pi^2 \hbar^2}{a^2}$$<br>$$\sigma_p=\frac{n\pi \hbar}{a}$$</p>
+<p>$$&lt; x &gt; = \frac{2}{a}\int_0^a x\sin^2\frac{n\pi x}{a}dx = \frac{a}{a} \qquad &lt; x^2 &gt; = \frac{2}{a}\int_0^a x^2 \sin^2\frac{n\pi x}{a}dx = \frac{a}{a}$$</p>
+<p>$$\sigma_x^2 =&lt; x^2 &gt; - &lt; x &gt;^2= (\frac{a}{2\pi n})^2(\frac{\pi^2 n^2}{3}-2)$$</p>
+<p>$$\sigma_x \sigma_p=\frac{\hbar}{2}(\frac{\pi^2 n^2}{3}-2)^{1/2} &gt; \frac{\hbar}{2}$$</p>
+<h3 id="The-Problem-of-a-particle-in-a-3D-Box-is-a-Simple-Extension-of-the-1D-Case"><a href="#The-Problem-of-a-particle-in-a-3D-Box-is-a-Simple-Extension-of-the-1D-Case" class="headerlink" title="The Problem of a particle in a 3D Box is a Simple Extension of the 1D Case"></a>The Problem of a particle in a 3D Box is a Simple Extension of the 1D Case</h3><p>Hamilltonian for a 3D box:<br>$$\hat{H}=-\frac{\hbar^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})+V(x,y,z)$$<br>Thus, the Schrodinger equation for the system:<br>$$-\frac{\hbar^2}{2m}(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2})=E\psi(x,y,z) \qquad x \in [0,a];y \in [0,b];z \in [0,c]$$</p>
+<p>The wave function satisfies the boundary conditions:<br>$$\psi(0,y,z)=\psi(a,y,z)=0$$<br>$$\psi(x,0,z)=\psi(x,b,z)=0$$<br>$$\psi(x,y,0)=\psi(x,y,c)=0$$</p>
+<p>We use the method of sparation of variables变量分离 to solove the equation:<br>$\psi(x,y,z)=X(x)Y(y)Z(z)$<br>$$\frac{1}{X(x)}\frac{\partial^2 X}{\partial x^2}+\frac{1}{Y(y)}\frac{\partial^2 Y}{\partial y^2}+\frac{1}{Z(z)}\frac{\partial^2 Z}{\partial z^2}+\frac{2m}{\hbar}E=0$$<br>It can be concerted into three equations:<br>$$\frac{1}{X(x)}\frac{\partial^2 X}{\partial x^2}=-\frac{2m}{\hbar}E_x$$<br>$$\frac{1}{Y(y)}\frac{\partial^2 Y}{\partial y^2}=-\frac{2m}{\hbar}E_y$$<br>$$\frac{1}{Z(z)}\frac{\partial^2 Z}{\partial z^2}=-\frac{2m}{\hbar}E_z$$<br>Where$E=E_x+E_y+E_z$</p>
+<p>Same as 1D to solve the equation:<br>$$\psi_{n_x n_y n_z}=(\frac{8}{abc})^{1/2} \sin\frac{n_x\pi x}{a} \sin\frac{n_y\pi y}{b} \sin\frac{n_z\pi z}{c} \qquad n_x,n_y,n_z=1,2,3,…$$<br>$$E_{n_x n_y n_z}=\frac{h^2}{8m}(\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\frac{n_z^2}{c^2})$$</p>
+<p>For a particle in a cube $(a=b=c)$:<br>$$E_{n_x n_y n_z}=\frac{h^2}{8ma^2}(n_x^2+n_y^2+n_z^2)$$</p>
+<p>量子数不同，但是能级相同——能级简并<br>Degeneracy 简并度</p>
+<h3 id="A-Particle-in-a-Box-with-Different-Potential-Energies-in-Three-Different-Regions"><a href="#A-Particle-in-a-Box-with-Different-Potential-Energies-in-Three-Different-Regions" class="headerlink" title="A Particle in a Box with Different Potential Energies in Three Different Regions"></a>A Particle in a Box with Different Potential Energies in Three Different Regions</h3><p>$$V(x)=V_0,x \in [0,a]; 0, else$$</p>
+<p>If $E&gt;V_0$, the solution to the Schrodinger Equation:<br>$$\frac{d^2\psi}{dx^2}+\frac{2m}{\hbar}[E-V(x)]\psi(x)=0$$<br>let $k_1=\sqrt{\frac{2mE}{\hbar^2}} \qquad k_2=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}$, in each region is:<br>$$\psi_1(x)=Ae^{ik_1x}+Be^{-ik_1x} \qquad x&lt;0$$<br>$$\psi_2(x)=Ce^{ik_2x}+De^{-ik_2x} \qquad 0&lt;x&lt;a$$<br>$$\psi_3(x)=Ee^{ik_1x}+Fe^{-ik_1x} \qquad x&gt;a$$</p>
+<p>exclude the situation of the particle coming from large position values of x:<br>$$F=0$$</p>
+<p>The boundary conditions:$\psi(x)$ and $d\psi / dx$ must be continuous at $x=0$ and $x=a$:<br>$$B=\frac{2i(k_1^2-k_2^2)\sin(k_2a)}{(k_1-k_2)^2e^{ik_2a}-(k_1+k_2)^2e^{-ik_2a}}A$$<br>$$E=\frac{4k_1 k_2 e^{-ik_1a}}{(k_1+k_2)^2e^{-ik_2a}-(k_1-k_2)^2e^{ik_2a}}A$$</p>
+<p>So we transmission coefficient, the probability the particle will get through the barrrier透射系数, is:<br>$$T=|\frac{E}{A}|^2=\frac{4k_1^2k_2^2}{(k_1-k_2)^2\sin^2(k_2a)+4k_1^2k_2^2}$$</p>
+<p>and the refrection coefficient反射系数, is:<br>$$R=|\frac{B}{A}|^2=\frac{(k_1-k_2)^2\sin^2(k_2a)}{(k_1-k_2)^2\sin^2(k_2a)+4k_1^2k_2^2}=1-T$$<br><strong>If the energy $E$ is greater than the barrier height, the particle will be reflected to some extent.</strong></p>
+<p>If $E&lt;V_0$<br>$$k_1=\sqrt{\frac{2mE}{\hbar^2}} \qquad k_2=\sqrt{\frac{2m(V_0-E)}{\hbar^2}}$$</p>
+<p>$$T=|\frac{E}{A}|^2=\frac{4}{4+\frac{(k_1^2+k_2^2)^2}{k_1^2 k_2^2}\sinh^2 k_2 a}$$<br><strong>If the energy $E$ is less than the barrier height, the particle will have a chance to get through the barrier.</strong></p>
+<p>“隧穿效应”</p>
+<h2 id="Section-3-Rigid-Rotator-and-Rotational-Spectroscopy-of-Diatomic-Molecules双原子分子"><a href="#Section-3-Rigid-Rotator-and-Rotational-Spectroscopy-of-Diatomic-Molecules双原子分子" class="headerlink" title="Section 3: Rigid Rotator and Rotational Spectroscopy of Diatomic Molecules双原子分子"></a>Section 3: Rigid Rotator and Rotational Spectroscopy of Diatomic Molecules双原子分子</h2><p>For a diatomic molecule with two interacting actoms<br>particle 1: $\vec{r_1}(x_1,y_1,z_1)$<br>particle 2: $\vec{r_2}(x_2,y_2,z_2)$</p>
+<p>the Hamiltonian for its nuclear motion核运动 can be disctibed as<br>$$\hat{H}=-\frac{\hbar^2}{2m_1}\nabla_1^2-\frac{\hbar^2}{2m_2}\nabla_2^2+V(x_1,y_1,z_1,x_2,y_2,z_2)$$</p>
+<p>Assume the center of mass of this two-particle system is $\vec{R}$: $C(X,Y,Z)$<br>$$\vec{R}=\frac{m_1 \vec{r_1}+m_2 \vec{r_2}}{m_1 + m_2}$$</p>
+<p>On the other hand, the ralative motion is described by $\vec{r}$: $(x,y,z)$<br>$$\vec{r}=\vec{r_2}-\vec{r_1}$$</p>
+<p>so:<br>$$\vec{r_1}=\vec{R}-\frac{m_2}{m_1+m_2}\vec{r} \qquad \vec{r_2}=\vec{R}+\frac{m_1}{m_1+m_2}\vec{r}$$</p>
+<p>This represents a transformation of coordinates from $x_1,y_1,z_1,x_2,y_2,z_2$ to {x,y,z,X,Y,Z}</p>
+<p>The kinetic energy动能 of the two particles:<br>$$T=\frac{1}{2} m_1 |\dot{\vec{r_1}}|^2 + \frac{1}{2} m_2 |\dot{\vec{r_2}}|^2 = \frac{1}{2} m_1 (\dot{\vec{R}}-\frac{m_2}{m_1+m_2} \dot{\vec{r}}) \cdot (\dot{\vec{R}}-\frac{m_2}{m_1+m_2} \dot{\vec{r}}) + \frac{1}{2} m_2 (\dot{\vec{R}}+\frac{m_1}{m_1+m_2} \dot{\vec{r}}) \cdot (\dot{\vec{R}}+\frac{m_1}{m_1+m_2} \dot{\vec{r}})$$</p>
+<p>注：$\dot{\vec{R}}=\frac{d\vec{r}}{dt}$</p>
+<p>Let $C_1=\frac{-m_2}{m_1+m_2}$, $C_2=\frac{m_1}{m_1=m_2}$, then<br>$$T=\frac{1}{2}m_1[\dot{\vec{R}} \cdot \dot{\vec{R}} + \dot{\vec{R}} \cdot \dot{\vec{r}} \cdot C_1 + C_1 \cdot \dot{\vec{r}} \cdot \dot{\vec{R}} +\dot{\vec{r}} \cdot \dot{\vec{r}} \cdot C_1^2] + \frac{1}{2}m_2[\dot{\vec{R}} \cdot \dot{\vec{R}} + \dot{\vec{R}} \cdot \dot{\vec{r}} \cdot C_2 + C_2 \cdot \dot{\vec{r}} \cdot \dot{\vec{R}} +\dot{\vec{r}} \cdot \dot{\vec{r}} \cdot C_2^2]$$<br>$$=\frac{1}{2}(m_1 + m_2)|\dot{\vec{R}}|^2 + (m_1C_1+m_2C_2)\dot{\vec{R}} \cdot \dot{\vec{r}} + \frac{1}{2}(m_1 C_1^2 + m_2 C_2^2)|\dot{\vec{r}}|^2 $$</p>
+<p>Let $M=m_1 + m_2$ be total mass, define the reduced mass $\mu = \frac{m_1 m_2}{m_1 +m_2}$ then,<br>$$T=\frac{1}{2}M |\dot{\vec{R}}|^2+\frac{1}{2} \mu |\dot{\vec{r}}|^2$$</p>
+<p>$1/2M |\dot{\vec{R}}|^2$: the kinetic energy of translational motion平动动能 vibration<br>$1/2 \mu |\dot{\vec{r}}|^2$: the kinetic energy of relative motion相对运动动能 rotation </p>
+<p>Hence, the total Hamiltonian is now reduced as<br>$$\hat{H}=\hat{H} _{tr}+\hat{H} _{int}$$<br>$$\hat{H} _{tr}=-\frac{\hbar^2}{2M}\nabla_R^2, \qquad \hat{H} _{int}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z) $$</p>
+<p>Thus, the total wave functions and energies have forms<br>$$\Psi(X,Y,Z,x,y,z)=\Lambda(X,Y,Z)\psi(x,y,z) \qquad E=E_{tr}+E_{vr}$$</p>
+<h3 id="translational-motion-the-mass-center-behaves-like-a-free-particle-V-0"><a href="#translational-motion-the-mass-center-behaves-like-a-free-particle-V-0" class="headerlink" title="translational motion the mass center behaves like a free particle, $V=0$"></a>translational motion the mass center behaves like a free particle, $V=0$</h3><p>$$[-\frac{\hbar^2}{2M}\nabla_R^2] \Lambda(X,Y,Z)= E_{tr} \Lambda(X,Y,Z)$$</p>
+<p>$$\Lambda(X,Y,Z)=Ae^{i\vec{K}\cdot \vec{R}}$$<br>$$E_{tr}=\frac{K^2 \hbar^2}{2M} \geq 0$$<br>K取值不受限制，因此$E_{tr}$是连续的，不是量子化的</p>
+<h3 id="the-Schrodinger-Equation-for-the-Relative-Motion"><a href="#the-Schrodinger-Equation-for-the-Relative-Motion" class="headerlink" title="the Schrodinger Equation for the Relative Motion"></a>the Schrodinger Equation for the Relative Motion</h3><p>$$[-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)] \psi(x,y,z) = E_{vr} \psi(x,y,z)$$</p>
+<p>The above equations also hold true for other two-partice system like a hydrogen atom:<br>$$M=m_e + m_p \qquad \mu=\frac{m_e m_p}{m_e + m_p}$$</p>
+<p>In spherical coordinates,<br>$$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}\nabla^2+V(x,y,z)=-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{r^2 \hbar^2}\hat{L}^2)+V(r)$$<br>$$\hat{L}^2=-\hbar^2 [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \varphi^2}]$$</p>
+<p>For a two-particle rigid rotor(刚性转子), we mean: $|\vec{r}|=r_e(constant)$, $V(x,y,z)=V(r)=0$<br>$$-\frac{\hbar}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})=0$$<br>Thus, the Hamiltonian operator fo the rotation is defind as<br>$$\hat{H} _{rot}=\frac{\hat{L}^2}{2 \mu r_e^2}=\frac{\hat{L}^2}{2I} \qquad I=\mu r_e^2$$<br>here $I$ is the moment of inertia(转动惯量)</p>
+<hr>
+<p>角动量平方算符$\hat{L}^2$的本征方程：<br>$$\hat{L}^2 Y_J^m(\theta,\varphi)=\hbar^2J(J+1) Y_J^m(\theta,\varphi)$$<br>The eigenvalues本征值:<br>$$L^2=\hbar^2J(J+1)$$<br>$$J=0,1,2,… \qquad m=0, \pm1, \pm2,…,\pm J$$</p>
+<hr>
+<h3 id="The-Energy-Levels-of-a-Rigid-Rotator刚性转子"><a href="#The-Energy-Levels-of-a-Rigid-Rotator刚性转子" class="headerlink" title="The Energy Levels of a Rigid Rotator刚性转子"></a>The Energy Levels of a Rigid Rotator刚性转子</h3><p>The schridubger equation for a rigid rotator is:<br>$$\frac{\hat{L}^2}{2I}Y(\theta,\varphi)=-\frac{\hbar^2}{2I} [\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta}\frac{\partial^2}{\partial \varphi^2}]Y(\theta,\varphi)=E_{rot}Y(\theta,\varphi)$$</p>
+<p>The spherical harmonics球谐函数 $Y_J^m(\theta,\varphi)$ are the eigenfunctions, and the allowed rotational energies are easy to obtain:<br>$$\hat{H} _{rot} Y(\theta,\varphi)=E _{rot} Y(\theta,\varphi) \qquad J=0,1,2,… \quad m=0,\pm1,\pm2…,\pm J$$</p>
+<p>$$E _{rot}=\frac{\hbar^2}{2I} J(J+1) \qquad J=0,1,2,…$$</p>
+<p>we obtain a set of discrete energy levels离散能级 for the rotational energies转动能, and we can also notice:<br>(1) $E_{rot}=0(J=0)$ means no zero-point rotational energy<br>(2) Each energy level has a degeneracy $g_j=2J+1$ since for each value of $J$ there are $(2J+1)$ values of m($-J$ to $J$)</p>
+<h3 id="Rotational-Spectroscopy-pf-Diatomic-Molecules"><a href="#Rotational-Spectroscopy-pf-Diatomic-Molecules" class="headerlink" title="Rotational Spectroscopy pf Diatomic Molecules"></a>Rotational Spectroscopy pf Diatomic Molecules</h3><p>Electromagnetic radiation can cause a rigid rotator to undergo transitions from one state to another</p>
+<p><strong>Selection rules</strong> 跃迁选率：满足要求才能发生跃迁:<br>(1) These transitions occur between adjacent states相邻状态, or $\Delta J=\pm 1$<br>(2) The molecule must alse possess a permanent dipole moment分子拥有永久偶极矩</p>
+<p>$$\Delta E=E_{J+1}-E_J=\frac{\hbar^2}{I}(J+1)$$<br>Since $\Delta E=h\nu$<br>$$\nu=\frac{h}{4\pi^2 I}(J+1) \qquad J=0,1,2,…$$</p>
+<p>rotational constant of the molecule(转动常数Hz) $B=\frac{h}{8\pi^2 I}$:<br>$$\nu=2B(J+1) \qquad J=0,1,2,…$$</p>
+<p>If the transition frequency is expressed in terms of wave numbers 跃迁频率用波数表示：<br>$$\tilde{\nu}=2\tilde{B}(J+1) \qquad J=0,1,2,… \qquad \tilde{B}=\frac{h}{8\pi^2 cI}$$</p>
+<p>可以看出跃迁频率是等差数列，因此跃迁光谱是等间距谱线</p>
+<h2 id="Section-4-Harmonic-Oscillator-双原子分子振动薛定谔方程"><a href="#Section-4-Harmonic-Oscillator-双原子分子振动薛定谔方程" class="headerlink" title="Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程"></a>Section 4: Harmonic Oscillator 双原子分子振动薛定谔方程</h2><p>$$\hat{H} _{int}=-\frac{\hbar^2}{2\mu}(\frac{\partial^2}{\partial r^2}+\frac{2}{r}\frac{\partial}{\partial r})+\frac{1}{2\mu r^2}\hat{L}^2+V(r)$$<br>$$\hat{H} _{int} \Psi(r,\theta,\varphi)=E _{vr}\Psi(r,\theta,\varphi)$$</p>
+<p>Let $\Psi(r,\theta,\varphi)=\psi(r)Y_J^m(\theta,\varphi)$,<br>With $\hat{L}^2Y_J^m(\theta,\varphi)=J(J+1)\hbar^2 Y_J^m(\theta,\varphi)$<br>Let $f(r)=r\psi(r)$<br>$$\frac{\partial^2 \psi(r)}{\partial r^2}+\frac{2}{r}\frac{\partial \psi(r)}{\partial r}=\frac{1}{r} \frac{\partial^2 f(r)}{\partial r^2}$$</p>
+<p>The equation can be simplified as:<br>$$-\frac{\hbar^2}{2\mu}\frac{d^2f(r)}{dr^2}+\frac{J(J+1) \hbar^2}{2\mu r^2}f(r)+V(r)f(r)=E_{vr}f(r)$$</p>
+<p>Let $r=r_e+x$, $\chi(x)=f(r_e+x)=r\psi(r)$<br>$$-\frac{\hbar^2}{2\mu}\frac{d^2\chi(x)}{dx^2}+\frac{J(J+1) \hbar^2}{2\mu (x+r_e)^2}\chi(x)+V(x+r_e)\chi(x)=E_{vr}\chi(x)$$</p>
+<p>When $x&lt;&lt;r_e$<br>$$\frac{J(J+1) \hbar^2}{2\mu (x+r_e)^2} \approx \frac{J(J+1) \hbar^2}{2\mu r_e^2}=\frac{J(J+1)\hbar^2}{2I}=E_{rot}$$<br>$$-\frac{\hbar^2}{2\mu}\frac{d^2\chi(x)}{dx^2}+V(x+r_e)\chi(x)=E_{vib}\chi(x) \qquad E_{vr}=E_{vib}+E_{rot}$$</p>
+<p>简谐近似$V(x+r_e) \approx \frac{1}{2}kx^2$：<br>$$[-\frac{\hbar^2}{2\mu}\frac{d^2}{dx^2}+\frac{1}{2}kx^2]\chi(x)=E_{vib}\chi(x)$$</p>
+<p><strong>It can be shown that the vibrational振动 Hamiltonian of a diatomic molecule obtained above is exactly the same as that of the harmonic oscillator简谐振子</strong></p>
+<h2 id="Section-5-Infrared-Spectrum-of-Diatomic-Molecules-双原子分子红外光谱"><a href="#Section-5-Infrared-Spectrum-of-Diatomic-Molecules-双原子分子红外光谱" class="headerlink" title="Section 5: Infrared Spectrum of Diatomic Molecules  双原子分子红外光谱"></a>Section 5: Infrared Spectrum of Diatomic Molecules  双原子分子红外光谱</h2><h3 id="The-energy-levels-of-a-Harmonic-Oscillator"><a href="#The-energy-levels-of-a-Harmonic-Oscillator" class="headerlink" title="The energy levels of a Harmonic Oscillator"></a>The energy levels of a Harmonic Oscillator</h3><p>$$-\frac{\hbar^2}{2\mu}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E \psi(x) \qquad V(x)=\frac{1}{2}kx^2$$<br>Transformed into the second-order differential equation:<br>$$\frac{d^2\psi}{dx^2}+\frac{2u}{\hbar^2}(E-\frac{1}{2}kx^2)\psi(x)=0 \qquad -\infty&lt; x &lt; +\infty$$</p>
+<p>With <strong>the power series method</strong>幂级数法, solve the equation:<br>$$E_n=h\nu(n+\frac{1}{2}) \qquad n=0,1,2,… \quad \nu=\frac{1}{2\pi}(\frac{k}{\mu})^{1/2}$$</p>
+<p>The groundd state energy (the state with $n=0$) is $E=\frac{1}{2}h\nu$, called <strong>zero-point energy</strong></p>
+<p>vibrational transitions振动 of diatomic molecules occur is the infrared region红外区域</p>
+<p>Selection rules:<br>(1) Transitions occur only between adjacent states. 相邻能级之间<br>(2) The dipole moment of the molecule must change as the molecule vibrates.振动引起偶极矩改变</p>
+<p>For ansorption to occur:<br>$$\Delta E=E_{n+1}-E_n=\hbar(\frac{k}{\nu})^{1/2}$$<br>Thus, the observed frequency of the radiation absorbed辐射频率 is:<br>$$\nu_{obs}=\frac{1}{2\pi}(\frac{k}{\mu})^{1/2}$$<br>$$\tilde{\omega}=\frac{1}{2\pi}(\frac{k}{\mu})^{1/2} \quad (cm^{-1})$$</p>
+<h3 id="The-Wave-Function-of-the-Harmonic-Oscillator一维谐振子"><a href="#The-Wave-Function-of-the-Harmonic-Oscillator一维谐振子" class="headerlink" title="The Wave Function of the Harmonic Oscillator一维谐振子"></a>The Wave Function of the Harmonic Oscillator一维谐振子</h3><p>$$\psi_n(x)=N_n H_n (\alpha^{1/2}x)e^{\alpha x^2/2} \qquad \alpha=(\frac{k\mu}{\hbar^2})^{1/2}$$<br>The normalization constant归一化系数 $N_n=\frac{1}{(2^n n!)^{1/2}}(\frac{\alpha}{\pi})^{1/4}$<br>Hermite polynomials厄米多项式: $H_n(\alpha^{1/2}x)$</p>
+<h3 id="Rotational-Transitions-Accompany-Vibrational-Transitions"><a href="#Rotational-Transitions-Accompany-Vibrational-Transitions" class="headerlink" title="Rotational Transitions Accompany Vibrational Transitions"></a>Rotational Transitions Accompany Vibrational Transitions</h3><p>振动能级差大，转动能级差小。 相当于同一个振动态具有不同的转动态</p>
+<p>within the rigid rotator-harmonic oscillator approximation刚性转子和简谐振子近似, the rotational and vibrational energy(Hz) of a diatomic molecule is given by<br>$$E_{n.J}=(n+\frac{1}{2})\nu+BJ(J+1) \qquad n=0,1,2,… \quad J=0,1,2,…$$<br>$$\tilde{E}_{n,J}=(n+\frac{1}{2})\tilde{\nu}+\tilde{B}J(J+1) \qquad \tilde{\nu}=\frac{1}{2\pi c}(\frac{k}{\mu})^{1/2} \quad \tilde{B}=\frac{h}{8\pi^2 cI}$$</p>
+<p>跃迁时，可能发生：<br>(1) 跃迁到更高振动态($\Delta n=+1$)的更高转动态($\Delta J=+1$)——光谱R支<br>(2) 跃迁到更高振动态($\Delta n=+1$)的更低转动态($\Delta J=-1$)——光谱P支  </p>
+<h3 id="The-Vibrations-of-Polyatomic-Molecules-Are-Represented-by-Normal-Coordinates多原子分子振动光谱"><a href="#The-Vibrations-of-Polyatomic-Molecules-Are-Represented-by-Normal-Coordinates多原子分子振动光谱" class="headerlink" title="The Vibrations of Polyatomic Molecules Are Represented by Normal Coordinates多原子分子振动光谱"></a>The Vibrations of Polyatomic Molecules Are Represented by Normal Coordinates多原子分子振动光谱</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>Linear线性分子</th>
+<th>Nolinear非线性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Translational</strong> degree of freedom平动自由度</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Rotational</strong> degrees of freedom转动自由度</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Vibrational</strong> degrees of freedom振动自由度</td>
+<td>3N-5</td>
+<td>3N-6</td>
+</tr>
+</tbody></table>
+<p>The potential energy of molecule is a function of vibrational coordinates ($3N-5$ or $3N-6$)<br>$$\Delta V=V(x_1,x_2,…x_{N_{vib}})-V(0,0,…,0)=\frac{1}{2}\sum\limits_{j=1}^{N_{vib}}F_jQ_j^2$$<br>The new coordinates are called <strong>normal coordinates or normal modes</strong>简正坐标</p>
+<p>Then the vibrational Hamiltonian operator is:<br>$$\hat{H} _ {vib} = -\sum\limits_{j=1}^{N_{vib}} \frac{\hbar^2}{2 \mu_j} \frac{d^2}{d Q_j^2}+\frac{1}{2}\sum\limits_{j=1}^{N_{vib}} F_j Q_j^2$$</p>
+<p>每一项对应一个简谐振子的哈密顿，振动波函数可以写成每个简谐振子波函数相乘<br>$$\psi_{vib}(Q_1,Q_2,…,Q_{vib})=\psi_{vib,1}(Q_1)\psi_{vib,2}(Q_2)…\psi_{vib,n}(Q_n)$$<br>$$E_{vib}=\sum\limits_{i=1}^{N_{vib}}hv_i(\nu_i+\frac{1}{2}) \qquad each \quad \nu_i=0,1,2,…$$</p>
+<h1 id="Chapter-4-The-Hydrogen-Atom"><a href="#Chapter-4-The-Hydrogen-Atom" class="headerlink" title="Chapter 4: The Hydrogen Atom"></a>Chapter 4: The Hydrogen Atom</h1><h2 id="Section-1-Schrodinger-Equation-for-the-Hydrogen-Atom"><a href="#Section-1-Schrodinger-Equation-for-the-Hydrogen-Atom" class="headerlink" title="Section 1: Schrodinger Equation for the Hydrogen Atom"></a>Section 1: Schrodinger Equation for the Hydrogen Atom</h2><h3 id="Hamiltonian-Operator-for-the-Hydrogen-Atom"><a href="#Hamiltonian-Operator-for-the-Hydrogen-Atom" class="headerlink" title="Hamiltonian Operator for the Hydrogen Atom"></a>Hamiltonian Operator for the Hydrogen Atom</h3><p>$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 +V(r) \qquad V(r)=-\frac{e^2}{4\pi \varepsilon_0 r}$$</p>
+<p>In spherical coordinates求极坐标, the Laplaceian operator is:<br>$$\nabla^2=\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2 \qquad \hat{L}^2=-\hbar^2[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}(\sin \theta \frac{\partial}{\partial \theta})+\frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \varphi^2}]$$</p>
+<p>The corresponding Schrodinger equation in spherical coordinate is:<br>$$-\frac{\hbar^2}{2m_e}[\frac{1}{r^2} \frac{\partial}{\partial r}(r^2 \frac{\partial}{\partial r})-\frac{1}{r^2 \hbar^2}\hat{L}^2]+V(r)\psi=E\psi$$</p>
+<p>The operators $\hat{H}$ and $\hat{L}^2$ commute对易 (simultaneous eigenfunctions)<br>The equation can be turner into the radial equation:<br>$$\frac{\hbar}{2m_e r^2}\frac{d}{dr}(r^2 \frac{dR}{dr})+[\frac{\hbar^2 l(l+1)}{2m_e r^2}+V(r)-E]R_{nl}(r)=0$$</p>
+<p>Solved, find the energu must be quantized according to:<br>$$E_n=-\frac{e^2}{8\pi \varepsilon_0 a_0 n^2} \quad n=1,2,3…$$<br>Bohr radius波尔半径: $a_0=\frac{4\pi \varepsilon_0 \hbar^2}{m_e e^2}$</p>
+<p>The radial wave functions径向波函数, depending on n and l:<br>$$R_{nl}(r)=(\frac{(n-l-1)!}{2n[(n+l)!]^3})^{1/2} (\frac{2}{na_0})^{l+3/2}r^l e^{-r/na_0} L_{n+1}^{2l+1}(\frac{2r}{na_0}) \quad l=0,1,2,…,n-1$$</p>
+<p>The $L_{n+1}^{2l+1}$ are called <strong>associated Laguerre polynomials</strong>.</p>
+<p>球谐函数与径向函数相乘得到完整版波函数:<br>$$\Psi_{nlm_l}(r,\theta,\varphi)=R_{nl}(r)Y_l^{m_l}(\theta,\varphi)$$<br>$$n=1,2,…; \qquad l=0,1,…,n-1; \qquad m_l=0,\pm 1,…,\pm l$$</p>
+<p>完备的波函数形成了一个正交归一的集合，两个不同的波函数内积等于0</p>
+<h3 id="Quantum-Numbers-n-l-m-l"><a href="#Quantum-Numbers-n-l-m-l" class="headerlink" title="Quantum Numbers $n$, $l$, $m_l$"></a>Quantum Numbers $n$, $l$, $m_l$</h3><p>Three mutually commuting operators: $\hat{H}$, $\hat{L}^2$, $\hat{L_z}$两两对易，<br>$\Psi_{nlm_l}(r,\theta,\varphi)$ are the simultaneous eigenfunctions of these operators氢原子波函数使他们共同的本征函数<br>$$\hat{H}\Psi_{nlm_l}(r,\theta,\varphi)=E_n\Psi_{nlm_l}(r,\theta,\varphi)$$<br>$$\hat{L}^2\Psi_{nlm_l}(r,\theta,\varphi) = l(l+1)\hbar^2\Psi_{nlm_l}(r,\theta,\varphi) \qquad l=0,1,2,…,n-1$$<br>$$\hat{L_z}\Psi_{nlm_l}(r,\theta,\varphi)=m_l\hbar\Psi_{nlm_l}(r,\theta,\varphi) \qquad m_l=0,\pm 1,…, \pm l$$</p>
+<h2 id="Section-2-s-Orbitals-are-Spherically-Symmetric-球对称的s轨道"><a href="#Section-2-s-Orbitals-are-Spherically-Symmetric-球对称的s轨道" class="headerlink" title="Section 2: s Orbitals are Spherically Symmetric 球对称的s轨道"></a>Section 2: s Orbitals are Spherically Symmetric 球对称的s轨道</h2><h3 id="Degeneracy-of-hydrogen-atomic-level简并度"><a href="#Degeneracy-of-hydrogen-atomic-level简并度" class="headerlink" title="Degeneracy of hydrogen atomic level简并度"></a>Degeneracy of hydrogen atomic level简并度</h3><p>$$n^2$$<br>n=1:1($1s$)<br>n=2:4($2s$, $2p_0$, $2p_{+1}$, $2p_{-1}$)<br>…</p>
+<h3 id="Radial-distribution-function-of-hydrogen-atom-氢原子径向分布函数"><a href="#Radial-distribution-function-of-hydrogen-atom-氢原子径向分布函数" class="headerlink" title="Radial distribution function of hydrogen atom 氢原子径向分布函数"></a>Radial distribution function of hydrogen atom 氢原子径向分布函数</h3><p>在氢原子$r$到$r+dr$薄膜中找到电子的概率：<br>$$P(r)dr =[R_{nl}(r)]^2 r^2 dr \int_0^{2\pi} \int_0^\pi |Y_l^{m_l}(\theta,\varphi)|^2 \sin\theta d\theta d\varphi=[R_{nl}(r)]^2 r^2 dr$$<br>$P(r) = [R_{nl}(r)]^2 r^2$ is called <strong>the radial distribution function</strong></p>
+<p>The number of nodes节点 in the radial function $=n-l-1$<br>在节点上电子出现的概率为0</p>
+<h3 id="The-complete-1s-wave-function"><a href="#The-complete-1s-wave-function" class="headerlink" title="The complete $1s$ wave function"></a>The complete $1s$ wave function</h3><p>$$\psi_{1s}=\psi_{100}(r,\theta,\varphi)=R_{10}(r)Y_0^0(\theta,\varphi)=(\pi a_0^3)^{-1/2}e^{-r/a_0}$$</p>
+<p>The average value of $r$:<br>$$&lt; r &gt;_{1s}=\langle 100|r|100 \rangle = \frac{4}{a_0^3} \int_0^\infty r^3e^{-2r/a_0}dr=\frac{3}{2}a_0$$</p>
+<p>In the similar way, we obtain the Potenial energy:<br>$$&lt; V(r) &gt;_{1s}=&lt; 100|V|100 &gt; =\int_0^{2\pi}d\varphi \int_0^\pi d\theta \sin\theta \int_0^\infty dr r^2 \psi_{1s}^* (-\frac{e^2}{4\pi \varepsilon_0 r})\psi_{1s}=-\frac{e^2}{4\pi \varepsilon_0 a_0}$$</p>
+<p>$$E_{1s}=-\frac{e^2}{8\pi \varepsilon_0 a_0}=2V$$</p>
+<p>Show that the most probable value of $r$ ($r_{mp}$) in is state is $a_0$电子出现最大概率处:<br>$$P’(r_{mp})=0 \Rightarrow r_{mp}=a_0$$<br>It is <strong>The Bohr radius</strong></p>
+<h3 id="The-complete-2s-wave-function"><a href="#The-complete-2s-wave-function" class="headerlink" title="The complete $2s$ wave function"></a>The complete $2s$ wave function</h3><p>$$\psi_{2s}(r,\theta,\varphi)=\frac{1}{\sqrt{32\pi}} (\frac{1}{a_0})^{3/2}(2-\frac{2}{a_0})e^{-r/2a_0}$$</p>
+<p>$$&lt; r &gt;_{2s}=\langle 200|r|200 \rangle = 6a_0$$</p>
+<h2 id="Section-3-p-Orbitas-p轨道-and-the-Zeeman-Effect"><a href="#Section-3-p-Orbitas-p轨道-and-the-Zeeman-Effect" class="headerlink" title="Section 3: p Orbitas p轨道 and the Zeeman Effect"></a>Section 3: p Orbitas p轨道 and the Zeeman Effect</h2><h3 id="p-Orbitas"><a href="#p-Orbitas" class="headerlink" title="p Orbitas"></a>p Orbitas</h3><p>When $l=1$ states with $m_l \neq 0$ 球谐函数:<br>$$Y_1^{+1}(\theta,\varphi)=-(\frac{3}{8\pi})^{1/2} \sin\theta e^{+i\theta} \qquad Y_1^{-1}(\theta,\varphi)=(\frac{3}{8\pi})^{1/2} \sin\theta e^{-i\theta}$$</p>
+<p>对应能量相同。<br>若本征函数简并，那么重新组合后得到的新的本征函数，仍是哈密顿算符的本征函数：<br>$$p_x=\frac{1}{\sqrt{2}}(Y_1^{-1}-Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \cos\varphi$$<br>$$p_y=\frac{i}{\sqrt{2}}(Y_1^{-1}+Y_1^{+1})=(\frac{3}{4\pi})^{1/2}\sin\theta \sin\varphi$$</p>
+<hr>
+<p>When $l=1$ states with $m_l=0$<br>$$p_z=Y_1^0=(\frac{3}{4\pi})^{1/2}\cos\theta$$</p>
+<p>$2p_x$与$3p_x$的差别主要在径向函数上</p>
+<p>When $l=2$: $m_l=0,\pm 1, \pm 2$<br>$$d_{z^2}=Y_2^0=\sqrt{\frac{5}{16\pi}}(3cos^2\theta -1)$$<br>$$d_{xz}=\frac{1}{\sqrt{2}}(Y_2^{-1}-Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \cos \varphi$$<br>$$d_{yz}=\frac{i}{\sqrt{2}}(Y_2^{-1}+Y_2^{+1})=\sqrt{\frac{15}{4\pi}} \sin\theta \cos \theta \sin \varphi$$<br>$$d_{xy}=\frac{1}{\sqrt{2}i}(Y_2^{+2}-Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \sin 2\varphi$$<br>$$d_{x^2-y^2}=\frac{1}{\sqrt{2}}(Y_2^{+2}+Y_2^{-2})=\sqrt{\frac{15}{16\pi}} \sin^2\theta \cos 2\varphi$$</p>
+<p>类氢离子完整波函数：<br>$$\psi_{1s}=\frac{1}{\sqrt{\pi}}(\frac{Z}{a_0})^{3/2}e^{-\rho}$$<br>$$\psi_{2s}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}(2-\rho)e^{-\rho/2}$$<br>$$\psi_{2p_z}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \cos \theta$$<br>$$\psi_{2p_x}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \cos \varphi$$<br>$$\psi_{2p_y}=\frac{1}{4\sqrt{2\pi}}(\frac{Z}{a_0})^{3/2}\rho e^{-\rho/2} \sin \theta \sin \varphi$$<br>$Z$ is the nuclear charge, and $\rho=Zr/a_0$, where $a_0$ is Bohr radius </p>
+<h3 id="Zeeman-Effect塞曼效应"><a href="#Zeeman-Effect塞曼效应" class="headerlink" title="Zeeman Effect塞曼效应"></a>Zeeman Effect塞曼效应</h3><p>The motion of an electric charge around a closed loop produces a magnetic dipole $\vec{m}$, whose magnitude is电荷沿封闭圆环运动产生一个磁偶极：<br>$$\vec{m}=\frac{q(\vec{r} \times \vec{v})}{2}$$<br>$v$：The velocity速度 of the charge q</p>
+<p>$$\vec{m}=\frac{q}{2m} \vec{L} \qquad (\vec{L}=\vec{r} \times \vec{p} \quad \vec{p}=m\vec{v})$$<br>For a electron, $q=-|e|$ and $m=m_e$,so<br>$$\vec{m}=-\frac{|e|}{2m_e} \vec{L}$$</p>
+<p>The potential energy of a magnetic dipole in a magentic field is given by<br>$$V=-\vec{m} \cdot \vec{B}$$<br>$\vec{B}: The strength of the magnetic field(T:tesla)$</p>
+<p>We take the magnetic field to be in the $z$ direction磁场方向指向z方向, then<br>$$V=-m_z B_z=\frac{|e|B_z}{2m_e}\vec{L_z}$$</p>
+<p>The Hamiltonian operator for a hydrogen atom in an external magnetic field在外部磁场中的氢原子的哈密顿算符:<br>$$\hat{H}=\hat{H}_0+\frac{|e|B_z}{2m_e}\vec{L_z}$$</p>
+<p>The corresponding Schrodinger Equation:<br>$$(\hat{H}_0+\frac{|e|B_z}{2m_e}\vec{L_z})\psi=E\psi$$</p>
+<p>The hydrogen atomic wave functions are also eigenfunctions of this Hamiltonian, with the energy levels of a hydrogen atom in a magnetic field<br>$$E=-\frac{m_e e^4}{8 \varepsilon_0^2 h^2 n^2}+\beta_B m_l B_z \qquad n=1,2,3,… \quad m_l=0,\pm 1, \pm 2,…,\pm l$$<br>$\beta_B$, <strong>A Bohr magneton</strong>, defined as<br>$$\beta_B=\frac{|e|\hbar}{2m_e}=9.274 \times 10^{-24} J \cdot T^{-1}$$</p>
+<p>A state with given values of $n$ and $l$ is split into $2l+1$ levels by an external magnetic firld特定的nl能级，在磁场作用下可以分裂，各个$m_l$的能量不再相同<br>因此$m_l$称为磁量子数</p>
+<h2 id="Section-4-Spin-Angular-Momentum自旋角动量-and-Spin-Orbit-Interaction自旋轨道相互作用"><a href="#Section-4-Spin-Angular-Momentum自旋角动量-and-Spin-Orbit-Interaction自旋轨道相互作用" class="headerlink" title="Section 4: Spin Angular Momentum自旋角动量 and Spin-Orbit Interaction自旋轨道相互作用"></a>Section 4: Spin Angular Momentum自旋角动量 and Spin-Orbit Interaction自旋轨道相互作用</h2><h3 id="Spin-Angular-Momentum"><a href="#Spin-Angular-Momentum" class="headerlink" title="Spin Angular Momentum"></a>Spin Angular Momentum</h3><p>Just as we have the eigenvalue equations for $\hat{L} ^2$ and $\hat{L}_z$,<br>$$\hat{L}^2 Y_l^{m_l}(\theta,\varphi)=\hbar^2l(l+1) Y_l^{m_l}(\theta,\varphi)$$<br>$$\hat{L}_z Y_l^{m_l}(\theta,\varphi)=m_l \hbar Y_l^{m_l}(\theta,\varphi)$$<br>We define the spin自旋 operators $\hat{S}^2$ and $\hat{S}_z$ and their eigenfunctions $\alpha$(spin up) and $\beta$(spin down) by the equations:<br>$$\hat{S}^2 \alpha=\hbar^2 s(s+1)\alpha \qquad \hat{S}^2 \beta=\hbar^2 s(s+1)\beta \qquad s=\frac{1}{2}(Only)$$<br>$$\hat{S}_z \alpha =\frac{1}{2}\hbar \alpha \qquad \hat{S}_z \beta =-\frac{1}{2}\hbar \beta$$</p>
+<p>The magnitude of the spin angular momentum of an electron is自旋角动量大小:<br>$$S=\hbar\sqrt{s(s+1)}=\frac{\sqrt{3}}{2}\hbar \qquad (s=\frac{1}{2})$$</p>
+<p>Two spin functions are complete完备 and they are orthonormal正交归一</p>
+<hr>
+<p>完整的单电子波函数需要四个量子数来描述$n,l,m_l,m_s$，称为自旋轨道<br>The spatial and spin parts of the wave function are independent and so we write:<br>$$\psi_{n,l,m_l,m_s}(r,\theta,\varphi,\sigma) = \psi_{n,l,m_l}(r,\theta,\varphi) \alpha(\sigma) \quad or \quad \psi_{n,l,m_l}(r,\theta,\varphi) \beta(\sigma)$$<br>$\sigma$spin variable 自旋变量</p>
+<p>自旋轨道也都是正交归一的</p>
+<h3 id="Spin-Orbit-Interaction"><a href="#Spin-Orbit-Interaction" class="headerlink" title="Spin-Orbit Interaction"></a>Spin-Orbit Interaction</h3><p>The magnetic moment associated with the spin of the electron与电子自旋相关的磁矩:<br>$$\vec{m}_s=-\frac{g|e|}{2m_e}\vec{S} \qquad m_s=-g\beta_B [s(s+1)]^{1/2}$$<br>Here $g=2$ is called <strong>anomalous spin factor</strong>反常自旋因子</p>
+<p>In fact, the <strong>spin-orbital interaction term</strong>自旋-轨道相互作用, from the interactions between the magnetic of moments of spin and orbital angular momentum, must be included in the Hamiltonian operator:<br>$$\hat{H}=-\frac{\hbar^2}{2m_e}\nabla^2 - \frac{e^2}{4\pi\varepsilon_0 r}+\xi(r)\vec{l} \cdot \vec{s}$$<br>It is difficult to find the eigenfunctions and eigenvalues of the operator, since the spin-orbital interaction term is usually estimated with first-order perturbation theory一阶微扰理论.</p>
+<p>The <strong>spin-orbital interaction</strong> is small in a hydrogen atom</p>
+<p>When the spin-orbital interaction is taken into account, $\hat{L}^2$ and $\hat{S}^2$ no longer commute with $\hat{H}$不再对易, so $\vec{L}$ and $\vec{S}$ are no longer conserved守恒, only $\vec{J}=\vec{L}+\vec{S}$ is conserved:<br>$$\hat{J}^2| J M_J &gt; =\hbar J(J+1)|J M_J \rangle \qquad \hat{J}_z|J M_J=\hbar M_J|J M_J \rangle $$</p>
+<hr>
+<p>角动量耦合：<br>对于每一个$L$，存在$2L+1$个可能的轨道角动量的态，且有$2S+1=2$个自旋角动量的态，因此总的态数:$2(2L+1)$<br>$$J=L+S,L+S-1,…,|L_S|$$<br>$$M_J=\pm J, \pm (J-1), …,0$$</p>
+<p>The total electron angular momentum电子角动量 for a hydrogen atom:<br>$$\vec{J}=\vec{L}+\vec{S}$$<br>When the spin-orbital interaction is included, the schrodinger equation for a hydrogen atom cannot be solved exactly, but $\psi_{nml}(r,\theta,\varphi)$ is a good approximation.</p>
+<p>For a hydrogen atom, the energy shift due to the spin-orbital interaction is estimated旋轨耦合带来的能量偏移(with the first perturbation theory一阶微扰理论)<br>$$E_{S.Q.}= \langle \psi_{nml}|\xi(r)\vec{L} \cdot \vec{S}|\psi_{nml} \rangle =\frac{1}{2}A\hbar^2[J(J+1)-L(L+1)-S(S+1)]$$</p>
+<hr>
+<ol>
+<li>The similar expression exists for a many-electron atom  </li>
+<li>So each atomic term is split into levels, each level with a different $J$</li>
+<li>The set of states that belong to the same term and have the same value of $J$ consitutes and atomic level能级. Each level consists of $(2J+1)$ states of equal energy.</li>
+</ol>
+<h2 id="Section-5-Term-symbols-of-a-Hydrogen-Atom-and-Spectrum-of-Atomic-Hydrogen-in-an-External-Magnetic-Field"><a href="#Section-5-Term-symbols-of-a-Hydrogen-Atom-and-Spectrum-of-Atomic-Hydrogen-in-an-External-Magnetic-Field" class="headerlink" title="Section 5: Term symbols of a Hydrogen Atom and Spectrum of Atomic Hydrogen in an External Magnetic Field"></a>Section 5: Term symbols of a Hydrogen Atom and Spectrum of Atomic Hydrogen in an External Magnetic Field</h2><p>We designate the electronic states of a hydrogen atom by an atomic term symble, which is expressed by the occupied orbital followed by the symbol $^2l_j$<br>l: 占据轨道对应的光谱符号<br>2：自旋多重度$2s+1=2$<br>j: 总角动量的值</p>
+<p>We can use <strong>the Rydberg formula</strong> to calculate the frequencies of the lines in the Lyman series:<br>$$\vec{\nu}=109677.58(1-\frac{1}{n^2}) cm^{-1} \quad n=2,3,…$$</p>
+<hr>
+<p>Selection rules:  </p>
+<ol>
+<li>$\Delta L=\pm 1$</li>
+<li>$\Delta S=0$  </li>
+<li>$\Delta J= 0, \pm 1$ ($J=0 \rightarrow J=0$ is forbidden)</li>
+</ol>
+<p>So for Lyman series of atom hydrogen, the allowed transitions into the ground state are:<br>$$np \quad ^2P_{1/2} \qquad \rightarrow 1s \quad ^2S_{1/2}$$<br>$$np \quad ^2P_{3/2} \qquad \rightarrow 1s \quad ^2S_{1/2}$$</p>
+<p>The first line of the Lyman series is a doublet, due to the spin-orbital coupling</p>
+<h3 id="in-an-External-Magnetic-Field"><a href="#in-an-External-Magnetic-Field" class="headerlink" title="in an External Magnetic Field"></a>in an External Magnetic Field</h3><p>The magnetic moments associated with orbital and spin angular momentum:<br>$$\vec{m}_L=-\frac{|e|}{2m_e} \vec{L} \qquad \vec{m}_S=-\frac{g|e|}{2m_e} \vec{S}$$</p>
+<p>The <strong>total magnetic moment</strong> is $\vec{m}_L+\vec{m}_S$, and the potential energy of its interaction with an external magnetic field is given by:<br>$$V=\frac{|e|B_z}{2m_e}(L_z+gS_z)$$</p>
+<p>Taken it into the Hamiltonian operator, and treat by perturbation theory微扰理论, then the final state are split by:<br>$$\Delta E_{mag}=g(j,l)\beta_B m_j B_z$$<br><strong>Lande g factor</strong>: $g(j,l)=1+\frac{j(j+1)-l(l+1)+s(s+1)}{2j(j+1)} \qquad (s=1/2)$</p>
+<p>在弱外加磁场下，每个$j$分裂成$2j+1$个能态，对应不同$m_j$</p>
+<h1 id="Chapter-5-Approximate-Methods"><a href="#Chapter-5-Approximate-Methods" class="headerlink" title="Chapter 5: Approximate Methods"></a>Chapter 5: Approximate Methods</h1><p>量子化学中使用的近似方法</p>
+<p><a target="_blank" rel="noopener" href="https://blog.oddish.cn/c3e569a74248/">https://blog.oddish.cn/c3e569a74248/</a></p>
+<h1 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6:"></a>Chapter 6:</h1>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>HL Du
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://duhl1999.github.io/e10808c0a9ce/" title="量子化学_mooc_NJU">https://duhl1999.github.io/e10808c0a9ce/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E7%90%86%E8%AE%BA/" rel="tag"># 理论</a>
+              <a href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/" rel="tag"># 量子化学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/58666b256db8/" rel="prev" title="VASP输出文件">
+                  <i class="fa fa-chevron-left"></i> VASP输出文件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/ec36bac5ff8d/" rel="next" title="markdown数学公式语法">
+                  markdown数学公式语法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HL Du</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>

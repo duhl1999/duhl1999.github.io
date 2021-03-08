@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"duhl1999.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="2 输出文件输出文件主要包括：CHG,CHGCAR,CONTCAR,DOSCAR,EIGENVAL,IBZKPT,OSZICAR,OUTCAR,REPORT,vasprun.xml,WAVECAR,XDATCAR 本篇内容较长，比较重要的输出文件使用&quot;※ ※&quot;进行了重点标注">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VASP输出文件">
+<meta property="og:url" content="https://duhl1999.github.io/58666b256db8/index.html">
+<meta property="og:site_name" content="ODDISH">
+<meta property="og:description" content="2 输出文件输出文件主要包括：CHG,CHGCAR,CONTCAR,DOSCAR,EIGENVAL,IBZKPT,OSZICAR,OUTCAR,REPORT,vasprun.xml,WAVECAR,XDATCAR 本篇内容较长，比较重要的输出文件使用&quot;※ ※&quot;进行了重点标注">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-30T01:41:35.000Z">
+<meta property="article:modified_time" content="2021-03-08T14:55:38.740Z">
+<meta property="article:author" content="HL Du">
+<meta property="article:tag" content="VASP">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="输出文件">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://duhl1999.github.io/58666b256db8/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>VASP输出文件 | ODDISH</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ODDISH</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-sitemap fa-fw"></i>资源</a></li>
+        <li class="menu-item menu-item-日程"><a href="https://www.notion.so/Dashboard-eb86603d44db418a84002f4455a28fb5" rel="noopener" target="_blank"><i class="fa fa-calendar fa-fw"></i>日程</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6"><span class="nav-text">2 输出文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-CHG"><span class="nav-text">2.1 CHG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-CHGCAR"><span class="nav-text">2.2 CHGCAR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E2%80%BBCONTCAR%E2%80%BB"><span class="nav-text">2.3 ※CONTCAR※</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-DOSCAR"><span class="nav-text">2.4 DOSCAR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-EIGENVAL"><span class="nav-text">2.5 EIGENVAL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-IBZKPT"><span class="nav-text">2.6 IBZKPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-%E2%80%BBOSZICAR%E2%80%BB%E5%92%8C%E6%A0%87%E5%87%86%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6-out-log"><span class="nav-text">2.7 ※OSZICAR※和标准输出文件(out.log)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-%E2%80%BBOUTCAR%E2%80%BB"><span class="nav-text">2.8 ※OUTCAR※</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-REPORT"><span class="nav-text">2.9 REPORT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-vasprun-xml"><span class="nav-text">2.10 vasprun.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-WAVECAR"><span class="nav-text">2.11 WAVECAR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-12-XDATCAR"><span class="nav-text">2.12 XDATCAR</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HL Du"
+      src="/images/duhl.jpg">
+  <p class="site-author-name" itemprop="name">HL Du</p>
+  <div class="site-description" itemprop="description">SCCE@HIT</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/duhl1999" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;duhl1999" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:duhl1999@outlook.com" title="E-Mail → mailto:duhl1999@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://duhl1999.github.io/58666b256db8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/duhl.jpg">
+      <meta itemprop="name" content="HL Du">
+      <meta itemprop="description" content="SCCE@HIT">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ODDISH">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VASP输出文件
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-30 09:41:35" itemprop="dateCreated datePublished" datetime="2020-12-30T09:41:35+08:00">2020-12-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-08 22:55:38" itemprop="dateModified" datetime="2021-03-08T22:55:38+08:00">2021-03-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/VASP/" itemprop="url" rel="index"><span itemprop="name">VASP</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="2-输出文件"><a href="#2-输出文件" class="headerlink" title="2 输出文件"></a>2 输出文件</h1><p>输出文件主要包括：<br><code>CHG</code>,<code>CHGCAR</code>,<code>CONTCAR</code>,<code>DOSCAR</code>,<code>EIGENVAL</code>,<code>IBZKPT</code>,<code>OSZICAR</code>,<code>OUTCAR</code>,<code>REPORT</code>,<code>vasprun.xml</code>,<code>WAVECAR</code>,<code>XDATCAR</code></p>
+<p>本篇内容较长，比较重要的输出文件使用<code>&quot;※ ※&quot;</code>进行了重点标注</p>
+<a id="more"></a>
+
+
+<h2 id="2-1-CHG"><a href="#2-1-CHG" class="headerlink" title="2.1 CHG"></a>2.1 CHG</h2><p>包含晶格矢量，原子核最表和电荷密度信息。结构优化和分子动力学模拟每十步储存一次</p>
+<p>可以在<code>INCAR</code>中通过<code>LCHARGE = .FALSE</code>关闭输出</p>
+<h2 id="2-2-CHGCAR"><a href="#2-2-CHGCAR" class="headerlink" title="2.2 CHGCAR"></a>2.2 CHGCAR</h2><p>包含最终结构的晶格矢量，原子核坐标和电荷密度信息</p>
+<p>可以在<code>INCAR</code>中通过<code>LCHARGE = .FALSE</code>关闭输出</p>
+<p>重启vasp计算或者做DOS，能带计算可以从这个文件中读取电荷信息</p>
+<h2 id="2-3-※CONTCAR※"><a href="#2-3-※CONTCAR※" class="headerlink" title="2.3 ※CONTCAR※"></a>2.3 ※CONTCAR※</h2><p>vasp最后输出的结构信息，包括结构信息和每个原子的速度，格式与POSCAR一样，可以直接复制</p>
+<p>对于单点能计算，<code>CONTCAR</code>和<code>POSCAR</code>完全一样</p>
+<p>对于结构优化，<code>CONTCAR</code>是优化到最后一步的结构</p>
+<p>对于分子动力学计算，<code>CONTCAR</code>是最后一步MD外推的结构，并且包含速度和预矫正(predictor-corrector coordinates)信息</p>
+<p>无论那种计算，中断后都可以把<code>CONTCAR</code>复制成<code>POSCAR</code>继续计算</p>
+<h2 id="2-4-DOSCAR"><a href="#2-4-DOSCAR" class="headerlink" title="2.4 DOSCAR"></a>2.4 DOSCAR</h2><p>储存DOS和DOS积分值信息。DOS:density of state态密度</p>
+<h2 id="2-5-EIGENVAL"><a href="#2-5-EIGENVAL" class="headerlink" title="2.5 EIGENVAL"></a>2.5 EIGENVAL</h2><p>输出本征值信息：轨道能量和电子占据</p>
+<p>每个k点分别对应一套</p>
+<h2 id="2-6-IBZKPT"><a href="#2-6-IBZKPT" class="headerlink" title="2.6 IBZKPT"></a>2.6 IBZKPT</h2><p>vasp自动生成的k电信系，格式与KPOINTS一样，可以直接复制</p>
+<h2 id="2-7-※OSZICAR※和标准输出文件-out-log"><a href="#2-7-※OSZICAR※和标准输出文件-out-log" class="headerlink" title="2.7 ※OSZICAR※和标准输出文件(out.log)"></a>2.7 ※OSZICAR※和标准输出文件(out.log)</h2><p>储存电子步迭代收敛和能量信息，简洁明了</p>
+<p>标准输出文件多了计算初始化过程中的一些基本信息:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">running on   24 total cores</span><br><span class="line">distrk:  each k-point on   24 cores,    1 groups</span><br><span class="line">distr:  one band on    1 cores,   24 groups</span><br><span class="line">using from now: INCAR     </span><br><span class="line">vasp.5.4.1 24Jun15 (build Aug 19 2019 20:28:00) complex                        </span><br><span class="line"> </span><br><span class="line">POSCAR found type information on POSCAR  Al O </span><br><span class="line">POSCAR found :  2 types and      10 ions</span><br><span class="line">scaLAPACK will be used</span><br><span class="line">LDA part: xc-table for Pade appr. of Perdew</span><br><span class="line">POSCAR found type information on POSCAR  Al O </span><br><span class="line">POSCAR found :  2 types and      10 ions</span><br><span class="line">POSCAR, INCAR and KPOINTS ok, starting setup</span><br><span class="line">WARNING: small aliasing (wrap around) errors must be expected</span><br><span class="line">FFT: planning ...</span><br><span class="line">WAVECAR not read</span><br><span class="line">WARNING: chargedensity file is incomplete</span><br><span class="line">WARNING: random wavefunctions but no delay for mixing, default for NELMDL</span><br></pre></td></tr></table></figure>
+
+<p>SCF迭代的输出，程序默认使用DAV(blocked Davidson interation scheme阻尼戴维森迭代方法) 取决于<code>INCAR</code>中<code>ALGO = Normal</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> entering main loop</span><br><span class="line">       N       E                     dE             d eps       ncg     rms          rms(c)</span><br><span class="line">DAV:   1     0.102544314961E+03    0.10254E+03   -0.20873E+04  6552   0.760E+02</span><br><span class="line">DAV:   2    -0.783175035641E+02   -0.18086E+03   -0.17286E+03  9312   0.179E+02</span><br><span class="line">DAV:   3    -0.839200063663E+02   -0.56025E+01   -0.55989E+01  7560   0.315E+01</span><br><span class="line">DAV:   4    -0.839485173787E+02   -0.28511E-01   -0.28510E-01  9360   0.263E+00</span><br><span class="line">DAV:   5    -0.839488363125E+02   -0.31893E-03   -0.31893E-03  7944   0.271E-01    0.182E+01</span><br><span class="line">DAV:   6    -0.748689466073E+02    0.90799E+01   -0.20084E+01  7272   0.213E+01    0.642E+00</span><br><span class="line">DAV:   7    -0.748616584673E+02    0.72881E-02   -0.48800E-01  8232   0.305E+00    0.356E+00</span><br><span class="line">DAV:   8    -0.748644005529E+02   -0.27421E-02   -0.67091E-02  8712   0.162E+00    0.873E-01</span><br><span class="line">DAV:   9    -0.748726178380E+02   -0.82173E-02   -0.14378E-02  8760   0.584E-01    0.292E-01</span><br><span class="line">DAV:  10    -0.748738821757E+02   -0.12643E-02   -0.15127E-03  7896   0.173E-01    0.619E-02</span><br><span class="line">DAV:  11    -0.748738509679E+02    0.31208E-04   -0.84883E-05  7560   0.564E-02</span><br></pre></td></tr></table></figure>
+<p>具体信息：<br>        N：步数;<br>        E：当前能量;<br>        dE：能量差；<br>        d eps：能带能量变化;<br>        rms：（波函数）方均根;<br>        rms(c)：该步和上一步电荷密度差值</p>
+<p>最下一行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  1 F&#x3D; -.74873851E+02 E0&#x3D; -.74873851E+02  d E &#x3D;-.865390E-12</span><br><span class="line">writing wavefunctions</span><br></pre></td></tr></table></figure>
+<p>1代表离子步的步数<br>F=体系总能量(包含电子熵entropy)<br>E0=修正电子熵后的能量(energy(sigma-&gt;0):)<br>dE两个离子步差值（但单点能只有一个点，所以只有一个离子步）</p>
+<p>※※读取时要读取最后一个E0能量</p>
+<h2 id="2-8-※OUTCAR※"><a href="#2-8-※OUTCAR※" class="headerlink" title="2.8 ※OUTCAR※"></a>2.8 ※OUTCAR※</h2><p>VASP输出的细节信息<br>可以在<code>INCAR</code>中<code>NWRITE=0|1|2|3|4</code>控制输出的详细程度(默认2)<br>建议MD计算时候用1，其他用2</p>
+<p>可以根据开始计算时的电子步耗时来大致估算计算所需时间:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cat OUTCAR | grep &quot;LOOP&quot;</span><br><span class="line">      LOOP:  cpu time    1.9707: real time    2.5617</span><br><span class="line">      LOOP:  cpu time    2.9006: real time    2.9174</span><br><span class="line">      LOOP:  cpu time    2.3436: real time    2.5159</span><br><span class="line">    ... ... ...</span><br><span class="line">      LOOP:  cpu time    2.4166: real time    2.4274</span><br><span class="line">      LOOP:  cpu time    2.5316: real time    2.7207</span><br><span class="line">     LOOP+:  cpu time   30.9803: real time   33.1792</span><br></pre></td></tr></table></figure>
+<p>一般结构优化，可以接受电子步时间50s以内，MD 10s以内</p>
+<p>输出的能量:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">free energy    TOTEN  &#x3D;       102.54431496 eV</span><br><span class="line">energy without entropy &#x3D;      102.54494669  energy(sigma-&gt;0) &#x3D;      102.54463083</span><br></pre></td></tr></table></figure>
+<p>总能；通过估算电子熵，把TS从总能中减掉；外推sigma=0时的能量</p>
+<p>迭代结束，输出费米能级信息和能带信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">E-fermi :   5.3764     XC(G&#x3D;0): -10.9667     alpha+bet :-14.8344</span><br><span class="line"></span><br><span class="line">k-point     1 :       0.0000    0.0000    0.0000</span><br><span class="line"> band No.  band energies     occupation </span><br><span class="line">     1     -13.8611      2.00000</span><br><span class="line">     2     -12.3739      2.00000</span><br><span class="line">       ... ... ...</span><br></pre></td></tr></table></figure>
+<p>注:这里的E-fermi对应的时HOMO的能量，与实验上的费米能级不一样</p>
+<p>最后会打印总结信息，包括收敛情况，耗时和晶胞的应力信息及力在每个原子上的信息，在凝聚态物理中有用:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">------------------------ aborting loop because EDIFF is reached ----------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    CHARGE:  cpu time    0.0460: real time    0.0648</span><br><span class="line">    FORLOC:  cpu time    0.0020: real time    0.0033</span><br><span class="line">    FORNL :  cpu time    0.2470: real time    0.2664</span><br><span class="line">    STRESS:  cpu time    1.0388: real time    1.0692</span><br><span class="line">    FORCOR:  cpu time    0.0110: real time    0.0383</span><br><span class="line">    FORHAR:  cpu time    0.0020: real time    0.0202</span><br><span class="line">    MIXING:  cpu time    0.0040: real time    0.0502</span><br><span class="line">    OFIELD:  cpu time    0.0000: real time    0.0013</span><br><span class="line"></span><br><span class="line">  FORCE on cell &#x3D;-STRESS in cart. coord.  units (eV):</span><br><span class="line">  Direction    XX          YY          ZZ          XY          YZ          ZX</span><br><span class="line">  --------------------------------------------------------------------------------------</span><br><span class="line">  Alpha Z    66.90706    66.90706    66.90706</span><br><span class="line">  Ewald    -791.92409  -702.85439  -764.01879    23.38732    -7.24753    29.38922</span><br><span class="line">  Hartree   261.54248   276.19919   271.27549     3.84846    -3.19885    12.97154</span><br><span class="line">  E(xc)    -220.94191  -221.05716  -221.03388    -0.03026    -0.00165     0.00669</span><br><span class="line">  Local    -145.59042  -238.85254  -185.50223   -24.48814     9.85428   -39.95975</span><br><span class="line">  n-local   -88.16844   -83.95574   -86.43633     1.14972    -0.13786     0.48373</span><br><span class="line">  augment    38.51644    37.73118    38.49293    -0.20619     0.03329    -0.13814</span><br><span class="line">  Kinetic   876.19322   862.43347   876.77434    -3.81007     0.82666    -2.70689</span><br><span class="line">  Fock        0.00000     0.00000     0.00000     0.00000     0.00000     0.00000</span><br><span class="line">  -------------------------------------------------------------------------------------</span><br><span class="line">  Total      -3.40239    -3.51220    -3.54141    -0.02883    -0.00344     0.01393</span><br><span class="line">  in kB     -56.50412   -58.32779   -58.81293    -0.47885    -0.05707     0.23141</span><br><span class="line">  external pressure &#x3D;      -57.88 kB  Pullay stress &#x3D;        0.00 kB</span><br></pre></td></tr></table></figure>
+<p>接下来，原子坐标和各个原子受力的信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">POSITION                                       TOTAL-FORCE (eV&#x2F;Angst)</span><br><span class="line">-----------------------------------------------------------------------------------</span><br><span class="line">     4.82522      0.32460      1.12442         0.005509     -0.001359     -0.003774</span><br><span class="line">    -5.45573      2.85994      4.37695        -0.005509      0.001359      0.003774</span><br><span class="line">     1.75701      1.08124      1.74271         0.001064     -0.000262      0.003714</span><br><span class="line">    -2.38752      2.10330      3.75866        -0.001064      0.000262     -0.003714</span><br><span class="line">     3.09725      0.75073      4.90198         0.008682     -0.002141      0.004484</span><br><span class="line">    -3.72777      2.43381      0.59939        -0.008682      0.002141     -0.004484</span><br><span class="line">    -0.58134      1.65789      4.08509         0.012264     -0.003024      0.015087</span><br><span class="line">    -0.04917      1.52665      1.41628        -0.012264      0.003024     -0.015087</span><br><span class="line">    -4.18451      2.54645      3.12154        -0.014792      0.003648     -0.002466</span><br><span class="line">     3.55400      0.63809      2.37983         0.014792     -0.003648      0.002466</span><br><span class="line">-----------------------------------------------------------------------------------</span><br><span class="line">   total drift:                                0.000084      0.000166     -0.000184</span><br></pre></td></tr></table></figure>
+<p>然后时最终能量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FREE ENERGIE OF THE ION-ELECTRON SYSTEM (eV)</span><br><span class="line">---------------------------------------------------</span><br><span class="line">free  energy   TOTEN  &#x3D;       -74.87385097 eV</span><br><span class="line"></span><br><span class="line">energy  without entropy&#x3D;      -74.87385097  energy(sigma-&gt;0) &#x3D;      -74.87385097</span><br></pre></td></tr></table></figure>
+<p>最后是总结，包括内存消耗和计算时长</p>
+<h2 id="2-9-REPORT"><a href="#2-9-REPORT" class="headerlink" title="2.9 REPORT"></a>2.9 REPORT</h2><p>分子动力学(MD)的输出信息总结</p>
+<h2 id="2-10-vasprun-xml"><a href="#2-10-vasprun-xml" class="headerlink" title="2.10 vasprun.xml"></a>2.10 vasprun.xml</h2><p>包含vasp一些输出信息，比如DOS，能带，用p4vasp打开</p>
+<h2 id="2-11-WAVECAR"><a href="#2-11-WAVECAR" class="headerlink" title="2.11 WAVECAR"></a>2.11 WAVECAR</h2><p>包含波函数信息，是二进制文件</p>
+<p>重启vasp计算时从这里读取波函数信息作为初始猜测</p>
+<p>可以在<code>INCAR</code>中通过<code>LWAVE = .FALSE</code>关闭输出</p>
+<h2 id="2-12-XDATCAR"><a href="#2-12-XDATCAR" class="headerlink" title="2.12 XDATCAR"></a>2.12 XDATCAR</h2><p>在结构优化或者MD计算中保存每一步的结构信息</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>HL Du
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://duhl1999.github.io/58666b256db8/" title="VASP输出文件">https://duhl1999.github.io/58666b256db8/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/VASP/" rel="tag"># VASP</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/tags/%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6/" rel="tag"># 输出文件</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/11ae7f9ad9be/" rel="prev" title="VASP输入文件">
+                  <i class="fa fa-chevron-left"></i> VASP输入文件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/e10808c0a9ce/" rel="next" title="量子化学_mooc_NJU">
+                  量子化学_mooc_NJU <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HL Du</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>

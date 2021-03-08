@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"duhl1999.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="Chapter 5 of ‘量子化学_mooc_NJU’ 大多数原子和分子的薛定谔方程无法精确求解，因此发展了一系列近似求解方法。  Variational Method  Linear Variational Principle and Secular Determinant  Perturbation Theory and its Applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="量子化学中使用的近似方法">
+<meta property="og:url" content="https://duhl1999.github.io/c3e569a74248/index.html">
+<meta property="og:site_name" content="ODDISH">
+<meta property="og:description" content="Chapter 5 of ‘量子化学_mooc_NJU’ 大多数原子和分子的薛定谔方程无法精确求解，因此发展了一系列近似求解方法。  Variational Method  Linear Variational Principle and Secular Determinant  Perturbation Theory and its Applications">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-29T05:03:01.000Z">
+<meta property="article:modified_time" content="2021-02-03T17:03:01.000Z">
+<meta property="article:author" content="HL Du">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="理论">
+<meta property="article:tag" content="量子化学">
+<meta property="article:tag" content="方法">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://duhl1999.github.io/c3e569a74248/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>量子化学中使用的近似方法 | ODDISH</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ODDISH</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">During the daytime, Oddish buries itself in soil to absorb nutrients from the ground using its entire body.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-sitemap fa-fw"></i>资源</a></li>
+        <li class="menu-item menu-item-日程"><a href="https://www.notion.so/Dashboard-eb86603d44db418a84002f4455a28fb5" rel="noopener" target="_blank"><i class="fa fa-calendar fa-fw"></i>日程</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Variational-Method%E5%8F%98%E5%88%86%E6%96%B9%E6%B3%95"><span class="nav-text">1 Variational Method变分方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-The-ground-state-of-a-hydrogen-atom"><span class="nav-text">Example: The ground state of a hydrogen atom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-Harmonic-oscillator%E7%AE%80%E8%B0%90%E6%8C%AF%E5%AD%90"><span class="nav-text">Example: Harmonic oscillator简谐振子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Allocation-of-the-Variational-Method-to-Two-electron-Problems"><span class="nav-text">Allocation of the Variational Method to Two-electron Problems</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Linear-Variational-Principle%E7%BA%BF%E6%80%A7%E5%8F%98%E5%88%86%E6%96%B9%E6%B3%95-and-Secular-Determianant%E4%B9%85%E6%9C%9F%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-text">2 Linear Variational Principle线性变分方法 and Secular Determianant久期行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-text">Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Another-Situation"><span class="nav-text">Another Situation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Perturbation-Theory-%E5%BE%AE%E6%89%B0%E7%90%86%E8%AE%BA"><span class="nav-text">3 Perturbation Theory 微扰理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-order-perturbation-theory"><span class="nav-text">First-order perturbation theory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-The-first-order-energy"><span class="nav-text">(1) The first-order energy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-The-second-order-energy"><span class="nav-text">(2) The second-order energy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Application-of-Perturbation-Theory-to-the-Helium-Atom"><span class="nav-text">Application of Perturbation Theory to the Helium Atom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Application-of-Particle-in-a-1D-Box"><span class="nav-text">Application of Particle in a 1D Box</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HL Du"
+      src="/images/duhl.jpg">
+  <p class="site-author-name" itemprop="name">HL Du</p>
+  <div class="site-description" itemprop="description">SCCE@HIT</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/duhl1999" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;duhl1999" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:duhl1999@outlook.com" title="E-Mail → mailto:duhl1999@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://duhl1999.github.io/c3e569a74248/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/duhl.jpg">
+      <meta itemprop="name" content="HL Du">
+      <meta itemprop="description" content="SCCE@HIT">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ODDISH">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          量子化学中使用的近似方法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-29 13:03:01" itemprop="dateCreated datePublished" datetime="2021-01-29T13:03:01+08:00">2021-01-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-04 01:03:01" itemprop="dateModified" datetime="2021-02-04T01:03:01+08:00">2021-02-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">理论学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Chapter 5 of <a target="_blank" rel="noopener" href="https://blog.oddish.cn/e10808c0a9ce/">‘量子化学_mooc_NJU’</a></p>
+<p>大多数原子和分子的薛定谔方程无法精确求解，因此发展了一系列近似求解方法。</p>
+<ol>
+<li><p>Variational Method</p>
+</li>
+<li><p>Linear Variational Principle and Secular Determinant</p>
+</li>
+<li><p>Perturbation Theory and its Applications</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="1-Variational-Method变分方法"><a href="#1-Variational-Method变分方法" class="headerlink" title="1 Variational Method变分方法"></a>1 Variational Method变分方法</h1><p>Given a trial wave function试探波函数 $\varphi$,then:<br>$$E_\varphi = \frac{\int \varphi^* \hat{H} \varphi d\tau}{\int \varphi^* \varphi d\tau} \geq \varepsilon_0$$<br>$\varepsilon_0$: 体系的精确基态能量</p>
+<p>If a trial function $\psi$ depends on some parameters, $\alpha,\beta,\gamma,…$, then:<br>$$E_\varphi(\alpha,\beta,\gamma,…) \geq \varepsilon_0$$<br>Now we can minimize $E_\varphi$ with respect to variational parameters to get the best possible ground-state energy.</p>
+<hr>
+<h2 id="Example-The-ground-state-of-a-hydrogen-atom"><a href="#Example-The-ground-state-of-a-hydrogen-atom" class="headerlink" title="Example: The ground state of a hydrogen atom"></a>Example: The ground state of a hydrogen atom</h2><p>$$\hat{H} = -\frac{\hbar^2}{2m_e r^2} \frac{d}{dr}(r^2 \frac{d}{dr})-\frac{e^2}{4\pi \varepsilon_0 r}$$<br>Try a Gaussian function$\varphi(r)=e^{-ar^2}$ as a trial function, $\alpha$ being a variational parameter变分参数</p>
+<p>$$E(\alpha)=\frac{3\hbar^2 \alpha}{2m_e}-\frac{e^2 \alpha^{1/2}}{\sqrt{2}\varepsilon_0 \pi^{3/2}}$$<br>求$E$的最小值:<br>$$\frac{dE(\alpha)}{d\alpha}=0 \Rightarrow \alpha=\frac{m_e^2 e^4}{18\pi^3 \varepsilon_0^2 \hbar^4}$$<br>$$E_{min}=-\frac{4}{3\pi}(\frac{m_e e^4}{16\pi^2 \varepsilon_0^2 \hbar^2}) &gt; -\frac{1}{2}(\frac{m_e e^4}{16\pi^2 \varepsilon_0^2 \hbar^2})=\varepsilon_0$$</p>
+<p><strong>Exact wave function:</strong><br>$$\psi_0(r,\theta,\varphi)=\frac{1}{\sqrt{\pi}} a^{-3/2} e^{-r/a_0} \qquad \varepsilon_0=-\frac{1}{2}(\frac{m_e e^4}{16\pi^2 \varepsilon_0^2 \hbar^2})$$<br><strong>Variational wave function:</strong><br>$$\varphi_0(r,\theta,\varphi)=\frac{8}{3^{3/2}\pi} \frac{1}{\sqrt{\pi a_0^3}} e^{-(8/9\pi)r^2/a_0^2} \qquad E_0=-\frac{4}{3\pi}(\frac{m_e e^4}{16\pi^2 \varepsilon_0^2 \hbar^2})$$</p>
+<h2 id="Example-Harmonic-oscillator简谐振子"><a href="#Example-Harmonic-oscillator简谐振子" class="headerlink" title="Example: Harmonic oscillator简谐振子"></a>Example: Harmonic oscillator简谐振子</h2><p>$$\hat{H}=-\frac{\hbar^2}{2\mu} \frac{d^2}{dx^2}+\frac{1}{2}kx^2$$<br>Try a function$\varphi=\cos \lambda x$ as a trial function, $\lambda$ being a variational parameter变分参数</p>
+<p>$$E(\lambda)=\frac{\hbar^2 \lambda^2}{2\mu}+(\frac{\pi^2}{24}-\frac{1}{4})\frac{k}{\lambda^2}$$</p>
+<p>$$E_{min}(\lambda)=(\frac{\pi^2}{3}-2)^{1/2} \frac{\hbar}{2} (\frac{k}{\mu})^{1/2} =(1.14)\frac{1}{2}\hbar\omega &gt; \frac{1}{2}\hbar\omega=\varepsilon_0$$</p>
+<hr>
+<h2 id="Allocation-of-the-Variational-Method-to-Two-electron-Problems"><a href="#Allocation-of-the-Variational-Method-to-Two-electron-Problems" class="headerlink" title="Allocation of the Variational Method to Two-electron Problems"></a>Allocation of the Variational Method to Two-electron Problems</h2><p>The Hamiltonian operator for $He$:</p>
+<p>$$\hat{H}=(-\frac{\hbar^2}{2 m_e} \nabla_1^{2} -\frac{2 e^2}{4 \pi \varepsilon_0} \frac{1}{r_1}) + (-\frac{\hbar^2}{2 m_e} \nabla_2^{2}-\frac{2 e^2}{4 \pi \varepsilon_0} \frac{1}{r_2}) +\frac{e^2}{4 \pi \varepsilon_0} \cdot \frac{1}{r _{12}} $$<br>$$= \hat{H} _H(1)+\hat{H} _H(2)+\frac{e^{2}}{4 \pi \varepsilon_0} \cdot \frac{1}{r _{12}}$$</p>
+<p>量子力学基本假设<strong>antisymmetric</strong>： 对于该体系，交换两个电子的坐标，其波函数要取负值(反对称):$\Psi(x_1,x_2)=-\Psi(x_2,x_1)$</p>
+<p>For $He$, its trial wave function must be <strong>antisymmetric</strong> about exchange of two electrons 1 and 2, $Z$ being a variational parameter变分参数:<br>$$\Psi_{0}(x_1, x_2)=\varphi_{0}(\vec{r}_1, \vec{r}_2) \Omega(\sigma_1, \sigma_2)$$</p>
+<p>$$\varphi_0 (\vec{r_1}, \vec{r_2}) =\psi_{1s}(\vec{r_1}) \psi_{1s}(\vec{r_2}) \quad \Omega(\sigma_1, \sigma_2)=\frac{1}{\sqrt{2}}[\alpha(\sigma_1) \beta(\sigma_2)-\beta(\sigma_1) \alpha(\sigma_2)]$$</p>
+<p>$$\psi_{1s}(\vec{r}_j)=(\frac{Z^3}{\pi a_0^3})^{1/2} e^{Zr_j/a_0} \qquad j=1or2$$</p>
+<p>Try the trial function:<br>$$E(Z)=\frac{m_e e^4}{16 \pi^2 \varepsilon_{0}^{2} \hbar^2}(Z^2-\frac{27}{8} Z)$$<br>$$\frac{dE}{dZ}=0 \Rightarrow Z_{min}=\frac{27}{16} \quad E_{min}=-(\frac{27}{16})^2=-2.8477$$<br>from experimental: $\varepsilon_0=-2.9033$<br>in units of $\frac{m_e e^4}{16 \pi^2 \varepsilon_{0}^{2} \hbar^2}$</p>
+<p>有效核电荷$Z=\frac{27}{16} &lt; 2$ : 两个电子之间的屏蔽作用</p>
+<h1 id="2-Linear-Variational-Principle线性变分方法-and-Secular-Determianant久期行列式"><a href="#2-Linear-Variational-Principle线性变分方法-and-Secular-Determianant久期行列式" class="headerlink" title="2 Linear Variational Principle线性变分方法 and Secular Determianant久期行列式"></a>2 Linear Variational Principle线性变分方法 and Secular Determianant久期行列式</h1><p>For a arbitrary任意的 wave function $| \phi &gt;$, suppose it can be expanded as:<br>$$|\phi &gt; =\sum\limits_{i=1}^N c_i |\psi &gt; $$<br>where $|\psi &gt;$ is a fixed set of $N$ basis functions.</p>
+<p>Assume that the basis functions are real:<br>$$&lt; \phi|\phi &gt; = |\phi &gt; =\sum\limits_{ij}c_i c_j &lt; \psi_i|\psi_j &gt;=\sum\limits_{ij}c_i c_j S_{ij}$$<br>$$&lt; \phi|\hat{H}|\phi &gt; = |\phi &gt; =\sum\limits_{ij}c_i c_j &lt; \psi_i|\hat{H}|\psi_j &gt;=\sum\limits_{ij}c_i c_j H_{ij}$$<br>$H$ 和 $S$为对称矩阵：<br>$$ &lt; \psi_i|\hat{H}|\psi_j &gt; =  H_{ij}= H_{ji} \qquad &lt; \psi_i|\psi_j &gt; =  S_{ij}= S_{ji}$$</p>
+<p>$$E=\frac{&lt; \phi|\phi &gt;}{&lt; \phi|\hat{H}|\phi &gt;}=\frac{\sum_{i=1}^N \sum_{j=1}^N c_i c_j H_{ij}}{\sum_{i=1}^N \sum_{j=1}^N c_i c_j S_{ij}}$$</p>
+<p>To solve:<br>$$\sum_{i=1}^N \sum_{j=1}^N c_i c_j H_{ij}=E\sum_{i=1}^N \sum_{j=1}^N c_i c_j S_{ij}$$<br>之后两侧同时对$c_\kappa$求导</p>
+<p>To get the minimum energy $E$, we must have:<br>$$\frac{\partial E}{\partial c_\kappa}=0 \quad (\kappa=1,2,…,N)$$</p>
+<p>It is easy to prove the relationship:$\partial E / \partial c_\kappa=\delta_{i\kappa}$, ($\delta_{i\kappa}=0$ if $i=\kappa$, $\delta_{i\kappa}=1$ else)</p>
+<p>Therefore:<br>$$\sum\limits_{i=1}^N c_i H_{i\kappa}+\sum\limits_{j=1}^N c_j H_{\kappa j}=E(\sum\limits_{i=1}^N c_i S_{i\kappa}+\sum\limits_{j=1}^N c_j S_{\kappa j})$$</p>
+<p>With the relationship $H_{ij}= H_{ji}$, $S_{ij}= S_{ji}$, the above equation can be simplified as:<br>$$\sum\limits_{i=1}^N c_i H_{i\kappa}==E\sum\limits_{i=1}^N c_i S_{i\kappa}$$</p>
+<p>Therefore:<br>$$\sum\limits_{i=1}^N (H_{i\kappa}-ES_{i\kappa})c_i=0, \quad (\kappa=1,2,…,N)$$</p>
+<p>To have a nontrivial solution, the following <strong>Secular Determianant</strong> must be equal to $0$:<br>$$<br>\left|\begin{array}{cccc}<br>H_{11}-E S_{11} &amp; H_{12}-E S_{12} &amp; \cdots &amp; H_{1 N}-E S_{1 N} \<br>H_{12}-E S_{12} &amp; H_{22}-E S_{22} &amp; \cdots &amp; H_{2 N}-E S_{2 N} \<br>\vdots &amp; \vdots &amp; \ddots &amp; \vdots \<br>H_{1 N}-E S_{1 N} &amp; H_{2 N}-E S_{2 N} &amp; \cdots &amp; H_{N N}-E S_{N N}<br>\end{array}\right|=0<br>$$</p>
+<p>By expanding this determinant, one obtains a Nth-order N阶 <strong>secular equation</strong>久期方程, which can be solved to get $N$ roots for $E$.<br>The <em>smallest</em> root corresponds to the ground-state energy.</p>
+<hr>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>Determine the normalized trial function for a variational treatment of a particle in a box求解箱中粒子的试探波函数<br>$$\varphi=c_1x(1-x)+c_2x^2(1-x)^2 \quad (0 \leq x \leq 1)$$</p>
+<p><strong>SOLUTION</strong>:<br>The eogenvalues can be obtained by solving the equation below:<br>$$<br>\left|\begin{array}{ll}<br>H_{11}-E S_{11} &amp; H_{12}-E S_{12} \<br>H_{12}-E S_{12} &amp; H_{22}-E S_{22}<br>\end{array}\right|=0<br>$$</p>
+<p>$$H_{11}=\int_0^1 x(1-x) \hat{H} x(1-x)dx=\int_0^1 x(1-x)[-\frac{\hbar^2}{2m} \frac{d^2}{dx^2}x(1-x)]dx=\frac{\hbar^2}{6m}$$<br>$$H_{12}=\frac{\hbar^2}{30m} \qquad H_{22}=\frac{\hbar^2}{105m}$$<br>$$S_{11}=\frac{1}{30} \qquad S_{12}=\frac{1}{140} \qquad S_{22}=\frac{1}{630}$$</p>
+<p>The correspongding equation becomes:<br>$$E’^2-56E’+252=0 (E’=mE/\hbar^2)$$<br>$$E_{min}=4.93487\frac{\hbar^2}{m}$$</p>
+<p>Back to the first equation:<br>$$<br>\left(\begin{array}{ll}<br>H_{11}-E_{\min } S_{11} &amp; H_{12}-E_{\min } S_{12} \<br>H_{12}-E_{\min } S_{12} &amp; H_{22}-E_{\min } S_{22}<br>\end{array}\right)\left(\begin{array}{c}<br>c_{1} \<br>c_{2}<br>\end{array}\right)=0<br>$$<br>These two equation are not independent of each other, so we solve only one, and get:<br>$$\frac{c_2}{c_1}=1.133$$<br>With the normalization condition:$\int \varphi^2(x)dx=1$ the normalized trial funtion corresponding to $E_{min} is$:<br>$$\varphi=4.404x(1-x)+4.990x^2(1-x)^2$$</p>
+<p>The exact ground-state <strong>particle in a box</strong> wave function:<br>$$\psi_1(x)=2^{1/2}\sin \pi x$$</p>
+<hr>
+<h2 id="Another-Situation"><a href="#Another-Situation" class="headerlink" title="Another Situation"></a>Another Situation</h2><p>It is commom partice to use a trial function of the form:<br>$$\varphi=\sum\limits_{j=1}^N c_j f_j$$<br>The $f_j$ themselves may also contain variational parameters. $f_j$本身包含参数</p>
+<p>An example of such a trial funcion for the hydrogen atom is:<br>$$\varphi=\sum\limits_{j=1}^N c_j e^{-\alpha_j r^2}$$<br>The $\mathbf{c_j}$ and the $\mathbf{\alpha_j}$ are treated as variational paramenters变分参数.</p>
+<p>A number of <strong>optimization methods</strong> can be used to obtain the optimal $2N$ paramenters and the ground-state energy.</p>
+<p><strong>The exact value(-0.500) is approached as $N$ increase.</strong></p>
+<h1 id="3-Perturbation-Theory-微扰理论"><a href="#3-Perturbation-Theory-微扰理论" class="headerlink" title="3 Perturbation Theory 微扰理论"></a>3 Perturbation Theory 微扰理论</h1><p>Suppose we wish to solve the eigenvalue problem:<br>$$H|\psi_i\rangle   =E_i|\psi_i\rangle $$<br>Let:<br>$$H=H_0+\nu$$<br>$H_0$: Zeroth-order Hamiltonian零级哈密顿<br>$\nu$: perturbation微扰项</p>
+<p>Where wo know the eigenfunctions and eigenvalue of $H_0$:<br>$$H_0|\psi_i^{(0)}\rangle  =E_i^{(0)}|\psi_i^{(0)}\rangle$$</p>
+<p><strong>How to select $\nu$：the perturbation $\nu$ should be small.</strong></p>
+<p>定义函数：<br>$$H(\lambda)=H_0+\lambda\nu$$<br>对其本征值$E_i(\lambda)$进行泰勒展开：<br>$$E_i(\lambda)=E_i^{(0)}+\lambda E_i^{(1)}+\lambda^2 E_i^{(2)}+…$$<br>其波函数也可以进行泰勒展开：<br>$$|\psi_i\rangle (\lambda)=|\psi_{i}^{(0)}\rangle+\lambda|\psi_{i}^{(1)}\rangle+\lambda^2|\psi_{i}^{(2)}\rangle+…$$</p>
+<p>$E_i^{(n)}$: The $n$th-order correction<br>$\psi_i^{(n)}$: The $n$th-order wave function</p>
+<hr>
+<p>Let $|i\rangle=|\psi_i^{(0)}\rangle$ and assume the intermediate normalization for $|\psi_i\rangle$中间归一化:<br>$$\langle i|\psi_i\rangle=\langle i|i\rangle + \lambda\langle i|\psi_i^{(1)}\rangle+…=1$$<br>Thus:<br>$$\langle i|\psi_i^{(n)}\rangle =0 \qquad n=1,2,3,…$$</p>
+<hr>
+<p>Substituting the expression of $H(\lambda)$,$E_i(\lambda)$ and $|\psi_i\rangle (\lambda)$ into the schrodinger equation:<br>$$(H_{0}+\lambda\nu)\left(|i\rangle+\lambda|\psi_{i}^{(1)}\rangle+\lambda^{2}|\psi_{i}^{(2)}\rangle+…\right)=\left(E_{i}^{(0)}+\lambda E_{i}^{(1)}+\lambda^{2} E_{i}^{(2)}+…\right)\left(|i\rangle+\lambda|\psi_{i}^{(1)}\rangle+…\right)$$</p>
+<p>展开后，当且仅当$\lambda^n$各个次方项的系数相等才能使得方程成立：<br>$$n=0 \qquad H_0|i\rangle  =E_i^{(0)}|i\rangle \qquad\qquad\qquad\qquad\quad$$<br>$$n=1 \qquad H_0|\psi_i^{(1)}\rangle+ \nu|i\rangle=E_i^{(0)}|\psi_i^{(1)}\rangle+E_i^{(1)}|i\rangle$$<br>$$\quad\qquad\qquad \qquad n=2 \qquad H_0|\psi_i^{(2)}\rangle+ \nu|\psi_i^{(1)}\rangle=E_i^{(0)}|\psi_i^{(2)}\rangle+E_i^{(1)}|\psi_i^{(1)}\rangle+E_i^{(2)}|i\rangle$$<br>$$… \qquad\qquad … \qquad\qquad …$$</p>
+<p>For a Hermitian operator:<br>$$\left\langle i|H_0|\psi_i^{(n)}\right\rangle=E_i^{(0)}\left\langle i|\psi_i^{(n)}\right\rangle=0 \qquad n=1,2,… \qquad \left(\langle f|\hat{A}|g\rangle=\langle \hat{A}f|g\rangle \right)$$</p>
+<p>Multiplying each of these equations by $\langle i|$ and using the orthogonality relation:<br>$$E_i^{(0)}=\langle i|H_0|i\rangle$$<br>$$E_i^{(1)}=\langle i|\nu|i\rangle \quad$$<br>$$E_i^{(2)}=\langle i|\nu|\psi_i^{(1)}\rangle$$<br>$$E_i^{(3)}=\langle i|\nu|\psi_i^{(2)}\rangle$$<br>$$… \qquad …$$</p>
+<hr>
+<p>For example, let us start with the equation for $n=1$<br>$$H_0|\psi_i^{(1)}\rangle+ \nu|i\rangle=E_i^{(0)}|\psi_i^{(1)}\rangle+E_i^{(1)}|i\rangle$$</p>
+<p>Multiplying this equations by $\langle i|$:<br>$$\langle i|H_0|\psi_i^{(1)}\rangle+ \langle i|\nu|i\rangle=\langle i|E_i^{(0)}|\psi_i^{(1)}\rangle+\langle i|E_i^{(1)}|i\rangle$$</p>
+<p>We can derive:<br>$$E_i^{(1)}=\langle i|\nu|i\rangle=\langle \psi_i^{(0)}|\nu|\psi_i^{(0)} \rangle$$</p>
+<p>By setting $\lambda=1$, we have:<br>$$H=H_0+\nu$$<br>$$E_i=E_i^{(0)}+\lambda E_i^{(1)}+\lambda^2 E_i^{(2)}+…$$<br>$$|\psi_i\rangle=|\psi_{i}^{(0)}\rangle+\lambda|\psi_{i}^{(1)}\rangle+\lambda^2|\psi_{i}^{(2)}\rangle+…$$</p>
+<hr>
+<p>$$\psi_i=\psi_i^{(0)}+\psi_i^{(1)}+\psi_i^{(2)}+…$$<br>The first-order correction ($\psi_i^{(1)}$) is still quite substantial相当可观</p>
+<h2 id="First-order-perturbation-theory"><a href="#First-order-perturbation-theory" class="headerlink" title="First-order perturbation theory"></a>First-order perturbation theory</h2><h3 id="1-The-first-order-energy"><a href="#1-The-first-order-energy" class="headerlink" title="(1) The first-order energy"></a>(1) The <strong>first-order</strong> energy</h3><p>$$E_i^{(0)}=\langle i|H_0|i\rangle=\langle \psi_i^{(0)}|H_0|\psi_i^{(0)}\rangle$$<br>$$E_i^{(1)}=\langle \psi_i^{(0)}|\nu|\psi_i^{(0)}\rangle$$<br>$$E_i=E_i^{(0)}+E_i^{(1)}=\langle \psi_i^{(0)}|H_0|\psi_i^{(0)}\rangle+\langle \psi_i^{(0)}|\nu|\psi_i^{(0)}\rangle=\langle \psi_i^{(0)}|H|\psi_i^{(0)}\rangle$$<br><strong>The first-order energy can be obtained with the zero-order wave function</strong></p>
+<h3 id="2-The-second-order-energy"><a href="#2-The-second-order-energy" class="headerlink" title="(2) The second-order energy"></a>(2) The <strong>second-order</strong> energy</h3><p>In the case $n=1$:<br>$$(E_i^{(0)}-H_0)|\psi_i^{(1)}\rangle=(\nu-E_i^{(1)})|i\rangle$$<br>Multiplying both side by $\langle n |$:<br>$$\langle n |(E_i^{(0)}-H_0)|\psi_i^{(1)}\rangle=\langle n |(\nu-E_i^{(1)})|i\rangle=\langle n |\nu|i\rangle \quad (n \neq i)$$</p>
+<p>Expanding the first-order wave function is terms of the eigenfunction of $H_0$, one gets一级波函数展开为零级哈密顿的所有本征函数线性组合:<br>$$|\psi_i^{(1)}\rangle={\sum\limits_m}’ |m\rangle C_m^{(1)} \quad (m \neq i)$$<br>So:<br>$$\langle n |(E_i^{(0)}-H_0){\sum\limits_m}’ |m\rangle C_m^{(1)} \quad (m \neq i)\rangle =(E_i^{(0)}-E_n^{(0)})C_n^{(1)}$$<br>$$C_n^{(1)}=\frac{\langle n |\nu|i\rangle}{E_i^{(0)}-E_n^{(0)}}$$</p>
+<p>The first-order wave function:<br>$$|\psi_i^{(1)}\rangle={\sum\limits_n}’ |n\rangle \frac{\langle n |\nu|i\rangle}{E_i^{(0)}-E_n^{(0)}} \quad (n \neq i)$$</p>
+<p>$$E_i^{(2)}=\langle i|\nu|\psi_i^{(1)}\rangle={\sum\limits_n}’ \langle i|\nu|n\rangle \frac{\langle n |\nu|i\rangle}{E_i^{(0)}-E_n^{(0)}}=\langle i|\nu|\psi_i^{(1)}\rangle={\sum\limits_n}’  \frac{\langle i|\nu|n\rangle \langle n |\nu|i\rangle}{E_i^{(0)}-E_n^{(0)}}$$</p>
+<p>$$E_i=E_i^{(0)}+E_i^{(1)}+E_i^{(2)}=\left\langle \psi_i^{(0)} | H | \psi_i^{(0)} \right\rangle+ E_i^{(2)}$$</p>
+<h2 id="Application-of-Perturbation-Theory-to-the-Helium-Atom"><a href="#Application-of-Perturbation-Theory-to-the-Helium-Atom" class="headerlink" title="Application of Perturbation Theory to the Helium Atom"></a>Application of Perturbation Theory to the Helium Atom</h2><p>The Hamiltonian operator of $He$:<br>$$\hat{H} = \hat{H_H}(1)  + \hat{H_H}(2)  +\frac{e^2}{4\pi \varepsilon_0}\frac{1}{r_{12}} \qquad \hat{H_H} (i)=-\frac{\hbar^2}{2m_e}\nabla_i^2-\frac{2e^2}{4\pi \varepsilon_0}\frac{1}{r_i}\quad (i=1,2)$$</p>
+<p>$$H _0 = \hat{H _H}(1) + \hat{H _H}(2) \qquad \nu=\frac{e^2}{4\pi \varepsilon_0}\frac{1}{r _{12}}$$</p>
+<p>The zero-order wave function (of two zero-order Hamilton) are(空间部分×自旋部分):<br>$$\Psi_k^{(0)}=\varphi_k(\mathbf{r_1},\mathbf{r_2}) \Omega(\sigma_1,\sigma_2)$$<br>$$\Omega(\sigma_1,\sigma_2)=\frac{1}{\sqrt{2}}[\alpha(\sigma_1)\beta(\sigma_2)-\beta(\sigma_1)\alpha(\sigma_2)]$$<br>$$\varphi_k(\mathbf{r_1},\mathbf{r_2})=\frac{1}{\sqrt{2}}[\psi_{nlm}(\mathbf{r_1})\psi_{n’l’m’}(\mathbf{r_2})+\psi_{nlm}(\mathbf{r_2})\psi_{n’l’m’}(\mathbf{r_1})]$$</p>
+<p>The zero-order ground-state wave function and ground-state energy:<br>$$\Psi_k^{(0)}=\varphi_k(\mathbf{r_1},\mathbf{r_2}) \Omega(\sigma_1,\sigma_2)$$<br>$$\varphi_0(\mathbf{r_1},\mathbf{r_2})=\psi_{1s}(r_1,\theta_1,\varphi_1)\psi_{1s}(r_2,\theta_2,\varphi_2)$$<br>$$\psi_{1s}(\mathbf{r_j})=(\frac{Z^3}{\pi a_0^3})^{1/2} e^{-Zr_j/a_0} \qquad j=1,2$$</p>
+<p>$$E_{0}^{(0)}=-\frac{Z^{2} m_{e} e^{4}}{32 \pi^{2} \varepsilon_{0}^{2} \hbar^{2}}-\frac{Z^{2} m_{e} e^{4}}{32 \pi^{2} \varepsilon_{0}^{2} \hbar^{2}} \quad(\mathrm{Z}=2)$$</p>
+<p>The first-order energy correction is obtained as:<br>$$E_{0}^{(1)} =\left\langle\Psi_{0}^{(0)}|\nu| \Psi_{0}^{(0)}\right\rangle =\iint d \mathbf{r_1} d \mathbf{r_2} \psi_{1s}\left(\mathbf{r_1}\right) \psi_{1s}\left(\mathbf{r_2}\right) \frac{e^{2}}{4 \pi \varepsilon_{0} r_{12}} \psi_{1s}\left(\mathbf{r_1}\right) \psi_{1 s}\left(\mathbf{r_2}\right)=\frac{5 Z}{8}\left(\frac{m_{e} e^{4}}{16 \pi^{2} \varepsilon_{0}^{2} \hbar^{2}}\right)$$</p>
+<p>With the first-order perturbation theory, the ground-state energy is (in the units of $\left(\frac{m_{e} e^{4}}{16 \pi^{2} \varepsilon_{0}^{2} \hbar^{2}}\right)$):<br>$$E_0 \approx E_0^{(0)}+E_0^{(1)}=-\frac{1}{2}Z^2-\frac{1}{2}Z^2+\frac{5}{8}Z \approx -2.8477 \quad (Z=2)$$</p>
+<p>The second-order perturbation theory gives: $-2.910$<br>The higher-order calculation gives: $-2.9037$<br>The experimental result is: $-2.9033$</p>
+<h2 id="Application-of-Particle-in-a-1D-Box"><a href="#Application-of-Particle-in-a-1D-Box" class="headerlink" title="Application of Particle in a 1D Box"></a>Application of Particle in a 1D Box</h2><p>箱中粒子，势能不为0：<br>$$V(x)=\frac{V_0 x}{a} \qquad 0 \leq x \leq a$$</p>
+<p>显然微扰项为：$\nu=V_0 x/a$</p>
+<p>The zero-order functions and energies are:<br>$$\psi_n^{(0)}=(\frac{2}{a})^{1/2}\sin\frac{n\pi x}{a} \qquad E_n^{(0)}=\frac{n^2 h^2}{8ma^2}$$</p>
+<p>The first-order energy correction is:<br>$$E_n^{(1)}=\int_0^a \psi_n^{(0)*} (\frac{V_0 x}{a}) \psi_n^{(0)}dx=\frac{V_0}{2}$$<br>Therefore, the first-order energy is:<br>$$E_n=\frac{n^2 h^2}{8ma^2}+\frac{V_0}{2} \qquad n=1,2,3,…$$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>HL Du
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://duhl1999.github.io/c3e569a74248/" title="量子化学中使用的近似方法">https://duhl1999.github.io/c3e569a74248/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E7%90%86%E8%AE%BA/" rel="tag"># 理论</a>
+              <a href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/" rel="tag"># 量子化学</a>
+              <a href="/tags/%E6%96%B9%E6%B3%95/" rel="tag"># 方法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/757cf1cfa703/" rel="prev" title="倒易点阵和布里渊区">
+                  <i class="fa fa-chevron-left"></i> 倒易点阵和布里渊区
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HL Du</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+</body>
+</html>
